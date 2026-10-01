@@ -1,0 +1,294 @@
+table,field,reason
+accident,CASENUM,key
+accident,STRATUM,sampling design / split variable
+accident,PSU,sampling design / split variable
+accident,PJ,sampling design / split variable
+accident,PSU_VAR,sampling design / split variable
+accident,NUM_INJ,injury count
+accident,YEAR,sampling design / split variable
+accident,MINUTE,clock minute
+accident,MAX_SEV,defines the target
+accident,MINUTE_IM,clock minute
+accident,MAXSEV_IM,imputed target
+accident,NO_INJ_IM,imputed injury count
+accident,PSUSTRAT,sampling design / split variable
+accident,WEIGHT,sampling design / split variable
+crashrf,CASENUM,key
+crashrf,STRATUM,sampling design / split variable
+crashrf,PSU,sampling design / split variable
+crashrf,PJ,sampling design / split variable
+crashrf,PSU_VAR,sampling design / split variable
+crashrf,PSUSTRAT,sampling design / split variable
+crashrf,WEIGHT,sampling design / split variable
+crashrf,YEAR,sampling design / split variable
+weather,CASENUM,key
+weather,STRATUM,sampling design / split variable
+weather,PSU,sampling design / split variable
+weather,PJ,sampling design / split variable
+weather,PSU_VAR,sampling design / split variable
+weather,PSUSTRAT,sampling design / split variable
+weather,WEIGHT,sampling design / split variable
+weather,YEAR,sampling design / split variable
+cevent,CASENUM,key
+cevent,PSU,sampling design / split variable
+cevent,PJ,sampling design / split variable
+cevent,PSU_VAR,sampling design / split variable
+cevent,STRATUM,sampling design / split variable
+cevent,EVENTNUM,key
+cevent,VNUMBER1,key
+cevent,VNUMBER2,key
+cevent,PSUSTRAT,sampling design / split variable
+cevent,WEIGHT,sampling design / split variable
+cevent,YEAR,sampling design / split variable
+vehicle,CASENUM,key
+vehicle,VEH_NO,key
+vehicle,STRATUM,sampling design / split variable
+vehicle,PSU,sampling design / split variable
+vehicle,PJ,sampling design / split variable
+vehicle,PSU_VAR,sampling design / split variable
+vehicle,MINUTE,clock minute
+vehicle,MODEL,model code (kept via MAKE)
+vehicle,MAK_MOD,make-model code (kept via MAKE)
+vehicle,VIN,vehicle identifier
+vehicle,MCARR_I1,carrier identifier
+vehicle,MCARR_I2,carrier identifier
+vehicle,MCARR_ID,carrier identifier
+vehicle,HAZ_ID,hazmat identifier
+vehicle,HAZ_CNO,hazmat class number
+vehicle,MAX_VSEV,vehicle max injury severity
+vehicle,NUM_INJV,vehicle injury count
+vehicle,DR_ZIP,driver ZIP code
+vehicle,TRLR1VIN,identifier
+vehicle,TRLR2VIN,identifier
+vehicle,TRLR3VIN,identifier
+vehicle,VPICMAKE,duplicate of MAKE
+vehicle,VPICMODEL,model identifier
+vehicle,MXVSEV_IM,imputed vehicle max severity
+vehicle,NUMINJ_IM,imputed vehicle injury count
+vehicle,PSUSTRAT,sampling design / split variable
+vehicle,WEIGHT,sampling design / split variable
+vehicle,YEAR,sampling design / split variable
+damage,CASENUM,key
+damage,VEH_NO,key
+damage,STRATUM,sampling design / split variable
+damage,PSU,sampling design / split variable
+damage,PJ,sampling design / split variable
+damage,PSU_VAR,sampling design / split variable
+damage,PSUSTRAT,sampling design / split variable
+damage,WEIGHT,sampling design / split variable
+damage,YEAR,sampling design / split variable
+distract,CASENUM,key
+distract,VEH_NO,key
+distract,STRATUM,sampling design / split variable
+distract,PSU,sampling design / split variable
+distract,PJ,sampling design / split variable
+distract,PSU_VAR,sampling design / split variable
+distract,PSUSTRAT,sampling design / split variable
+distract,WEIGHT,sampling design / split variable
+distract,YEAR,sampling design / split variable
+drimpair,CASENUM,key
+drimpair,VEH_NO,key
+drimpair,STRATUM,sampling design / split variable
+drimpair,PSU,sampling design / split variable
+drimpair,PJ,sampling design / split variable
+drimpair,PSU_VAR,sampling design / split variable
+drimpair,PSUSTRAT,sampling design / split variable
+drimpair,WEIGHT,sampling design / split variable
+drimpair,YEAR,sampling design / split variable
+driverrf,CASENUM,key
+driverrf,VEH_NO,key
+driverrf,STRATUM,sampling design / split variable
+driverrf,PSU,sampling design / split variable
+driverrf,PJ,sampling design / split variable
+driverrf,PSU_VAR,sampling design / split variable
+driverrf,PSUSTRAT,sampling design / split variable
+driverrf,WEIGHT,sampling design / split variable
+driverrf,YEAR,sampling design / split variable
+factor,CASENUM,key
+factor,VEH_NO,key
+factor,STRATUM,sampling design / split variable
+factor,PSU,sampling design / split variable
+factor,PJ,sampling design / split variable
+factor,PSU_VAR,sampling design / split variable
+factor,PSUSTRAT,sampling design / split variable
+factor,WEIGHT,sampling design / split variable
+factor,YEAR,sampling design / split variable
+maneuver,CASENUM,key
+maneuver,VEH_NO,key
+maneuver,STRATUM,sampling design / split variable
+maneuver,PSU,sampling design / split variable
+maneuver,PJ,sampling design / split variable
+maneuver,PSU_VAR,sampling design / split variable
+maneuver,PSUSTRAT,sampling design / split variable
+maneuver,WEIGHT,sampling design / split variable
+maneuver,YEAR,sampling design / split variable
+vehiclesf,CASENUM,key
+vehiclesf,VEH_NO,key
+vehiclesf,STRATUM,sampling design / split variable
+vehiclesf,PSU,sampling design / split variable
+vehiclesf,PJ,sampling design / split variable
+vehiclesf,PSU_VAR,sampling design / split variable
+vehiclesf,PSUSTRAT,sampling design / split variable
+vehiclesf,WEIGHT,sampling design / split variable
+vehiclesf,YEAR,sampling design / split variable
+violatn,CASENUM,key
+violatn,VEH_NO,key
+violatn,STRATUM,sampling design / split variable
+violatn,PSU,sampling design / split variable
+violatn,PJ,sampling design / split variable
+violatn,PSU_VAR,sampling design / split variable
+violatn,PSUSTRAT,sampling design / split variable
+violatn,WEIGHT,sampling design / split variable
+violatn,YEAR,sampling design / split variable
+vision,CASENUM,key
+vision,VEH_NO,key
+vision,STRATUM,sampling design / split variable
+vision,PSU,sampling design / split variable
+vision,PJ,sampling design / split variable
+vision,PSU_VAR,sampling design / split variable
+vision,PSUSTRAT,sampling design / split variable
+vision,WEIGHT,sampling design / split variable
+vision,YEAR,sampling design / split variable
+vevent,CASENUM,key
+vevent,EVENTNUM,key
+vevent,VEH_NO,key
+vevent,STRATUM,sampling design / split variable
+vevent,PSU,sampling design / split variable
+vevent,PJ,sampling design / split variable
+vevent,PSU_VAR,sampling design / split variable
+vevent,VEVENTNUM,key
+vevent,VNUMBER1,key
+vevent,VNUMBER2,key
+vevent,PSUSTRAT,sampling design / split variable
+vevent,WEIGHT,sampling design / split variable
+vevent,YEAR,sampling design / split variable
+vsoe,CASENUM,key
+vsoe,VEH_NO,key
+vsoe,STRATUM,sampling design / split variable
+vsoe,PSU,sampling design / split variable
+vsoe,PJ,sampling design / split variable
+vsoe,PSU_VAR,sampling design / split variable
+vsoe,VEVENTNUM,key
+vsoe,PSUSTRAT,sampling design / split variable
+vsoe,WEIGHT,sampling design / split variable
+vsoe,YEAR,sampling design / split variable
+parkwork,CASENUM,key
+parkwork,VEH_NO,key
+parkwork,STRATUM,sampling design / split variable
+parkwork,PSU,sampling design / split variable
+parkwork,PJ,sampling design / split variable
+parkwork,PSU_VAR,sampling design / split variable
+parkwork,PMINUTE,clock minute
+parkwork,PMODEL,identifier
+parkwork,PMAK_MOD,identifier
+parkwork,PVIN,identifier
+parkwork,PMCARR_I1,identifier
+parkwork,PMCARR_I2,identifier
+parkwork,PMCARR_ID,identifier
+parkwork,PHAZ_ID,identifier
+parkwork,PHAZ_CNO,identifier
+parkwork,PVEH_SEV,parked-vehicle injury severity
+parkwork,PTRLR1VIN,identifier
+parkwork,PTRLR2VIN,identifier
+parkwork,PTRLR3VIN,identifier
+parkwork,PVPICMAKE,identifier
+parkwork,PVPICMODEL,identifier
+parkwork,PSUSTRAT,sampling design / split variable
+parkwork,WEIGHT,sampling design / split variable
+parkwork,YEAR,sampling design / split variable
+pvehiclesf,CASENUM,key
+pvehiclesf,VEH_NO,key
+pvehiclesf,STRATUM,sampling design / split variable
+pvehiclesf,PSU,sampling design / split variable
+pvehiclesf,PJ,sampling design / split variable
+pvehiclesf,PSU_VAR,sampling design / split variable
+pvehiclesf,PSUSTRAT,sampling design / split variable
+pvehiclesf,WEIGHT,sampling design / split variable
+pvehiclesf,YEAR,sampling design / split variable
+person,CASENUM,key
+person,VEH_NO,key
+person,PER_NO,key
+person,STRATUM,sampling design / split variable
+person,PSU,sampling design / split variable
+person,PJ,sampling design / split variable
+person,PSU_VAR,sampling design / split variable
+person,MINUTE,clock minute
+person,MAK_MOD,make-model code (kept via MAKE)
+person,INJ_SEV,person injury severity
+person,HOSPITAL,transport to hospital follows injury
+person,VPICMAKE,duplicate of MAKE
+person,VPICMODEL,model identifier
+person,INJSEV_IM,imputed person injury severity
+person,PSUSTRAT,sampling design / split variable
+person,WEIGHT,sampling design / split variable
+person,YEAR,sampling design / split variable
+nmcrash,CASENUM,key
+nmcrash,VEH_NO,key
+nmcrash,PER_NO,key
+nmcrash,STRATUM,sampling design / split variable
+nmcrash,PSU,sampling design / split variable
+nmcrash,PJ,sampling design / split variable
+nmcrash,PSU_VAR,sampling design / split variable
+nmcrash,PSUSTRAT,sampling design / split variable
+nmcrash,WEIGHT,sampling design / split variable
+nmcrash,YEAR,sampling design / split variable
+nmdistract,CASENUM,key
+nmdistract,VEH_NO,key
+nmdistract,PER_NO,key
+nmdistract,STRATUM,sampling design / split variable
+nmdistract,PSU,sampling design / split variable
+nmdistract,PJ,sampling design / split variable
+nmdistract,PSU_VAR,sampling design / split variable
+nmdistract,PSUSTRAT,sampling design / split variable
+nmdistract,WEIGHT,sampling design / split variable
+nmdistract,YEAR,sampling design / split variable
+nmimpair,CASENUM,key
+nmimpair,VEH_NO,key
+nmimpair,PER_NO,key
+nmimpair,STRATUM,sampling design / split variable
+nmimpair,PSU,sampling design / split variable
+nmimpair,PJ,sampling design / split variable
+nmimpair,PSU_VAR,sampling design / split variable
+nmimpair,PSUSTRAT,sampling design / split variable
+nmimpair,WEIGHT,sampling design / split variable
+nmimpair,YEAR,sampling design / split variable
+nmprior,CASENUM,key
+nmprior,VEH_NO,key
+nmprior,PER_NO,key
+nmprior,STRATUM,sampling design / split variable
+nmprior,PSU,sampling design / split variable
+nmprior,PJ,sampling design / split variable
+nmprior,PSU_VAR,sampling design / split variable
+nmprior,PSUSTRAT,sampling design / split variable
+nmprior,WEIGHT,sampling design / split variable
+nmprior,YEAR,sampling design / split variable
+personrf,CASENUM,key
+personrf,VEH_NO,key
+personrf,PER_NO,key
+personrf,STRATUM,sampling design / split variable
+personrf,PSU,sampling design / split variable
+personrf,PJ,sampling design / split variable
+personrf,PSU_VAR,sampling design / split variable
+personrf,PSUSTRAT,sampling design / split variable
+personrf,WEIGHT,sampling design / split variable
+personrf,YEAR,sampling design / split variable
+safetyeq,CASENUM,key
+safetyeq,VEH_NO,key
+safetyeq,PER_NO,key
+safetyeq,STRATUM,sampling design / split variable
+safetyeq,PSU,sampling design / split variable
+safetyeq,PJ,sampling design / split variable
+safetyeq,PSU_VAR,sampling design / split variable
+safetyeq,PSUSTRAT,sampling design / split variable
+safetyeq,WEIGHT,sampling design / split variable
+safetyeq,YEAR,sampling design / split variable
+pbtype,CASENUM,key
+pbtype,VEH_NO,key
+pbtype,PER_NO,key
+pbtype,STRATUM,sampling design / split variable
+pbtype,PSU,sampling design / split variable
+pbtype,PJ,sampling design / split variable
+pbtype,PSU_VAR,sampling design / split variable
+pbtype,PSUSTRAT,sampling design / split variable
+pbtype,WEIGHT,sampling design / split variable
+pbtype,YEAR,sampling design / split variable

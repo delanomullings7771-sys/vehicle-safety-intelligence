@@ -1,0 +1,21 @@
+# Environments and caches
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.ipython/
+.jupyter/
+.pytest_cache/
+tmp*_kernels/
+*.pyc
+
+# Data: 6 GB of public NHTSA downloads and derived tables, reproducible from the scripts in src/
+data/
+
+# Research model files (the deployable copies live in app/api/artifacts)
+models/
+
+# Official NHTSA manuals (public, ~84 MB); the complaint field layout text file is kept
+documentation/**/*.pdf
+
+# Local tool settings
+.claude/

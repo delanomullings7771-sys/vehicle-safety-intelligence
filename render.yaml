@@ -1,0 +1,16 @@
+# Render Blueprint: deploys the model API from app/api.
+# In Render: New > Blueprint > select this repository.
+services:
+  - type: web
+    name: vehicle-safety-api
+    runtime: python
+    rootDir: app/api
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: ALLOWED_ORIGINS
+        value: "*"   # replace with the Vercel URL once known, e.g. https://vehicle-safety.vercel.app

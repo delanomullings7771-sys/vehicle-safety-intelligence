@@ -1,0 +1,31 @@
+{
+  "crss_years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "crss_csv_files": 140,
+  "crss_tables_per_year": {
+    "2020": 28,
+    "2021": 28,
+    "2022": 28,
+    "2023": 28,
+    "2024": 28
+  },
+  "complaints": {
+    "file": "C:\\Users\\delan\\Downloads\\NHTSA_Road_Vehicle_Safety_Capstone_Last_Lap\\data\\raw\\complaints\\FLAT_CMPL\\FLAT_CMPL.txt",
+    "rows": 2250304,
+    "documented_columns": 51,
+    "observed_row_widths": {
+      "51": 2250304
+    },
+    "blank_narratives": 39,
+    "blank_components": 149,
+    "unique_odino": 1622118,
+    "repeated_component_rows": 628186,
+    "size_bytes": 1605264894,
+    "sha256": "ca2d3fe0c53a7b2ecc5a5354162914ae21e046d7766452a1ee8825ea0ceb4ad1"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "serious_rate_trend_2010_on":{
+    "kendall_tau":-0.75,
+    "p_value":0.0000037189
+  },
+  "narrative_words_serious_vs_not":{
+    "median_serious":96.0,
+    "median_not":79.0,
+    "rank_biserial":-0.1559720887,
+    "p_value":0.0
+  },
+  "linkage":{
+    "make_modelyear_cells":852,
+    "spearman_exposure_vs_complaints":0.8076778367,
+    "p_value":3.29989577e-197,
+    "complaint_rate_p90_over_p10":25.8038182775
+  }
+}

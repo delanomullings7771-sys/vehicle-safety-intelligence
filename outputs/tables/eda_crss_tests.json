@@ -1,0 +1,26 @@
+{
+  "year_vs_y_injury":{
+    "cramers_v":0.0302359673,
+    "p_value":3.089413631e-50
+  },
+  "year_vs_y_serious":{
+    "cramers_v":0.013494183,
+    "p_value":0.0000000014
+  },
+  "leakage_check_max_single_feature_auc":{
+    "y_injury":0.6813021338,
+    "y_serious":0.7208304311
+  },
+  "vehicle_defect_vs_y_injury":{
+    "rate_with_defect":0.5387837643,
+    "rate_without_defect":0.5237404327,
+    "crashes_with_defect":6923,
+    "chi2_p":0.0138757082
+  },
+  "vehicle_defect_vs_y_serious":{
+    "rate_with_defect":0.1496815287,
+    "rate_without_defect":0.1342514614,
+    "crashes_with_defect":6908,
+    "chi2_p":0.0002254681
+  }
+}

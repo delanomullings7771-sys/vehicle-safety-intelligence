@@ -1,0 +1,520 @@
+{
+ "fields": [
+  {
+   "name": "first_harmful_event",
+   "type": "select",
+   "label": "First harmful event",
+   "help": "what the vehicle first struck",
+   "options": [
+    {
+     "value": 1,
+     "label": "Rollover/Overturn"
+    },
+    {
+     "value": 8,
+     "label": "Pedestrian"
+    },
+    {
+     "value": 9,
+     "label": "Pedalcyclist"
+    },
+    {
+     "value": 11,
+     "label": "Live Animal"
+    },
+    {
+     "value": 12,
+     "label": "Motor Vehicle In-Transport"
+    },
+    {
+     "value": 14,
+     "label": "Parked Motor Vehicle"
+    },
+    {
+     "value": 24,
+     "label": "Guardrail Face"
+    },
+    {
+     "value": 25,
+     "label": "Concrete Traffic Barrier"
+    },
+    {
+     "value": 30,
+     "label": "Utility Pole/Light Support"
+    },
+    {
+     "value": 33,
+     "label": "Curb"
+    },
+    {
+     "value": 34,
+     "label": "Ditch"
+    },
+    {
+     "value": 42,
+     "label": "Tree (Standing Only)"
+    }
+   ]
+  },
+  {
+   "name": "manner_of_collision",
+   "type": "select",
+   "label": "Manner of collision",
+   "help": "between motor vehicles",
+   "options": [
+    {
+     "value": 0,
+     "label": "The First Harmful Event was Not a Collision with a Motor Vehicle In-Transport"
+    },
+    {
+     "value": 1,
+     "label": "Front-to-Rear"
+    },
+    {
+     "value": 2,
+     "label": "Front-to-Front"
+    },
+    {
+     "value": 6,
+     "label": "Angle"
+    },
+    {
+     "value": 7,
+     "label": "Sideswipe - Same Direction"
+    },
+    {
+     "value": 8,
+     "label": "Sideswipe - Opposite Direction"
+    },
+    {
+     "value": 9,
+     "label": "Rear-to-Side"
+    },
+    {
+     "value": 11,
+     "label": "Other"
+    }
+   ]
+  },
+  {
+   "name": "relation_to_road",
+   "type": "select",
+   "label": "Location relative to road",
+   "help": null,
+   "options": [
+    {
+     "value": 1,
+     "label": "On Roadway"
+    },
+    {
+     "value": 2,
+     "label": "On Shoulder"
+    },
+    {
+     "value": 3,
+     "label": "On Median"
+    },
+    {
+     "value": 4,
+     "label": "On Roadside"
+    },
+    {
+     "value": 5,
+     "label": "Outside Trafficway"
+    },
+    {
+     "value": 7,
+     "label": "In Parking Lane/Zone"
+    }
+   ]
+  },
+  {
+   "name": "intersection_type",
+   "type": "select",
+   "label": "Intersection type",
+   "help": null,
+   "options": [
+    {
+     "value": 1,
+     "label": "Not an Intersection"
+    },
+    {
+     "value": 2,
+     "label": "Four-Way Intersection"
+    },
+    {
+     "value": 3,
+     "label": "T-Intersection"
+    },
+    {
+     "value": 6,
+     "label": "Roundabout"
+    },
+    {
+     "value": 7,
+     "label": "Five Point, or More"
+    }
+   ]
+  },
+  {
+   "name": "junction",
+   "type": "select",
+   "label": "Relation to junction",
+   "help": null,
+   "options": [
+    {
+     "value": 1,
+     "label": "Non-Junction"
+    },
+    {
+     "value": 2,
+     "label": "Intersection"
+    },
+    {
+     "value": 3,
+     "label": "Intersection-Related"
+    },
+    {
+     "value": 4,
+     "label": "Driveway Access"
+    },
+    {
+     "value": 5,
+     "label": "Entrance/Exit Ramp Related"
+    },
+    {
+     "value": 8,
+     "label": "Driveway Access Related"
+    },
+    {
+     "value": 18,
+     "label": "Through Roadway"
+    },
+    {
+     "value": 19,
+     "label": "Other location within Interchange Area"
+    },
+    {
+     "value": 20,
+     "label": "Entrance/Exit Ramp"
+    }
+   ]
+  },
+  {
+   "name": "light",
+   "type": "select",
+   "label": "Light condition",
+   "help": null,
+   "options": [
+    {
+     "value": 1,
+     "label": "Daylight"
+    },
+    {
+     "value": 2,
+     "label": "Dark - Not Lighted"
+    },
+    {
+     "value": 3,
+     "label": "Dark - Lighted"
+    },
+    {
+     "value": 4,
+     "label": "Dawn"
+    },
+    {
+     "value": 5,
+     "label": "Dusk"
+    }
+   ]
+  },
+  {
+   "name": "weather",
+   "type": "select",
+   "label": "Weather",
+   "help": null,
+   "options": [
+    {
+     "value": 1,
+     "label": "Clear"
+    },
+    {
+     "value": 2,
+     "label": "Rain"
+    },
+    {
+     "value": 4,
+     "label": "Snow"
+    },
+    {
+     "value": 5,
+     "label": "Fog, Smog, Smoke"
+    },
+    {
+     "value": 10,
+     "label": "Cloudy"
+    }
+   ]
+  },
+  {
+   "name": "alcohol",
+   "type": "select",
+   "label": "Alcohol involved",
+   "help": "police-reported",
+   "options": [
+    {
+     "value": 1,
+     "label": "Alcohol Involved"
+    },
+    {
+     "value": 2,
+     "label": "No Alcohol Involved"
+    }
+   ]
+  },
+  {
+   "name": "work_zone",
+   "type": "select",
+   "label": "Work zone",
+   "help": null,
+   "options": [
+    {
+     "value": 0,
+     "label": "None"
+    },
+    {
+     "value": 1,
+     "label": "Construction"
+    }
+   ]
+  },
+  {
+   "name": "interstate",
+   "type": "select",
+   "label": "Interstate highway",
+   "help": null,
+   "options": [
+    {
+     "value": 0,
+     "label": "No"
+    },
+    {
+     "value": 1,
+     "label": "Yes"
+    }
+   ]
+  },
+  {
+   "name": "urbanicity",
+   "type": "select",
+   "label": "Area",
+   "help": null,
+   "options": [
+    {
+     "value": 1,
+     "label": "Urban Area"
+    },
+    {
+     "value": 2,
+     "label": "Rural Area"
+    }
+   ]
+  },
+  {
+   "name": "region",
+   "type": "select",
+   "label": "US region",
+   "help": null,
+   "options": [
+    {
+     "value": 1,
+     "label": "Northeast (PA, NJ, NY, NH, VT, RI, MA, ME, CT)"
+    },
+    {
+     "value": 2,
+     "label": "Midwest (OH, IN, IL, MI, WI, MN, ND, SD, NE, IA, MO, KS)"
+    },
+    {
+     "value": 3,
+     "label": "South (MD, DE, DC, WV, VA, KY, TN, NC, SC, GA, FL, AL, MS, LA, AR, OK, TX)"
+    },
+    {
+     "value": 4,
+     "label": "West (MT, ID, WA, OR, CA, NV, NM, AZ, UT, CO, WY, AK, HI)"
+    }
+   ]
+  },
+  {
+   "name": "weekday",
+   "type": "select",
+   "label": "Day of week",
+   "help": null,
+   "options": [
+    {
+     "value": 1,
+     "label": "Sunday"
+    },
+    {
+     "value": 2,
+     "label": "Monday"
+    },
+    {
+     "value": 3,
+     "label": "Tuesday"
+    },
+    {
+     "value": 4,
+     "label": "Wednesday"
+    },
+    {
+     "value": 5,
+     "label": "Thursday"
+    },
+    {
+     "value": 6,
+     "label": "Friday"
+    },
+    {
+     "value": 7,
+     "label": "Saturday"
+    }
+   ]
+  },
+  {
+   "name": "hour",
+   "type": "number",
+   "label": "Hour of day",
+   "help": "0-23",
+   "min": 0,
+   "max": 23
+  },
+  {
+   "name": "vehicles",
+   "type": "number",
+   "label": "Vehicles involved",
+   "help": null,
+   "min": 1,
+   "max": 20
+  },
+  {
+   "name": "occupants",
+   "type": "number",
+   "label": "Vehicle occupants",
+   "help": "all vehicles",
+   "min": 0,
+   "max": 60
+  },
+  {
+   "name": "pedestrians_cyclists",
+   "type": "number",
+   "label": "Pedestrians / cyclists involved",
+   "help": null,
+   "min": 0,
+   "max": 20
+  },
+  {
+   "name": "max_travel_speed",
+   "type": "number",
+   "label": "Highest travel speed (mph)",
+   "help": "of any vehicle",
+   "min": 0,
+   "max": 150
+  },
+  {
+   "name": "speed_limit",
+   "type": "number",
+   "label": "Speed limit (mph)",
+   "help": null,
+   "min": 5,
+   "max": 85
+  },
+  {
+   "name": "oldest_model_year",
+   "type": "number",
+   "label": "Oldest vehicle model year",
+   "help": null,
+   "min": 1950,
+   "max": 2026
+  },
+  {
+   "name": "youngest_person_age",
+   "type": "number",
+   "label": "Youngest person's age",
+   "help": null,
+   "min": 0,
+   "max": 110
+  },
+  {
+   "name": "oldest_person_age",
+   "type": "number",
+   "label": "Oldest person's age",
+   "help": null,
+   "min": 0,
+   "max": 110
+  },
+  {
+   "name": "rollovers",
+   "type": "number",
+   "label": "Vehicles that rolled over",
+   "help": null,
+   "min": 0,
+   "max": 10
+  },
+  {
+   "name": "unrestrained_occupants",
+   "type": "number",
+   "label": "Occupants not using a restraint",
+   "help": null,
+   "min": 0,
+   "max": 30
+  },
+  {
+   "name": "ejected",
+   "type": "number",
+   "label": "People ejected",
+   "help": null,
+   "min": 0,
+   "max": 20
+  },
+  {
+   "name": "motorcycles",
+   "type": "number",
+   "label": "Motorcycles involved",
+   "help": null,
+   "min": 0,
+   "max": 10
+  },
+  {
+   "name": "truck_tractors",
+   "type": "number",
+   "label": "Truck-tractors involved",
+   "help": null,
+   "min": 0,
+   "max": 10
+  },
+  {
+   "name": "hit_and_run",
+   "type": "number",
+   "label": "Hit-and-run vehicles",
+   "help": null,
+   "min": 0,
+   "max": 5
+  },
+  {
+   "name": "speeding_vehicles",
+   "type": "number",
+   "label": "Vehicles speeding",
+   "help": "police-reported",
+   "min": 0,
+   "max": 10
+  },
+  {
+   "name": "vehicle_fire",
+   "type": "number",
+   "label": "Vehicles with fire",
+   "help": null,
+   "min": 0,
+   "max": 5
+  }
+ ]
+}

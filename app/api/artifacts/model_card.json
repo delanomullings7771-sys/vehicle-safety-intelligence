@@ -1,0 +1,32 @@
+{
+ "models": [
+  {
+   "task": "S1 Injury crash (CRSS)",
+   "model": "Gradient Boosting",
+   "headline_metric": "ROC-AUC, 2024 test",
+   "headline_value": "0.907",
+   "detail": "PR-AUC 0.919 vs baseline 0.513; app form model 0.849"
+  },
+  {
+   "task": "S2 Serious or fatal crash (CRSS)",
+   "model": "Gradient Boosting",
+   "headline_metric": "ROC-AUC, 2024 test",
+   "headline_value": "0.902",
+   "detail": "PR-AUC 0.642 vs baseline 0.130; app form model 0.853"
+  },
+  {
+   "task": "U1 Component routing (complaints)",
+   "model": "Linear SVM",
+   "headline_metric": "Top-1 accuracy, 2024-26 test",
+   "headline_value": "84.4%",
+   "detail": "micro-F1 0.740, macro-F1 0.691 across 19 groups"
+  },
+  {
+   "task": "U2 Serious-incident flag (complaints)",
+   "model": "Linear SVM",
+   "headline_metric": "ROC-AUC, 2024-26 test",
+   "headline_value": "0.965",
+   "detail": "PR-AUC 0.858, recall 0.77, precision 0.83"
+  }
+ ]
+}

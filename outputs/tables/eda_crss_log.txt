@@ -1,0 +1,87 @@
+year_vs_y_injury                        {'cramers_v': 0.03023596732641676, 'p_value': ...
+year_vs_y_serious                       {'cramers_v': 0.013494182967586841, 'p_value':...
+leakage_check_max_single_feature_auc    {'y_injury': 0.6813021337940368, 'y_serious': ...
+vehicle_defect_vs_y_injury              {'rate_with_defect': 0.5387837642640474, 'rate...
+vehicle_defect_vs_y_serious             {'rate_with_defect': 0.14968152866242038, 'rat...
+
+Top 25 for y_injury
+                                           description        group      auc             direction
+                     vehicle.TOWED = Not Towed (count)   post_crash 0.681302 higher -> less likely
+                                    accident.EVENT1_IM crash_record 0.645706 higher -> more likely
+              person.EJECT_IM = Not Applicable (count) crash_record 0.640449 higher -> more likely
+                                    accident.MANCOL_IM crash_record 0.638382 higher -> more likely
+           vehicle.DEFORMED = Disabling Damage (count)   post_crash 0.637252 higher -> more likely
+                 person.AIR_BAG = Not Deployed (count) crash_record 0.621136 higher -> less likely
+             cevent.AOI2 = Not a Motor Vehicle (count) crash_record 0.616186 higher -> more likely
+             vevent.AOI2 = Not a Motor Vehicle (count) crash_record 0.616186 higher -> more likely
+               vehicle.DEFORMED = Minor Damage (count)   post_crash 0.599156 higher -> less likely
+                             vehicle.TOWED = 2 (count)   post_crash 0.589849 higher -> more likely
+    person.REST_USE = None Used/Not Applicable (count) crash_record 0.587972 higher -> more likely
+                                        nmcrash.n_rows crash_record 0.585461 higher -> more likely
+                                        nmprior.n_rows crash_record 0.585457 higher -> more likely
+                                     nmdistract.n_rows crash_record 0.585456 higher -> more likely
+                                         accident.PEDS crash_record 0.585456 higher -> more likely
+person.REST_USE = Not a Motor Vehicle Occupant (count) crash_record 0.585456 higher -> more likely
+person.HELM_USE = Not a Motor Vehicle Occupant (count) crash_record 0.585456 higher -> more likely
+person.HELM_MIS = Not a Motor Vehicle Occupant (count) crash_record 0.585456 higher -> more likely
+person.REST_MIS = Not a Motor Vehicle Occupant (count) crash_record 0.585456 higher -> more likely
+ person.AIR_BAG = Not a Motor Vehicle Occupant (count) crash_record 0.585456 higher -> more likely
+ person.SEAT_IM = Not a Motor Vehicle Occupant (count) crash_record 0.585456 higher -> more likely
+                                       safetyeq.n_rows crash_record 0.585456 higher -> more likely
+                                       nmimpair.n_rows crash_record 0.585455 higher -> more likely
+                                         pbtype.n_rows crash_record 0.585179 higher -> more likely
+                   pbtype.PBSZONE = None Noted (count) crash_record 0.584837 higher -> more likely
+
+Top 25 for y_serious
+                                         description        group      auc             direction
+                   vehicle.TOWED = Not Towed (count)   post_crash 0.720830 higher -> less likely
+                                  accident.MANCOL_IM crash_record 0.670479 higher -> more likely
+           cevent.AOI2 = Not a Motor Vehicle (count) crash_record 0.667325 higher -> more likely
+           vevent.AOI2 = Not a Motor Vehicle (count) crash_record 0.667325 higher -> more likely
+         vehicle.DEFORMED = Disabling Damage (count)   post_crash 0.666633 higher -> more likely
+               person.AIR_BAG = Not Deployed (count) crash_record 0.658444 higher -> less likely
+                                       cevent.n_rows crash_record 0.656113 higher -> more likely
+                                  accident.EVENT1_IM crash_record 0.641801 higher -> more likely
+  person.REST_USE = None Used/Not Applicable (count) crash_record 0.640927 higher -> more likely
+             cevent.AOI1 = Non-Harmful Event (count) crash_record 0.635080 higher -> more likely
+             vevent.AOI1 = Non-Harmful Event (count) crash_record 0.635080 higher -> more likely
+                vsoe.AOI = Non-Harmful Event (count) crash_record 0.635080 higher -> more likely
+             cevent.AOI2 = Non-Harmful Event (count) crash_record 0.630378 higher -> more likely
+             vevent.AOI2 = Non-Harmful Event (count) crash_record 0.630378 higher -> more likely
+  person.REST_MIS = None Used/Not Applicable (count) crash_record 0.629080 higher -> more likely
+                                vehicle.TRAV_SP__max crash_record 0.622484 higher -> more likely
+              vehicle.ROLLOVER = No Rollover (count) crash_record 0.619227 higher -> less likely
+              vehicle.ROLINLOC = No Rollover (count) crash_record 0.619227 higher -> less likely
+                               vehicle.MDLYR_IM__max crash_record 0.608747 higher -> less likely
+person.REST_USE = Shoulder and Lap Belt Used (count) crash_record 0.608496 higher -> less likely
+   person.REST_MIS = No Indication of Misuse (count) crash_record 0.608342 higher -> less likely
+     vehicle.V_ALCH_IM = No Alcohol Involved (count) crash_record 0.608227 higher -> less likely
+                           vehicle.TOWED = 2 (count)   post_crash 0.607527 higher -> more likely
+                                person.MOD_YEAR__max crash_record 0.605283 higher -> less likely
+             vehicle.DEFORMED = Minor Damage (count)   post_crash 0.604876 higher -> less likely
+ year    target  sample_rate  weighted_national_rate  weighted_crashes_millions
+ 2020  y_injury       0.5493                  0.2901                     5.0705
+ 2020 y_serious       0.1430                  0.0320                     5.0588
+ 2021  y_injury       0.5323                  0.2832                     5.9097
+ 2021 y_serious       0.1312                  0.0312                     5.8998
+ 2022  y_injury       0.5098                  0.2787                     5.7433
+ 2022 y_serious       0.1338                  0.0312                     5.7348
+ 2023  y_injury       0.5148                  0.2729                     5.9488
+ 2023 y_serious       0.1350                  0.0301                     5.9403
+ 2024  y_injury       0.5130                  0.2711                     6.0045
+ 2024 y_serious       0.1300                  0.0302                     5.9959
+              feature    target  median_positive  median_negative  rank_biserial  p_value      n
+   person.AGE_IM__min  y_injury             25.0             26.0         0.0431      0.0 159920
+   person.AGE_IM__min y_serious             27.0             25.0        -0.0455      0.0 159516
+   person.AGE_IM__max  y_injury             50.0             48.0        -0.0359      0.0 159920
+   person.AGE_IM__max y_serious             48.0             49.0         0.0197      0.0 159516
+ vehicle.TRAV_SP__max  y_injury             35.0             20.0        -0.1768      0.0  84769
+ vehicle.TRAV_SP__max y_serious             45.0             25.0        -0.3994      0.0  84552
+vehicle.VSPD_LIM__max  y_injury             40.0             40.0        -0.0156      0.0 138406
+vehicle.VSPD_LIM__max y_serious             45.0             40.0        -0.1530      0.0 138047
+vehicle.MDLYR_IM__min  y_injury           2009.0           2010.0         0.0322      0.0 159920
+vehicle.MDLYR_IM__min y_serious           2008.0           2010.0         0.1154      0.0 159516
+    accident.VE_TOTAL  y_injury              2.0              2.0         0.1137      0.0 159920
+    accident.VE_TOTAL y_serious              2.0              2.0         0.1662      0.0 159516
+     accident.PERMVIT  y_injury              2.0              2.0         0.0150      0.0 159920
+     accident.PERMVIT y_serious              2.0              2.0         0.0785      0.0 159516

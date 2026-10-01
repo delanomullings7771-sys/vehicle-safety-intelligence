@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vehicle Safety Intelligence</title>
+  <meta name="description" content="Explainable vehicle-safety decision support built on NHTSA crash (CRSS) and owner-complaint data.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <div class="brand">
+        <span class="mark" aria-hidden="true">◆</span>
+        <div>
+          <h1>Vehicle Safety Intelligence</h1>
+          <p class="sub">NHTSA crash records and owner complaints, combined for human-reviewed safety screening</p>
+        </div>
+      </div>
+      <nav class="tabs" role="tablist">
+        <button role="tab" data-tab="overview" aria-selected="true">Overview</button>
+        <button role="tab" data-tab="complaint">Complaint triage</button>
+        <button role="tab" data-tab="crash">Crash severity</button>
+        <button role="tab" data-tab="vehicle">Vehicle lookup</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div id="api-status" class="banner" hidden></div>
+
+    <section id="overview" class="panel" role="tabpanel">
+      <h2>One question, two kinds of evidence</h2>
+      <p class="lead">Which vehicles and components deserve a closer safety look, and how serious are the incidents behind them?
+        This tool brings together <strong>structured</strong> police-reported crash data (CRSS 2020–2024) and
+        <strong>unstructured</strong> owner-complaint narratives (NHTSA ODI, 1995–2026), linked at make, model and model year.</p>
+      <div class="grid3">
+        <article class="card"><h3>Complaint triage</h3><p>Reads a narrative, recommends the affected component groups and flags reports describing a crash, fire, injury or death.</p></article>
+        <article class="card"><h3>Crash severity</h3><p>Estimates whether a described crash is likely to involve injury, and serious or fatal injury, and shows the factors behind the estimate.</p></article>
+        <article class="card"><h3>Vehicle lookup</h3><p>Combines complaint volume with CRSS-estimated on-road exposure, so vehicles are compared fairly rather than by raw counts.</p></article>
+      </div>
+      <h2>Model performance on untouched test data</h2>
+      <div id="metrics" class="metrics"><p class="muted">Loading…</p></div>
+      <p class="disclaimer" id="disclaimer"></p>
+    </section>
+
+    <section id="complaint" class="panel" role="tabpanel" hidden>
+      <h2>Complaint triage</h2>
+      <p class="muted">Paste an owner complaint narrative. Models: TF-IDF text classifiers trained on 2010–2021 complaints.</p>
+      <form id="complaint-form">
+        <label for="narrative">Narrative</label>
+        <textarea id="narrative" rows="7" required minlength="20" placeholder="e.g. While driving at 45 mph the vehicle lost all power and the brake pedal went hard. I could not stop and rear-ended another car. The airbags did not deploy."></textarea>
+        <div class="row">
+          <button type="submit" class="primary">Analyse narrative</button>
+          <button type="button" class="ghost" id="example-btn">Use an example</button>
+        </div>
+      </form>
+      <div id="complaint-result" class="result" aria-live="polite"></div>
+    </section>
+
+    <section id="crash" class="panel" role="tabpanel" hidden>
+      <h2>Crash severity assessment</h2>
+      <p class="muted">Describe a police-reported crash. Leave a field blank if it is unknown; the result will say so.</p>
+      <form id="crash-form"><div id="crash-fields" class="fields"><p class="muted">Loading form…</p></div>
+        <div class="row"><button type="submit" class="primary">Assess crash</button>
+        <button type="reset" class="ghost">Clear</button></div>
+      </form>
+      <div id="crash-result" class="result" aria-live="polite"></div>
+    </section>
+
+    <section id="vehicle" class="panel" role="tabpanel" hidden>
+      <h2>Vehicle lookup</h2>
+      <p class="muted">Complaints received 2020–2024, set against CRSS-estimated crash involvement over the same years.</p>
+      <div class="pickers">
+        <label>Make <select id="make"></select></label>
+        <label>Model <select id="model" disabled></select></label>
+        <label>Model year <select id="year" disabled></select></label>
+      </div>
+      <div id="vehicle-result" class="result" aria-live="polite"></div>
+      <h3>Highest exposure-adjusted complaint rates</h3>
+      <div class="table-scroll"><table id="top-table"><thead><tr><th>Vehicle</th><th class="num">Complaints</th>
+        <th class="num">Per 10k crash-involved</th><th class="num">Serious share</th></tr></thead><tbody></tbody></table></div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p>MSc Applied Data Science capstone · Data: NHTSA CRSS 2020–2024 and Vehicle Owner Complaints. Outputs support human review only.</p>
+  </footer>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
