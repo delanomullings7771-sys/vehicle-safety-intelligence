@@ -12,5 +12,5 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.12.7
-      - key: ALLOWED_ORIGINS
-        value: "*"   # replace with the Vercel URL once known, e.g. https://vehicle-safety.vercel.app
+      - key: ALLOWED_ORIGINS   # comma-separated; only the deployed web app may call the API from a browser
+        value: https://vehicle-safety-intelligence-web.vercel.app
