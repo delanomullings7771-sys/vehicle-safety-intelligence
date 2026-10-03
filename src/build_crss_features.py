@@ -85,6 +85,8 @@ def read(year: int, table: str) -> pd.DataFrame:
     df = pd.read_csv(crss_extracted_dir(year) / f"{table}.csv", encoding="latin-1", low_memory=False)
     df = df[[c for c in df.columns if not c.endswith("NAME")]]
     df.columns = [c.upper() for c in df.columns]
+    # NHTSA named the weather code "WEATHERCode" in 2020 and "WEATHER" in 2021-2024 (same codes).
+    df = df.rename(columns={"WEATHERCODE": "WEATHER"})
     df["YEAR"] = year
     return df
 
@@ -155,11 +157,15 @@ def aggregate(table: str, df: pd.DataFrame, numeric, vocab) -> pd.DataFrame:
 
 
 def main() -> None:
-    data = {t: {y: read(y, t) for y in CRSS_YEARS} for t in TABLE_LEVEL}
+    # One table at a time (all years together), released before the next, to limit peak memory.
     register, excluded = [], []
     frames = []
-    for table, by_year in data.items():
-        union = pd.concat(by_year.values(), ignore_index=True)
+    base = None
+    for table in TABLE_LEVEL:
+        union = pd.concat([read(y, table) for y in CRSS_YEARS], ignore_index=True)
+        if table == "accident":
+            base = union[["YEAR", "CASENUM", "WEIGHT", "MAX_SEV"]].set_index(["YEAR", "CASENUM"])
+            n_crashes = len(union)
         numeric, categorical = field_lists(table, union)
         for c in union.columns:
             reason = (LEAKAGE.get(c) or IDENTIFIERS.get(c)
@@ -180,11 +186,10 @@ def main() -> None:
                              ("count" if "=" in col or col.endswith("n_rows") else "numeric")})
         frames.append(agg)
         print(f"{table:10s} rows={len(union):>9,} numeric={len(numeric):>3} categorical={len(categorical):>3} features={agg.shape[1]:>4}")
+        del union, train
 
-    acc = data["accident"]
-    acc_all = pd.concat(acc.values(), ignore_index=True)
-    base = acc_all[["YEAR", "CASENUM", "WEIGHT", "MAX_SEV"]].set_index(["YEAR", "CASENUM"])
     X = pd.concat([base] + frames, axis=1)
+    del frames
     # A crash with no rows in a child table has zero units with each code; min/max stay missing.
     child_counts = [c for c in X.columns if "__" in c and not c.startswith("acc__")
                     and not c.endswith(("__min", "__max"))]
@@ -194,7 +199,7 @@ def main() -> None:
     X["y_serious"] = np.select([sev.isin([0, 1, 2]), sev.isin([3, 4])], [0, 1], default=-1).astype("int8")
     X = X.drop(columns="MAX_SEV").reset_index()
     assert X.duplicated(["YEAR", "CASENUM"]).sum() == 0, "crash duplicated during aggregation"
-    assert len(X) == len(acc_all), "row conservation failed"
+    assert len(X) == n_crashes, "row conservation failed"
     X.to_parquet(PROCESSED_DIR / "crss_crash_features.parquet", index=False)
     pd.DataFrame(register).to_csv(TABLE_DIR / "crss_feature_register.csv", index=False)
     pd.DataFrame(excluded).drop_duplicates(["table", "field"]).to_csv(TABLE_DIR / "crss_excluded_fields.csv", index=False)

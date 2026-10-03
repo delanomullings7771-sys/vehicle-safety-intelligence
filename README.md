@@ -13,8 +13,8 @@ The two sources are linked at **make + model + model year** (80% of CRSS crash v
 
 | | Task | Data | Selected model | Test result |
 |---|---|---|---|---|
-| S1 | Injury vs property-damage-only crash | CRSS | Gradient Boosting (1,324 fields from all 28 tables) | ROC-AUC 0.907, PR-AUC 0.919 (baseline 0.513) |
-| S2 | Serious/fatal (K+A) crash | CRSS | Gradient Boosting | ROC-AUC 0.901, PR-AUC 0.641 (baseline 0.130) |
+| S1 | Injury vs property-damage-only crash | CRSS | Gradient Boosting (1,317 fields from all 28 tables) | ROC-AUC 0.906, PR-AUC 0.918 (baseline 0.513) |
+| S2 | Serious/fatal (K+A) crash | CRSS | Gradient Boosting | ROC-AUC 0.902, PR-AUC 0.642 (baseline 0.130) |
 | U1 | Narrative to component groups (multi-label, 19) | Complaints | Linear SVM, TF-IDF | Top-1 accuracy 84.4%, micro-F1 0.740 |
 | U2 | Narrative reports crash/fire/injury/death | Complaints | Linear SVM, TF-IDF | ROC-AUC 0.965, PR-AUC 0.858 (baseline 0.056) |
 

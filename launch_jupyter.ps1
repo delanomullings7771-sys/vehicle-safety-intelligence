@@ -10,4 +10,5 @@ Set-Location -LiteralPath $ProjectRoot
 $env:IPYTHONDIR = Join-Path $ProjectRoot ".ipython"
 $env:JUPYTER_CONFIG_DIR = Join-Path $ProjectRoot ".jupyter"
 New-Item -ItemType Directory -Force -Path $env:IPYTHONDIR, $env:JUPYTER_CONFIG_DIR | Out-Null
-& $Python -m jupyter lab
+# Run the project environment's own JupyterLab (python -m jupyter can dispatch to a system install)
+& (Join-Path $ProjectRoot ".venv\Scripts\jupyter-lab.exe")

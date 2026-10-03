@@ -1,11 +1,27 @@
-2026-10-02T20:30:18 START S1 y_injury
-2026-10-02T21:18:06 END S1 y_injury exit=0
-2026-10-02T21:18:06 START S2 y_serious
-2026-10-02T22:22:23 END S2 y_serious exit=0
-2026-10-02T22:22:23 START compact app models
-2026-10-02T22:23:39 END compact app models exit=0
-2026-10-02T22:23:39 START export artifacts
-2026-10-02T22:23:59 END export artifacts exit=0
-2026-10-02T22:23:59 START api tests
-2026-10-02T22:24:16 END api tests exit=0
+2026-10-03T05:24:54 START build crash features
+2026-10-03T05:28:11 END build crash features exit=0
+2026-10-03T05:28:11 START eda crss
+2026-10-03T05:30:08 END eda crss exit=0
+2026-10-03T05:30:08 START S1 y_injury
+2026-10-03T06:14:54 END S1 y_injury exit=0
+2026-10-03T06:14:54 START S2 y_serious
+2026-10-03T07:18:46 END S2 y_serious exit=0
+2026-10-03T07:18:46 START compact app models
+2026-10-03T07:19:58 END compact app models exit=0
+2026-10-03T07:19:58 START export artifacts
+2026-10-03T07:20:16 END export artifacts exit=0
+2026-10-03T07:20:16 START api tests
+2026-10-03T07:20:33 END api tests exit=0
+2026-10-03T07:20:33 START data dictionary
+2026-10-03T07:21:03 END data dictionary exit=0
+2026-10-03T07:21:03 START notebook 02_Data_Understanding
+2026-10-03T07:21:12 END notebook 02_Data_Understanding exit=0
+2026-10-03T07:21:12 START notebook 03_Data_Preparation
+2026-10-03T07:21:28 END notebook 03_Data_Preparation exit=0
+2026-10-03T07:21:28 START notebook 04_Modelling
+2026-10-03T07:21:37 END notebook 04_Modelling exit=0
+2026-10-03T07:21:37 START notebook 05_Evaluation
+2026-10-03T07:21:59 END notebook 05_Evaluation exit=0
+2026-10-03T07:21:59 START notebook 06_Deployment
+2026-10-03T07:23:07 END notebook 06_Deployment exit=0
 DONE

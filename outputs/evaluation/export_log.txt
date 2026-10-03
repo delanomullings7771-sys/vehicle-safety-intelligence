@@ -11,15 +11,15 @@ vehicle_profiles.parquet              0.4 MB
    "task": "S1 Injury crash (CRSS)",
    "model": "Gradient Boosting",
    "headline_metric": "ROC-AUC, 2024 test",
-   "headline_value": "0.907",
-   "detail": "PR-AUC 0.919 vs baseline 0.513; app form model 0.849"
+   "headline_value": "0.906",
+   "detail": "PR-AUC 0.918 vs baseline 0.513; app form model 0.849"
   },
   {
    "task": "S2 Serious or fatal crash (CRSS)",
    "model": "Gradient Boosting",
    "headline_metric": "ROC-AUC, 2024 test",
-   "headline_value": "0.901",
-   "detail": "PR-AUC 0.641 vs baseline 0.130; app form model 0.853"
+   "headline_value": "0.902",
+   "detail": "PR-AUC 0.642 vs baseline 0.130; app form model 0.853"
   },
   {
    "task": "U1 Component routing (complaints)",

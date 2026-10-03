@@ -321,6 +321,7 @@ y_injury,vsoe__SOE=63,vsoe.SOE = Ran Off Roadway - Right (count),crash_record,0.
 y_injury,vehicle__P_CRASH2=60,vehicle.P_CRASH2 = From adjacent lane (same direction) over left lane line (count),crash_record,0.5209093514050762,higher -> less likely,0.061449474737368684
 y_injury,acc__WEATHR_IM,accident.WEATHR_IM,crash_record,0.5208883199107297,higher -> more likely,1.0
 y_injury,person__VPICBODYCLASS=60.0,person.VPICBODYCLASS = 60 (count),crash_record,0.520730261357168,higher -> less likely,0.21209979989994998
+y_injury,weather__WEATHER=1,weather.WEATHER = Clear (count),crash_record,0.5206498574493132,higher -> more likely,0.7299524762381191
 y_injury,vpicdecode__DRIVETYPEID=7.0,vpicdecode.DRIVETYPEID = 7 (count),crash_record,0.520483487605623,higher -> less likely,0.4411455727863932
 y_injury,vehicle__P_CRASH2=10,vehicle.P_CRASH2 = Over the lane line on left side of travel lane (count),crash_record,0.520386259224459,higher -> less likely,0.07556903451725863
 y_injury,vehicle__P_CRASH2=66,"vehicle.P_CRASH2 = From crossing street, across path (count)",crash_record,0.5199271075623835,higher -> more likely,0.07841420710355178
@@ -359,7 +360,6 @@ y_injury,vehicle__ROLINLOC=5,vehicle.ROLINLOC = On Roadside (count),crash_record
 y_injury,person__DEVMOTOR=0.0,person.DEVMOTOR = 0 (count),crash_record,0.5166306942073305,higher -> more likely,0.01783391695847924
 y_injury,person__DEVTYPE=0.0,person.DEVTYPE = 0 (count),crash_record,0.5165850603334056,higher -> more likely,0.01775887943971986
 y_injury,pbtype__PBSWALK=1,pbtype.PBSWALK = Yes (count),crash_record,0.5164229422537694,higher -> more likely,0.017746373186593296
-y_injury,weather__WEATHERCODE=1.0,weather.WEATHERCODE = 1 (count),crash_record,0.516369921935725,higher -> more likely,0.23730615307653827
 y_injury,vehicle__UNDEROVERRIDE=8.0,vehicle.UNDEROVERRIDE = Not Reported (count),crash_record,0.5162876693563065,higher -> less likely,0.13569909954977488
 y_injury,vehicle__TOWED=7,vehicle.TOWED = 7 (count),post_crash,0.5161319893258245,higher -> more likely,0.049749874937468734
 y_injury,person__IMPACT1=1.0,person.IMPACT1 = 1 (count),crash_record,0.5161304916122059,higher -> less likely,0.09834917458729364
@@ -533,6 +533,7 @@ y_injury,vpicdecode__FUELDELIVERYINJECTIONTYPEID=1.0,vpicdecode.FUELDELIVERYINJE
 y_injury,vpicdecode__GROSSVEHICLEWEIGHTRATINGFROMID=15.0,vpicdecode.GROSSVEHICLEWEIGHTRATINGFROMID = 15 (count),crash_record,0.5087384914304004,higher -> less likely,0.06922836418209105
 y_injury,vehicle__SPEEDREL=4,"vehicle.SPEEDREL = Yes, Too Fast for Conditions (count)",crash_record,0.508724641975233,higher -> more likely,0.08043396698349174
 y_injury,person__REST_USE=99,person.REST_USE = Reported as Unknown (count),crash_record,0.5087148857211478,higher -> less likely,0.1033016508254127
+y_injury,weather__WEATHER=2,weather.WEATHER = Rain (count),crash_record,0.5084786026371375,higher -> less likely,0.08324787393696849
 y_injury,pbtype__PEDCTYPE=781,pbtype.PEDCTYPE = Motorist Left Turn - Parallel Paths (count),crash_record,0.5084414659331028,higher -> more likely,0.009010755377688844
 y_injury,vpicdecode__WHEELSIZEREARIN__max,vpicdecode.WHEELSIZEREARIN__max,crash_record,0.508364285092396,higher -> less likely,1.0
 y_injury,vsoe__AOI=5,vsoe.AOI = 5 Clock Point (count),crash_record,0.5083574282643029,higher -> less likely,0.02927088544272136
@@ -626,14 +627,13 @@ y_injury,vehicle__BODY_TYP=15,"vehicle.BODY_TYP = Large utility (ANSI D16.1 Util
 y_injury,vehicle__VTRAFWAY=3,"vehicle.VTRAFWAY = Two-Way,  Divided, Positive  Median Barrier (count)",crash_record,0.5056780569853394,higher -> less likely,0.16037393696848423
 y_injury,vehicle__VNUM_LAN=5,vehicle.VNUM_LAN = Five lanes (count),crash_record,0.5056392118045273,higher -> more likely,0.08626813406703351
 y_injury,vehicle__PCRASH1_IM=10,vehicle.PCRASH1_IM = Turning Right (count),crash_record,0.5056372257640522,higher -> less likely,0.06675212606303152
-y_injury,weather__WEATHER=2.0,weather.WEATHER = Rain (count),crash_record,0.5055991430199477,higher -> less likely,0.05248249124562281
 y_injury,vehicle__VTRAFWAY=7,"vehicle.VTRAFWAY = Two-Way Divided, Unknown if Unprotected Median or Positive Median Barrier (count)",crash_record,0.5055405468585346,higher -> less likely,0.028570535267633815
 y_injury,vpicdecode__ADAPTIVEDRIVINGBEAMID=1.0,vpicdecode.ADAPTIVEDRIVINGBEAMID = 1 (count),crash_record,0.5055384571241552,higher -> less likely,0.09242746373186593
 y_injury,person__BODY_TYP=15.0,person.BODY_TYP = 15 (count),crash_record,0.5055346265724323,higher -> less likely,0.0882503751875938
-y_injury,weather__WEATHER=10.0,weather.WEATHER = Cloudy (count),crash_record,0.5055338954558367,higher -> less likely,0.08967608804402201
 y_injury,person__VPICBODYCLASS=13.0,person.VPICBODYCLASS = 13 (count),crash_record,0.505514315283665,higher -> less likely,0.48706228114057026
 y_injury,person__AIR_BAG=2,"person.AIR_BAG = Deployed- Side (door, seatback) (count)",crash_record,0.505466845925592,higher -> more likely,0.013694347173586793
 y_injury,vpicdecode__BODYCLASSID=11.0,vpicdecode.BODYCLASSID = 11 (count),crash_record,0.5054668187657958,higher -> less likely,0.01760255127563782
+y_injury,weather__WEATHER=10,weather.WEATHER = Cloudy (count),crash_record,0.5054340453693714,higher -> less likely,0.13520510255127563
 y_injury,vehicle__VTRAFCON=2,vehicle.VTRAFCON = Traffic control signal (on colors) with Pedestrian Signal (count),crash_record,0.5054331512155019,higher -> more likely,0.012825162581290645
 y_injury,person__ROLLOVER=9.0,person.ROLLOVER = 9 (count),crash_record,0.5054071128205703,higher -> more likely,0.009836168084042021
 y_injury,vehicle__ROLLOVER=9,vehicle.ROLLOVER = 9 (count),crash_record,0.5054033846283105,higher -> more likely,0.009836168084042021
@@ -648,6 +648,7 @@ y_injury,acc__RELJCT1_IM,accident.RELJCT1_IM,crash_record,0.5051329000606712,hig
 y_injury,maneuver__MANEUVER=4,maneuver.MANEUVER = Contact Motor Vehicle (In this crash) (count),crash_record,0.5051269172128416,higher -> more likely,0.06972861430715357
 y_injury,vehicle__CARGO_BT=99,vehicle.CARGO_BT = Unknown (count),crash_record,0.5051092748842814,higher -> less likely,0.03885692846423212
 y_injury,person__DEVMOTOR=1.0,person.DEVMOTOR = 1 (count),crash_record,0.5050978778174197,higher -> more likely,0.005502751375687844
+y_injury,weather__WEATHER=4,weather.WEATHER = Snow (count),crash_record,0.5050677893944926,higher -> less likely,0.01466983491745873
 y_injury,vpicdecode__DESTINATIONMARKETID=6.0,vpicdecode.DESTINATIONMARKETID = 6 (count),crash_record,0.505065623047509,higher -> more likely,0.005721610805402701
 y_injury,vehicle__SPEEDREL=5,"vehicle.SPEEDREL = Yes, Specifics Unknown (count)",crash_record,0.5050426365188132,higher -> more likely,0.014288394197098549
 y_injury,vpicdecode__GROSSVEHICLEWEIGHTRATINGFROMID=17.0,vpicdecode.GROSSVEHICLEWEIGHTRATINGFROMID = 17 (count),crash_record,0.5050302602863499,higher -> less likely,0.03147823911955978
@@ -689,7 +690,6 @@ y_injury,pbtype__PEDCGP=400,pbtype.PEDCGP = Walking/Running Along Roadway (count
 y_injury,pbtype__PEDCGP=100,pbtype.PEDCGP = Unusual Circumstances (count),crash_record,0.5043687198670068,higher -> more likely,0.004702351175587794
 y_injury,nmcrash__NMCC=6,"nmcrash.NMCC = Inattentive (Talking, Eating, Etc.) (count)",crash_record,0.5043451216149236,higher -> more likely,0.004677338669334667
 y_injury,pbtype__PEDCTYPE=770,pbtype.PEDCTYPE = Motorist Failed to Yield (count),crash_record,0.5043128319925575,higher -> more likely,0.004589794897448724
-y_injury,weather__WEATHER=1.0,weather.WEATHER = Clear (count),crash_record,0.5042799355135884,higher -> more likely,0.4926463231615808
 y_injury,parkwork__PMODYEAR__min,parkwork.PMODYEAR__min,crash_record,0.5042737064221727,higher -> less likely,1.0
 y_injury,pbtype__PEDDIR=1,pbtype.PEDDIR = Northbound (count),crash_record,0.5042464791974323,higher -> more likely,0.004546023011505753
 y_injury,vpicdecode__LANEKEEPINGASSISTANCEID=5.0,vpicdecode.LANEKEEPINGASSISTANCEID = 5 (count),crash_record,0.5042393138780121,higher -> less likely,0.06782766383191596
@@ -727,7 +727,6 @@ y_injury,vpicdecode__SEATROWSCOUNT__min,vpicdecode.SEATROWSCOUNT__min,crash_reco
 y_injury,driverrf__DRIVERRF=51,driverrf.DRIVERRF = Driving on Wrong Side of Two-Way Trafficway (Intentional or Unintentional) (count),crash_record,0.5035278549306476,higher -> more likely,0.00735367683841921
 y_injury,driverrf__DRIVERRF=58,driverrf.DRIVERRF = Overcorrecting (count),crash_record,0.503484181821318,higher -> more likely,0.012368684342171086
 y_injury,vpicdecode__DESTINATIONMARKETID=3.0,vpicdecode.DESTINATIONMARKETID = 3 (count),crash_record,0.5034581176010309,higher -> more likely,0.003789394697348674
-y_injury,weather__WEATHER=4.0,weather.WEATHER = Snow (count),crash_record,0.5034460701119973,higher -> less likely,0.009823661830915457
 y_injury,cevent__AOI2=10,cevent.AOI2 = 10 Clock Point (count),crash_record,0.5034396245271773,higher -> less likely,0.02488119059529765
 y_injury,vevent__AOI2=10,vevent.AOI2 = 10 Clock Point (count),crash_record,0.5034396245271773,higher -> less likely,0.02488119059529765
 y_injury,drimpair__DRIMPAIR=2,drimpair.DRIMPAIR = Asleep or Fatigued (count),crash_record,0.503423192614969,higher -> more likely,0.015101300650325163
@@ -759,7 +758,6 @@ y_injury,vpicdecode__TRUCKBODYCABTYPEID=3.0,vpicdecode.TRUCKBODYCABTYPEID = 3 (c
 y_injury,pbtype__BIKECGP=210,pbtype.BIKECGP = Motorist Left Turn / Merge (count),crash_record,0.5029264667092512,higher -> more likely,0.0031453226613306655
 y_injury,pbtype__PEDLEG=9,pbtype.PEDLEG = Unknown/None of the Above (count),crash_record,0.5028939404983711,higher -> more likely,0.0031640820410205103
 y_injury,person__ATST_TYP=95,person.ATST_TYP = Not Reported (count),post_crash,0.5028823986054286,higher -> more likely,0.2521135567783892
-y_injury,weather__WEATHERCODE=2.0,weather.WEATHERCODE = 2 (count),crash_record,0.5028794596171898,higher -> less likely,0.030765382691345673
 y_injury,nmimpair__NMIMPAIR=9,"nmimpair.NMIMPAIR = Under the Influence of Alcohol, Drugs or Medication (count)",crash_record,0.50286241111481,higher -> more likely,0.003064032016008004
 y_injury,nmprior__NMACTION=6,nmprior.NMACTION = Movement Along Roadway Against Traffic (In or Adjacent to Travel Lane) (count),crash_record,0.5028557527259218,higher -> more likely,0.003070285142571286
 y_injury,vpicdecode__FUELDELIVERYINJECTIONTYPEID=4.0,vpicdecode.FUELDELIVERYINJECTIONTYPEID = 4 (count),crash_record,0.5028458125544879,higher -> less likely,0.08701850925462731
@@ -847,7 +845,6 @@ y_injury,person__DRUGS=9,person.DRUGS = Reported as Unknown (count),crash_record
 y_injury,vpicdecode__WHEELBASETYPEID=5.0,vpicdecode.WHEELBASETYPEID = 5 (count),crash_record,0.5019403834447285,higher -> less likely,0.03514257128564282
 y_injury,pbtype__PBPTYPE=8,pbtype.PBPTYPE = Person on a Personal Conveyance (count),crash_record,0.5019254425739348,higher -> more likely,0.002069784892446223
 y_injury,person__VPICBODYCLASS=999.0,person.VPICBODYCLASS = 999 (count),crash_record,0.501921309025641,higher -> more likely,0.0974424712356178
-y_injury,weather__WEATHER=98.0,weather.WEATHER = Not Reported (count),crash_record,0.5019188279861051,higher -> less likely,0.016439469734867432
 y_injury,pbtype__PEDPOS=9,pbtype.PEDPOS = Other/Unknown (count),crash_record,0.5019085308124943,higher -> more likely,0.002038519259629815
 y_injury,vpictrailerdecode__n_rows,vpictrailerdecode.n_rows,crash_record,0.501904941794566,higher -> less likely,0.00834167083541771
 y_injury,vpictrailerdecode__VEHICLETYPEID=6,vpictrailerdecode.VEHICLETYPEID = 6 (count),crash_record,0.501904941794566,higher -> less likely,0.00834167083541771
@@ -883,7 +880,6 @@ y_injury,pbtype__PEDSNR=11c,"pbtype.PEDSNR = Motorist turning left - Crash Occur
 y_injury,vpicdecode__BODYCLASSID=2.0,vpicdecode.BODYCLASSID = 2 (count),crash_record,0.5016502761598034,higher -> less likely,0.04416583291645823
 y_injury,person__IMPACT1=62.0,person.IMPACT1 = 62 (count),crash_record,0.5016422467506811,higher -> less likely,0.027807653826913456
 y_injury,person__GVWR_FROM=15.0,person.GVWR_FROM = 15 (count),crash_record,0.5016379149201755,higher -> less likely,0.004602301150575288
-y_injury,weather__WEATHERCODE=4.0,weather.WEATHERCODE = 4 (count),crash_record,0.5016217192824952,higher -> less likely,0.004846173086543271
 y_injury,person__VPICBODYCLASS=8.0,person.VPICBODYCLASS = 8 (count),crash_record,0.5016210240388097,higher -> less likely,0.022192346173086543
 y_injury,person__VPICBODYCLASS=5.0,person.VPICBODYCLASS = 5 (count),crash_record,0.5016208056614886,higher -> less likely,0.053626813406703354
 y_injury,vehicle__VPICBODYCLASS=8,vehicle.VPICBODYCLASS = Crossover Utility Vehicle (CUV) (count),crash_record,0.501618964682584,higher -> less likely,0.022123561780890446
@@ -933,6 +929,7 @@ y_injury,vevent__AOI1=62,vevent.AOI1 = Left-Front Side (count),crash_record,0.50
 y_injury,vpicdecode__DRIVETYPEID=4.0,vpicdecode.DRIVETYPEID = 4 (count),crash_record,0.5013942088911635,higher -> less likely,0.03568034017008504
 y_injury,parkwork__PMAN_COLL=6,parkwork.PMAN_COLL = Angle (count),crash_record,0.5013882008459509,higher -> more likely,0.002645072536268134
 y_injury,parkwork__PIMPACT1=11,parkwork.PIMPACT1 = 11 Clock Point (count),post_crash,0.5013737924170583,higher -> less likely,0.0030577788894447224
+y_injury,weather__WEATHER=98,weather.WEATHER = Not Reported (count),crash_record,0.5013732106008454,higher -> less likely,0.03209729864932466
 y_injury,cevent__AOI1=62,cevent.AOI1 = Left-Front Side (count),crash_record,0.5013724435328433,higher -> less likely,0.013900700350175087
 y_injury,vehicle__IMPACT1_IM=62,vehicle.IMPACT1_IM = Left-Front Side (count),crash_record,0.501367945525203,higher -> less likely,0.02835792896448224
 y_injury,parkwork__PMAKE=12,parkwork.PMAKE = Ford (count),crash_record,0.5013588772146267,higher -> less likely,0.006509504752376188
@@ -1103,7 +1100,6 @@ y_injury,person__GVWR_FROM=99.0,person.GVWR_FROM = 99 (count),crash_record,0.500
 y_injury,parkwork__PHOUR=19,parkwork.PHOUR = 7:00pm-7:59pm (count),crash_record,0.5005580017813611,higher -> less likely,0.0019384692346173086
 y_injury,vehicle__GVWR_FROM=99,vehicle.GVWR_FROM = Reported as Unknown (count),crash_record,0.500552315100905,higher -> less likely,0.004195847923961981
 y_injury,person__GVWR_TO=99.0,person.GVWR_TO = 99 (count),crash_record,0.5005480326447111,higher -> less likely,0.004227113556778389
-y_injury,weather__WEATHERCODE=98.0,weather.WEATHERCODE = 98 (count),crash_record,0.5005456173852597,higher -> more likely,0.015657828914457227
 y_injury,vpicdecode__FUELTYPEPRIMARYID=2.0,vpicdecode.FUELTYPEPRIMARYID = 2 (count),crash_record,0.5005448153078093,higher -> more likely,0.00891695847923962
 y_injury,vehicle__GVWR_TO=99,vehicle.GVWR_TO = Reported as Unknown (count),crash_record,0.5005412963087776,higher -> less likely,0.004220860430215107
 y_injury,vpicdecode__DESTINATIONMARKETID=16.0,vpicdecode.DESTINATIONMARKETID = 16 (count),crash_record,0.5005382978986725,higher -> less likely,0.01501375687843922
@@ -1128,6 +1124,7 @@ y_injury,nmdistract__NMDISTRACT=12,"nmdistract.NMDISTRACT = Distracted by Animal
 y_injury,parkwork__PHOUR=23,parkwork.PHOUR = 11:00pm-11:59pm (count),crash_record,0.5004665698187896,higher -> less likely,0.0015695347673836918
 y_injury,parkwork__PBODYTYP=6,parkwork.PBODYTYP = Station Wagon (excluding van and truck based) (count),crash_record,0.500466284483936,higher -> less likely,0.0020760380190095046
 y_injury,vpicdecode__AXLECONFIGURATIONID=2.0,vpicdecode.AXLECONFIGURATIONID = 2 (count),crash_record,0.5004561158876264,higher -> less likely,0.0015007503751875938
+y_injury,weather__WEATHER=99,weather.WEATHER = Reported as Unknown (count),crash_record,0.5004533042207446,higher -> less likely,0.0015570285142571286
 y_injury,parkwork__PIMPACT1=61,parkwork.PIMPACT1 = Left (count),post_crash,0.5004379339739815,higher -> less likely,0.001306903451725863
 y_injury,crashrf__CRASHRF=28,crashrf.CRASHRF = Regular Congestion (count),crash_record,0.5004340041241595,higher -> less likely,0.002469984992496248
 y_injury,person__IMPACT1=9.0,person.IMPACT1 = 9 (count),crash_record,0.5004329767616941,higher -> more likely,0.045053776888444225
@@ -1158,7 +1155,6 @@ y_injury,distract__DRDISTRACT=3,distract.DRDISTRACT = By Other Occupant(s) (coun
 y_injury,distract__DRDISTRACT=96,distract.DRDISTRACT = Not Reported (count),crash_record,0.5003895761137885,higher -> less likely,0.5092608804402201
 y_injury,person__BODY_TYP=49.0,person.BODY_TYP = 49 (count),crash_record,0.5003871493938451,higher -> more likely,0.045679089544772386
 y_injury,parkwork__PBODYTYP=20,"parkwork.PBODYTYP = Minivan (Chrysler Town and Country, Caravan, Grand Caravan, Voyager, Voyager, Honda-Odyssey, ...) (count)",crash_record,0.5003859081283601,higher -> less likely,0.0014819909954977488
-y_injury,weather__WEATHER=99.0,weather.WEATHER = Reported as Unknown (count),crash_record,0.5003849494503505,higher -> less likely,0.0010567783891945973
 y_injury,person__REST_USE=1,person.REST_USE = Shoulder Belt Only Used (count),crash_record,0.5003825843501759,higher -> more likely,0.009292146073036519
 y_injury,parkwork__PHOUR=18,parkwork.PHOUR = 6:00pm-6:59pm (count),crash_record,0.5003800159440124,higher -> less likely,0.0019009504752376188
 y_injury,nmimpair__NMIMPAIR=8,"nmimpair.NMIMPAIR = Emotional (depressed, angry, disturbed, etc.) (count)",crash_record,0.5003771450122572,higher -> more likely,0.00040020010005002504
@@ -1290,16 +1286,13 @@ y_injury,vpicdecode__REARAUTOMATICEMERGENCYBRAKINGID=3.0,vpicdecode.REARAUTOMATI
 y_injury,parkwork__PSP_USE=98,parkwork.PSP_USE = 98 (count),crash_record,0.5001203695480059,higher -> less likely,0.0003251625812906453
 y_injury,vpicdecode__ENTERTAINMENTSYSTEMID=1.0,vpicdecode.ENTERTAINMENTSYSTEMID = 1 (count),crash_record,0.5001167714244813,higher -> more likely,0.0021885942971485743
 y_injury,person__TOW_VEH=0.0,person.TOW_VEH = 0 (count),crash_record,0.5001150943463123,higher -> more likely,0.9879064532266133
-y_injury,weather__WEATHERCODE=5.0,weather.WEATHERCODE = 5 (count),crash_record,0.500114136453268,higher -> more likely,0.0014132066033016508
 y_injury,vpicdecode__BLINDSPOTINTERVENTIONID=3.0,vpicdecode.BLINDSPOTINTERVENTIONID = 3 (count),crash_record,0.5001136303077012,higher -> less likely,0.0012381190595297648
-y_injury,weather__WEATHER=5.0,"weather.WEATHER = Fog, Smog, Smoke (count)",crash_record,0.5001073468181967,higher -> less likely,0.002670085042521261
 y_injury,parkwork__PIMPACT1=6,parkwork.PIMPACT1 = 6 Clock Point (count),post_crash,0.5001048383048785,higher -> less likely,0.0125
 y_injury,vpicdecode__GROSSCOMBWEIGHTRATINGFROMID=5.0,vpicdecode.GROSSCOMBWEIGHTRATINGFROMID = 5 (count),crash_record,0.5001034659502037,higher -> less likely,0.00035642821410705354
 y_injury,vpicdecode__FORWARDCOLLISIONWARNINGID=2.0,vpicdecode.FORWARDCOLLISIONWARNINGID = 2 (count),crash_record,0.5001022662093784,higher -> more likely,0.0030390195097548776
 y_injury,vpictrailerdecode__TRAILERBODYTYPEID=5.0,vpictrailerdecode.TRAILERBODYTYPEID = 5 (count),crash_record,0.500101928595842,higher -> less likely,0.00033141570785392695
 y_injury,parkwork__PEM_USE=2,"parkwork.PEM_USE = Non-Emergency, Non-Transport (count)",crash_record,0.5001014375216073,higher -> less likely,0.00011880940470235117
 y_injury,parkwork__PTOWED=6,parkwork.PTOWED = Towed (count),post_crash,0.5000999132761647,higher -> more likely,0.002157328664332166
-y_injury,weather__WEATHERCODE=10.0,weather.WEATHERCODE = 10 (count),crash_record,0.5000998500864652,higher -> more likely,0.04552901450725363
 y_injury,vpicdecode__BUSLENGTHFT__min,vpicdecode.BUSLENGTHFT__min,crash_record,0.5000955224162753,higher -> less likely,1.0
 y_injury,vpicdecode__BUSLENGTHFT__max,vpicdecode.BUSLENGTHFT__max,crash_record,0.5000955224162753,higher -> less likely,1.0
 y_injury,vpicdecode__AIRBAGLOCSEATCUSHIONID=4.0,vpicdecode.AIRBAGLOCSEATCUSHIONID = 4 (count),crash_record,0.5000953662866953,higher -> less likely,0.005133816908454227
@@ -1331,7 +1324,6 @@ y_injury,vpicdecode__AXLESCOUNT__max,vpicdecode.AXLESCOUNT__max,crash_record,0.5
 y_injury,vpictrailerdecode__TRAILERLENGTHFT__max,vpictrailerdecode.TRAILERLENGTHFT__max,crash_record,0.5000742978989839,higher -> less likely,1.0
 y_injury,vpicdecode__EVDRIVEUNITID=2.0,vpicdecode.EVDRIVEUNITID = 2 (count),crash_record,0.5000725533923036,higher -> more likely,0.0005565282641320661
 y_injury,vpicdecode__ENGINEELECTRIFICATIONLEVELID=4.0,vpicdecode.ENGINEELECTRIFICATIONLEVELID = 4 (count),crash_record,0.5000706393331382,higher -> more likely,0.005496498249124562
-y_injury,weather__WEATHERCODE=99.0,weather.WEATHERCODE = 99 (count),crash_record,0.5000683547703941,higher -> less likely,0.0005002501250625312
 y_injury,parkwork__PCARGTYP=3,parkwork.PCARGTYP = Flatbed (count),crash_record,0.5000676457898174,higher -> more likely,0.0001250625312656328
 y_injury,vpicdecode__BATTERYTYPEID=3.0,vpicdecode.BATTERYTYPEID = 3 (count),crash_record,0.5000659935950457,higher -> more likely,0.00434592296148074
 y_injury,vehicle__BDYTYP_IM=6.0,vehicle.BDYTYP_IM = 6 (count),crash_record,0.5000642547401148,higher -> less likely,0.027676338169084543
@@ -1429,6 +1421,7 @@ y_injury,vpicdecode__CHARGERLEVELID=2.0,vpicdecode.CHARGERLEVELID = 2 (count),cr
 y_injury,vpicdecode__GROSSCOMBWEIGHTRATINGFROMID=7.0,vpicdecode.GROSSCOMBWEIGHTRATINGFROMID = 7 (count),crash_record,0.50000871625368,higher -> more likely,6.25312656328164e-05
 y_injury,parkwork__PGVWR_TO=17,"parkwork.PGVWR_TO = Class 7: 26,001 - 33,000 lbs. (11,794 - 14,969 kg) (count)",crash_record,0.5000084710305487,higher -> more likely,0.0001688344172086043
 y_injury,vpictrailerdecode__TRAILERTYPECONNECTIONID=3.0,vpictrailerdecode.TRAILERTYPECONNECTIONID = 3 (count),crash_record,0.5000069353246139,higher -> more likely,0.00019384692346173087
+y_injury,weather__WEATHER=5,"weather.WEATHER = Fog, Smog, Smoke (count)",crash_record,0.5000067896350712,higher -> more likely,0.004083291645822912
 y_injury,vpictrailerdecode__GROSSVEHICLEWEIGHTRATINGFROMID=5.0,vpictrailerdecode.GROSSVEHICLEWEIGHTRATINGFROMID = 5 (count),crash_record,0.5000066602728048,higher -> less likely,6.253126563281641e-06
 y_injury,vpicdecode__BATTERYMODULESPERPACK__min,vpicdecode.BATTERYMODULESPERPACK__min,crash_record,0.5000058928908165,higher -> more likely,1.0
 y_injury,vpicdecode__BATTERYMODULESPERPACK__max,vpicdecode.BATTERYMODULESPERPACK__max,crash_record,0.5000058928908165,higher -> more likely,1.0
@@ -1869,6 +1862,7 @@ y_serious,nmcrash__NMCC=12,nmcrash.NMCC = Improper Crossing of Roadway or Inters
 y_serious,person__IMPACT1=1.0,person.IMPACT1 = 1 (count),crash_record,0.5132237137321034,higher -> less likely,0.09834750119110308
 y_serious,safetyeq__NMLIGHT=1,safetyeq.NMLIGHT = No (count),crash_record,0.5131069464553224,higher -> more likely,0.027746432959703103
 y_serious,vpicdecode__GROSSVEHICLEWEIGHTRATINGFROMID=14.0,vpicdecode.GROSSVEHICLEWEIGHTRATINGFROMID = 14 (count),crash_record,0.5130224748775818,higher -> less likely,0.2016913663833095
+y_serious,weather__WEATHER=1,weather.WEATHER = Clear (count),crash_record,0.5129919563114109,higher -> more likely,0.7297512475237594
 y_serious,distract__DRDISTRACT=96,distract.DRDISTRACT = Not Reported (count),crash_record,0.5129664218764702,higher -> less likely,0.5087201283883749
 y_serious,pbtype__PBAGE__min,pbtype.PBAGE__min,crash_record,0.5128493768861039,higher -> more likely,0.9999373103638507
 y_serious,driverrf__DRIVERRF=36,"driverrf.DRIVERRF = Operating the Vehicle in an Erratic, Reckless or Negligent Manner. (count)",crash_record,0.5128448993606312,higher -> more likely,0.034115699992477246
@@ -1878,7 +1872,6 @@ y_serious,vpicdecode__AIRBAGLOCSEATCUSHIONID=2.0,vpicdecode.AIRBAGLOCSEATCUSHION
 y_serious,person__HELM_USE=19,"person.HELM_USE = Helmet, Unknown if DOT-Compliant (count)",crash_record,0.5125523122986018,higher -> more likely,0.01683843626971589
 y_serious,pbtype__PBAGE__max,pbtype.PBAGE__max,crash_record,0.512510500603957,higher -> more likely,0.9999686551819253
 y_serious,acc__URBANICITY,accident.URBANICITY,crash_record,0.5124224160744638,higher -> more likely,1.0
-y_serious,weather__WEATHERCODE=1.0,weather.WEATHERCODE = 1 (count),crash_record,0.5123040855092896,higher -> more likely,0.23709220391684846
 y_serious,safetyeq__NMPROPAD=1,safetyeq.NMPROPAD = No (count),crash_record,0.5122963379523309,higher -> more likely,0.026843702199152435
 y_serious,vpicdecode__WHEELSIZEREARIN__min,vpicdecode.WHEELSIZEREARIN__min,crash_record,0.5121398688350478,higher -> less likely,1.0
 y_serious,vpicdecode__DRIVETYPEID=3.0,vpicdecode.DRIVETYPEID = 3 (count),crash_record,0.5121048699010616,higher -> less likely,0.08389127109506256
@@ -1948,6 +1941,7 @@ y_serious,vsoe__AOI=1,vsoe.AOI = 1 Clock Point (count),crash_record,0.5086570798
 y_serious,person__FIRE_EXP=1.0,person.FIRE_EXP = 1 (count),crash_record,0.508656906936512,higher -> more likely,0.004582612402517615
 y_serious,vehicle__MAKE=99,vehicle.MAKE = Unknown Make (count),crash_record,0.508468920253256,higher -> less likely,0.04731186840191579
 y_serious,vpicdecode__PLANTCOUNTRYID=15.0,vpicdecode.PLANTCOUNTRYID = 15 (count),crash_record,0.5084664845329017,higher -> less likely,0.07870683818551118
+y_serious,weather__WEATHER=2,weather.WEATHER = Rain (count),crash_record,0.5084601486170022,higher -> less likely,0.0832392988791093
 y_serious,vpicdecode__ENGINETURBOID=2.0,vpicdecode.ENGINETURBOID = 2 (count),crash_record,0.5084433525461878,higher -> less likely,0.09701221194112189
 y_serious,vpicdecode__PRETENSIONERID=1.0,vpicdecode.PRETENSIONERID = 1 (count),crash_record,0.5084310630930579,higher -> less likely,0.07540309436044033
 y_serious,person__MAKE=99.0,person.MAKE = 99 (count),crash_record,0.508421256008139,higher -> less likely,0.047374558038065145
@@ -1998,7 +1992,6 @@ y_serious,maneuver__MANEUVER=5,"maneuver.MANEUVER = Pedestrian, Pedalcyclist or 
 y_serious,person__BODY_TYP=5.0,person.BODY_TYP = 5 (count),crash_record,0.5061463654262299,higher -> less likely,0.04420246244890794
 y_serious,vehicle__BODY_TYP=5,vehicle.BODY_TYP = 5-door/4-door hatchback (count),crash_record,0.5061304168750802,higher -> less likely,0.044189924521678074
 y_serious,vehicle__MAKE=2,vehicle.MAKE = Jeep / Kaiser-Jeep / Willys- Jeep (count),crash_record,0.5061090302538782,higher -> less likely,0.05984352666817122
-y_serious,weather__WEATHER=2.0,weather.WEATHER = Rain (count),crash_record,0.506027040041169,higher -> less likely,0.05249003234785225
 y_serious,person__MAKE=2.0,person.MAKE = 2 (count),crash_record,0.5060184605138313,higher -> less likely,0.059950099049625116
 y_serious,vehicle__VNUM_LAN=3,vehicle.VNUM_LAN = Three lanes (count),crash_record,0.5060026298362983,higher -> less likely,0.14005491612126683
 y_serious,cevent__AOI2=1,cevent.AOI2 = 1 Clock Point (count),crash_record,0.5059638821869044,higher -> less likely,0.04345645577873066
@@ -2034,6 +2027,7 @@ y_serious,pbtype__PEDLOC=1,pbtype.PEDLOC = At Intersection (count),crash_record,
 y_serious,vpicdecode__ENGINECYLINDERSCOUNT__max,vpicdecode.ENGINECYLINDERSCOUNT__max,crash_record,0.5053228087154273,higher -> less likely,1.0
 y_serious,drimpair__DRIMPAIR=2,drimpair.DRIMPAIR = Asleep or Fatigued (count),crash_record,0.505319778778287,higher -> more likely,0.015095664384763912
 y_serious,vpicdecode__BODYCLASSID=5.0,vpicdecode.BODYCLASSID = 5 (count),crash_record,0.5053006225599905,higher -> less likely,0.06213796735123749
+y_serious,weather__WEATHER=10,weather.WEATHER = Cloudy (count),crash_record,0.5052911475275581,higher -> less likely,0.1354158830462148
 y_serious,vehicle__CARGO_BT=99,vehicle.CARGO_BT = Unknown (count),crash_record,0.5052673393977145,higher -> less likely,0.038873843376213045
 y_serious,vpicdecode__KEYLESSIGNITIONID=3.0,vpicdecode.KEYLESSIGNITIONID = 3 (count),crash_record,0.505261908015527,higher -> less likely,0.02854259133879987
 y_serious,vehicle__PCRASH1_IM=4,vehicle.PCRASH1_IM = Starting in Road (count),crash_record,0.5051940041180185,higher -> less likely,0.016713056997417187
@@ -2053,7 +2047,6 @@ y_serious,vehicle__TOWED=3,vehicle.TOWED = 3 (count),post_crash,0.50481510965936
 y_serious,driverrf__DRIVERRF=6,"driverrf.DRIVERRF = Careless Driving, Inattentive Operation, Improper Driving, Driving Without Due Care (count)",crash_record,0.504797227144917,higher -> less likely,0.12786805085383285
 y_serious,acc__INT_HWY,accident.INT_HWY,crash_record,0.5047726876970594,higher -> more likely,1.0
 y_serious,vpicdecode__ENGINEBRAKEHP_TO__max,vpicdecode.ENGINEBRAKEHP_TO__max,crash_record,0.504772584536745,higher -> more likely,1.0
-y_serious,weather__WEATHER=10.0,weather.WEATHER = Cloudy (count),crash_record,0.5047023718211168,higher -> less likely,0.08983424860202112
 y_serious,vehicle__IMPACT1_IM=2,vehicle.IMPACT1_IM = 2 Clock Point (count),crash_record,0.5046984077564628,higher -> less likely,0.03401539657463828
 y_serious,cevent__AOI1=11,cevent.AOI1 = 11 Clock Point (count),crash_record,0.5046709597562107,higher -> less likely,0.06189347777025502
 y_serious,vehicle__VPICBODYCLASS=5,vehicle.VPICBODYCLASS = Hatchback/Liftback/Notchback (count),crash_record,0.5046423156313421,higher -> less likely,0.053580832016850974
@@ -2147,7 +2140,9 @@ y_serious,vehicle__V_CONFIG=6,vehicle.V_CONFIG = Truck Tractor/Semi-Trailer (cou
 y_serious,vpicdecode__BODYCLASSID=95.0,vpicdecode.BODYCLASSID = 95 (count),crash_record,0.5032126260314282,higher -> less likely,0.021772110634669876
 y_serious,vpicdecode__BRAKESYSTEMTYPEID=1.0,vpicdecode.BRAKESYSTEMTYPEID = 1 (count),crash_record,0.5032010349585784,higher -> more likely,0.0462085308056872
 y_serious,person__MAKE=7.0,person.MAKE = 7 (count),crash_record,0.5031969398117747,higher -> less likely,0.09473657814890042
+y_serious,weather__WEATHER=4,weather.WEATHER = Snow (count),crash_record,0.503194240589548,higher -> less likely,0.014644299004488577
 y_serious,vpicdecode__TRUCKBODYCABTYPEID=5.0,vpicdecode.TRUCKBODYCABTYPEID = 5 (count),crash_record,0.5031909321028396,higher -> more likely,0.03508112038917726
+y_serious,weather__WEATHER=98,weather.WEATHER = Not Reported (count),crash_record,0.5031805441768642,higher -> more likely,0.03210963163569799
 y_serious,parkwork__PM_HARM=12,parkwork.PM_HARM = Motor Vehicle In-Transport (count),crash_record,0.503179401053576,higher -> less likely,0.038742195140299404
 y_serious,person__IMPACT1=9.0,person.IMPACT1 = 9 (count),crash_record,0.5031760151548327,higher -> more likely,0.04502996564607939
 y_serious,pbtype__PBSWALK=1,pbtype.PBSWALK = Yes (count),crash_record,0.5031749980977958,higher -> more likely,0.01770982221219188
@@ -2212,7 +2207,6 @@ y_serious,violatn__VIOLATION=76,violatn.VIOLATION = Driving uninsured vehicle (c
 y_serious,vpicdecode__WHEELBASETYPEID=1.0,vpicdecode.WHEELBASETYPEID = 1 (count),crash_record,0.5024515552116762,higher -> less likely,0.023684144537225105
 y_serious,driverrf__DRIVERRF=60,driverrf.DRIVERRF = Alcohol and/or Drug Test Refused (count),crash_record,0.5024397902543419,higher -> more likely,0.007535294265152085
 y_serious,vpicdecode__GROSSVEHICLEWEIGHTRATINGFROMID=4.0,vpicdecode.GROSSVEHICLEWEIGHTRATINGFROMID = 4 (count),crash_record,0.5024364583601068,higher -> less likely,0.016882319015020436
-y_serious,weather__WEATHERCODE=2.0,weather.WEATHERCODE = 2 (count),crash_record,0.5024331085758332,higher -> less likely,0.030749266531257053
 y_serious,vpicdecode__PLANTCOUNTRYID=30.0,vpicdecode.PLANTCOUNTRYID = 30 (count),crash_record,0.502420035137754,higher -> more likely,0.006187467087941022
 y_serious,vehicle__VTRAFWAY=2,"vehicle.VTRAFWAY = Two-Way, Divided, Unprotected Median (count)",crash_record,0.5024192003250324,higher -> more likely,0.146712555480328
 y_serious,vehicle__VALIGN=4,vehicle.VALIGN = Curve - Unknown Direction (count),crash_record,0.5024086784745647,higher -> more likely,0.01070112089069435
@@ -2250,7 +2244,6 @@ y_serious,vpicdecode__DRIVETYPEID=4.0,vpicdecode.DRIVETYPEID = 4 (count),crash_r
 y_serious,person__LOCATION=3,person.LOCATION = At Intersection - Not In Crosswalk (count),crash_record,0.5020450751499532,higher -> more likely,0.012412547957571655
 y_serious,pbtype__PEDCTYPE=770,pbtype.PEDCTYPE = Motorist Failed to Yield (count),crash_record,0.5019889726586421,higher -> more likely,0.004582612402517615
 y_serious,parkwork__PTYPE=3,parkwork.PTYPE = Motor Vehicle Not In-Transport Outside the Trafficway (count),crash_record,0.5019781202604576,higher -> more likely,0.005247122545700745
-y_serious,weather__WEATHER=4.0,weather.WEATHER = Snow (count),crash_record,0.5019706146370074,higher -> less likely,0.009810928057373556
 y_serious,vevent__AOI1=82,vevent.AOI1 = Right-Front Side (count),crash_record,0.5019586370055731,higher -> less likely,0.015653602146493143
 y_serious,cevent__AOI1=82,cevent.AOI1 = Right-Front Side (count),crash_record,0.50193429418094,higher -> less likely,0.015653602146493143
 y_serious,vehicle__VNUM_LAN=6,vehicle.VNUM_LAN = Six lanes (count),crash_record,0.5019341771433063,higher -> less likely,0.02632964718272775
@@ -2259,7 +2252,6 @@ y_serious,pbtype__BIKEDIR=1,pbtype.BIKEDIR = With Traffic (count),crash_record,0
 y_serious,factor__VEHICLECC=1,factor.VEHICLECC = Tires (count),crash_record,0.5018936475123407,higher -> more likely,0.008525790516311844
 y_serious,vehicle__VTRAFWAY=6,vehicle.VTRAFWAY = Entrance/Exit Ramp (count),crash_record,0.5018749355354624,higher -> less likely,0.02708819178013491
 y_serious,vehicle__CARGO_BT=22,vehicle.CARGO_BT = Bus (count),crash_record,0.5018719801680145,higher -> less likely,0.007704556282755335
-y_serious,weather__WEATHER=98.0,weather.WEATHER = Not Reported (count),crash_record,0.5018648203071736,higher -> more likely,0.016456029489204844
 y_serious,pbtype__PEDPOS=4,pbtype.PEDPOS = Paved Shoulder / Bicycle Lane / Parking Lane (count),crash_record,0.5018585661504212,higher -> more likely,0.0024574337370545903
 y_serious,parkwork__PBODYTYP=4,"parkwork.PBODYTYP = 4-door sedan, hardtop (count)",crash_record,0.5018352400484318,higher -> less likely,0.013183630482208681
 y_serious,crashrf__n_rows,crashrf.n_rows,crash_record,0.5018238021276856,higher -> more likely,1.0
@@ -2323,7 +2315,6 @@ y_serious,vpictrailerdecode__PLANTCOUNTRYID=6.0,vpictrailerdecode.PLANTCOUNTRYID
 y_serious,pbtype__PEDDIR=4,pbtype.PEDDIR = Westbound (count),crash_record,0.5013824958460844,higher -> more likely,0.0044321572757591715
 y_serious,vehicle__BDYTYP_IM=66.0,vehicle.BDYTYP_IM = 66 (count),crash_record,0.5013575358987286,higher -> more likely,0.011754306778003461
 y_serious,vpicdecode__BACKUPCAMERAID=3.0,vpicdecode.BACKUPCAMERAID = 3 (count),crash_record,0.5013469593749663,higher -> less likely,0.007535294265152085
-y_serious,weather__WEATHERCODE=98.0,weather.WEATHERCODE = 98 (count),crash_record,0.5013157238696906,higher -> more likely,0.015653602146493143
 y_serious,vehicle__PCRASH4=5,"vehicle.PCRASH4 = Skidding Laterally, Rotation Direction Unknown (count)",crash_record,0.5013138985841946,higher -> more likely,0.004965019183028662
 y_serious,vevent__AOI1=10,vevent.AOI1 = 10 Clock Point (count),crash_record,0.5013117335551674,higher -> less likely,0.015076857493919106
 y_serious,vpicdecode__DAYTIMERUNNINGLIGHTID=3.0,vpicdecode.DAYTIMERUNNINGLIGHTID = 3 (count),crash_record,0.5013010981781951,higher -> less likely,0.004921136437724115
@@ -2338,7 +2329,6 @@ y_serious,vehicle__P_CRASH2=10,vehicle.P_CRASH2 = Over the lane line on left sid
 y_serious,distract__DRDISTRACT=17,distract.DRDISTRACT = Distraction/Inattention (count),crash_record,0.5012318259435519,higher -> less likely,0.010976955289751499
 y_serious,vehicle__VEVENT_IM=34,vehicle.VEVENT_IM = Ditch (count),crash_record,0.5012288898037152,higher -> more likely,0.01331527871812232
 y_serious,acc__SCH_BUS,accident.SCH_BUS,crash_record,0.5012256829725514,higher -> more likely,1.0
-y_serious,weather__WEATHERCODE=4.0,weather.WEATHERCODE = 4 (count),crash_record,0.5012236259525407,higher -> less likely,0.004833370947115023
 y_serious,vehicle__VPICBODYCLASS=11,vehicle.VPICBODYCLASS = Truck (count),crash_record,0.5012230803899709,higher -> less likely,0.019164221770856842
 y_serious,vehicle__PCRASH1_IM=16,vehicle.PCRASH1_IM = Merging (count),crash_record,0.5012183096016274,higher -> less likely,0.005560570726447504
 y_serious,vpicdecode__FUELTYPESECONDARYID=15.0,vpicdecode.FUELTYPESECONDARYID = 15 (count),crash_record,0.5012173599248281,higher -> less likely,0.012149251485744377
@@ -2379,6 +2369,7 @@ y_serious,parkwork__PGVWR_TO=12,"parkwork.PGVWR_TO = Class 2: 6,001 - 10,000 lbs
 y_serious,violatn__VIOLATION=23,violatn.VIOLATION = Speed greater than reasonable & prudent (not necessarily over the limit) (count),crash_record,0.5010846155062754,higher -> less likely,0.023345620502018605
 y_serious,vpicdecode__AIRBAGLOCSEATCUSHIONID=4.0,vpicdecode.AIRBAGLOCSEATCUSHIONID = 4 (count),crash_record,0.5010741311078506,higher -> less likely,0.005128012237016977
 y_serious,vehicle__BODY_TYP=2,"vehicle.BODY_TYP = 2-door sedan,hardtop,coupe (count)",crash_record,0.501072907730185,higher -> more likely,0.044967276009930036
+y_serious,weather__WEATHER=5,"weather.WEATHER = Fog, Smog, Smoke (count)",crash_record,0.5010714155003552,higher -> more likely,0.004093633240552672
 y_serious,vsoe__AOI=3,vsoe.AOI = 3 Clock Point (count),crash_record,0.5010710663938134,higher -> more likely,0.03695554051004288
 y_serious,vehicle__V_CONFIG=88,"vehicle.V_CONFIG = Qualifying Vehicle, Unknown Configuration (count)",crash_record,0.5010702553230117,higher -> less likely,0.005259660472930615
 y_serious,vpicdecode__SEMIAUTOHEADLAMPBEAMSWITCHINGID=3.0,vpicdecode.SEMIAUTOHEADLAMPBEAMSWITCHINGID = 3 (count),crash_record,0.5010528653698046,higher -> less likely,0.007303342611399483
@@ -2455,7 +2446,6 @@ y_serious,pbtype__BIKECTYPE=141,pbtype.BIKECTYPE = Motorist Drive Out - Sign-Con
 y_serious,pbtype__BIKECTYPE=239,pbtype.BIKECTYPE = Motorist Overtaking - Other/ Unknown (count),crash_record,0.5006950776452123,higher -> more likely,0.001886958048095489
 y_serious,vehicle__EMER_USE=8,vehicle.EMER_USE = Not Reported (count),crash_record,0.500688767143199,higher -> less likely,0.0031720955891572007
 y_serious,pbtype__BIKECGP=320,pbtype.BIKECGP = Motorist Failed to Yield - Midblock (count),crash_record,0.5006883518267959,higher -> less likely,0.0018806890844805537
-y_serious,weather__WEATHER=1.0,weather.WEATHER = Clear (count),crash_record,0.5006878708021213,higher -> more likely,0.49265904360691093
 y_serious,vpictrailerdecode__TRAILERTYPECONNECTIONID=4.0,vpictrailerdecode.TRAILERTYPECONNECTIONID = 4 (count),crash_record,0.5006837800024299,higher -> more likely,0.0017678477394117206
 y_serious,pbtype__BIKECGP=145,pbtype.BIKECGP = Bicyclist Failed to Yield - Sign-Controlled Intersection (count),crash_record,0.5006831155630636,higher -> more likely,0.002137716592692896
 y_serious,pbtype__PEDPOS=5,pbtype.PEDPOS = Sidewalk / Shared-Use Path / Driveway Access (count),crash_record,0.5006829918375649,higher -> more likely,0.0026455026455026454
@@ -2486,9 +2476,7 @@ y_serious,vpicdecode__FUELTYPESECONDARYID=4.0,vpicdecode.FUELTYPESECONDARYID = 4
 y_serious,pbtype__BIKECGP=215,pbtype.BIKECGP = Motorist Right Turn / Merge (count),crash_record,0.5006005008709802,higher -> less likely,0.0022819027558364053
 y_serious,parkwork__PMAKE=49,parkwork.PMAKE = Toyota (count),crash_record,0.5005983843289727,higher -> less likely,0.005460267308608541
 y_serious,vpicdecode__ENGINESTROKECYCLES__min,vpicdecode.ENGINESTROKECYCLES__min,crash_record,0.5005895464828577,higher -> less likely,1.0
-y_serious,weather__WEATHERCODE=10.0,weather.WEATHERCODE = 10 (count),crash_record,0.5005887757064413,higher -> less likely,0.045581634444193685
 y_serious,vehicle__V_CONFIG=4,vehicle.V_CONFIG = Truck Pulling Trailer(s) (count),crash_record,0.5005845269059443,higher -> less likely,0.006770480704129994
-y_serious,weather__WEATHER=5.0,"weather.WEATHER = Fog, Smog, Smoke (count)",crash_record,0.5005844871131488,higher -> more likely,0.0026768474635773215
 y_serious,safetyeq__NMLIGHT=2,safetyeq.NMLIGHT = Yes (count),crash_record,0.5005740533752997,higher -> more likely,0.0012663306502169061
 y_serious,vpicdecode__GROSSVEHICLEWEIGHTRATINGFROMID=8.0,vpicdecode.GROSSVEHICLEWEIGHTRATINGFROMID = 8 (count),crash_record,0.5005726437406,higher -> less likely,0.008362797462323528
 y_serious,vpictrailerdecode__TRAILERLENGTHFT__min,vpictrailerdecode.TRAILERLENGTHFT__min,crash_record,0.5005700485146706,higher -> more likely,1.0
@@ -2518,7 +2506,6 @@ y_serious,parkwork__PMAN_COLL=1,parkwork.PMAN_COLL = Front-to-Rear (count),crash
 y_serious,parkwork__PVPICBODYCLASS=7,parkwork.PVPICBODYCLASS = Sport Utility Vehicle (SUV)/Multi-Purpose Vehicle (MPV) (count),crash_record,0.5004970294037823,higher -> less likely,0.010262293437648888
 y_serious,nmdistract__NMDISTRACT=92,"nmdistract.NMDISTRACT = Distraction (Distracted), Details Unknown (count)",crash_record,0.5004917361260027,higher -> more likely,0.0005328619072694903
 y_serious,pbtype__MOTMAN=1,pbtype.MOTMAN = Left Turn (count),crash_record,0.5004885998518124,higher -> more likely,0.010218410692344342
-y_serious,weather__WEATHERCODE=5.0,weather.WEATHERCODE = 5 (count),crash_record,0.5004869283872062,higher -> more likely,0.0014167857769753504
 y_serious,nmcrash__NMCC=7,nmcrash.NMCC = Improper Turn/Merge (count),crash_record,0.5004828947687586,higher -> more likely,0.0011472203415331377
 y_serious,pbtype__PEDLOC=9,pbtype.PEDLOC = Unknown / Insufficient Information (count),crash_record,0.5004770418838931,higher -> more likely,0.00042002056220065697
 y_serious,person__GVWR_TO=99.0,person.GVWR_TO = 99 (count),crash_record,0.5004680861641613,higher -> less likely,0.004219012512851375
@@ -2706,7 +2693,6 @@ y_serious,parkwork__PMAN_COLL=7,parkwork.PMAN_COLL = Sideswipe - Same Direction 
 y_serious,parkwork__PMAKE=48,parkwork.PMAKE = Subaru (count),crash_record,0.5001345183746866,higher -> less likely,0.000877654906090925
 y_serious,safetyeq__NMHELMET=9,safetyeq.NMHELMET = Reported as Unknown (count),crash_record,0.5001339229875242,higher -> more likely,0.0021189097018480905
 y_serious,parkwork__PHARM_EV=59,parkwork.PHARM_EV = Traffic Sign Support (count),crash_record,0.5001335469623268,higher -> more likely,0.00013791719952857393
-y_serious,weather__WEATHER=99.0,weather.WEATHER = Reported as Unknown (count),crash_record,0.5001330622593265,higher -> less likely,0.0010594548509240452
 y_serious,parkwork__PBODYTYP=20,"parkwork.PBODYTYP = Minivan (Chrysler Town and Country, Caravan, Grand Caravan, Voyager, Voyager, Honda-Odyssey, ...) (count)",crash_record,0.5001324934564267,higher -> less likely,0.001473206449509767
 y_serious,vpicdecode__ENGINECONFIGURATIONID=5.0,vpicdecode.ENGINECONFIGURATIONID = 5 (count),crash_record,0.5001324073501676,higher -> less likely,0.0031783645527721357
 y_serious,parkwork__PBODYTYP=34,parkwork.PBODYTYP = Light Pickup (count),crash_record,0.5001323075337858,higher -> less likely,0.0065447980139923265
@@ -2732,7 +2718,6 @@ y_serious,vpicdecode__AXLECONFIGURATIONID=2.0,vpicdecode.AXLECONFIGURATIONID = 2
 y_serious,parkwork__PGVWR_TO=17,"parkwork.PGVWR_TO = Class 7: 26,001 - 33,000 lbs. (11,794 - 14,969 kg) (count)",crash_record,0.5001154114793929,higher -> more likely,0.00016926201760324982
 y_serious,parkwork__PCARGTYP=3,parkwork.PCARGTYP = Flatbed (count),crash_record,0.5001141347660056,higher -> more likely,0.00012537927229870358
 y_serious,parkwork__PIMPACT1=1,parkwork.PIMPACT1 = 1 Clock Point (count),post_crash,0.5001136636059316,higher -> less likely,0.0010719927781539156
-y_serious,weather__WEATHERCODE=99.0,weather.WEATHERCODE = 99 (count),crash_record,0.5001134460831295,higher -> more likely,0.0004952481255798792
 y_serious,parkwork__PGVWR_FROM=13,"parkwork.PGVWR_FROM = Class 3: 10,001 - 14,000 lbs. (4,536 - 6,350 kg) (count)",crash_record,0.5001127545579108,higher -> more likely,0.0008651169788610547
 y_serious,vpicdecode__ADAPTIVECRUISECONTROLID=2.0,vpicdecode.ADAPTIVECRUISECONTROLID = 2 (count),crash_record,0.5001126778146625,higher -> less likely,0.004250357330926051
 y_serious,parkwork__PMONTH=7,parkwork.PMONTH = July (count),crash_record,0.5001111962854162,higher -> more likely,0.00367988164196695
@@ -2846,6 +2831,7 @@ y_serious,vpicdecode__DESTINATIONMARKETID=19.0,vpicdecode.DESTINATIONMARKETID = 
 y_serious,parkwork__PEM_USE=8,parkwork.PEM_USE = Not Reported (count),crash_record,0.5000215733798261,higher -> less likely,0.000175530981218185
 y_serious,vpicdecode__GROSSCOMBWEIGHTRATINGFROMID=4.0,vpicdecode.GROSSCOMBWEIGHTRATINGFROMID = 4 (count),crash_record,0.5000208846969499,higher -> more likely,0.00019433787206299055
 y_serious,vpicdecode__GROSSCOMBWEIGHTRATINGFROMID=5.0,vpicdecode.GROSSCOMBWEIGHTRATINGFROMID = 5 (count),crash_record,0.5000201022167703,higher -> less likely,0.0003573309260513052
+y_serious,weather__WEATHER=99,weather.WEATHER = Reported as Unknown (count),crash_record,0.5000196161761972,higher -> less likely,0.0015547029765039244
 y_serious,vpictrailerdecode__GROSSVEHICLEWEIGHTRATINGFROMID=4.0,vpictrailerdecode.GROSSVEHICLEWEIGHTRATINGFROMID = 4 (count),crash_record,0.5000194145370739,higher -> more likely,1.2537927229870357e-05
 y_serious,vpicdecode__BUSLENGTHFT__min,vpicdecode.BUSLENGTHFT__min,crash_record,0.5000192172450628,higher -> less likely,1.0
 y_serious,vpicdecode__BUSLENGTHFT__max,vpicdecode.BUSLENGTHFT__max,crash_record,0.5000192172450628,higher -> less likely,1.0

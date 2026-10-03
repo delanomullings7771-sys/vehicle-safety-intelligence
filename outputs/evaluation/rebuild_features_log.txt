@@ -1,0 +1,40 @@
+accident   rows=  264,661 numeric=  6 categorical= 17 features=  23
+crashrf    rows=  265,626 numeric=  0 categorical=  1 features=  10
+weather    rows=  266,242 numeric=  0 categorical=  1 features=   8
+cevent     rows=  439,778 numeric=  0 categorical=  3 features=  37
+vehicle    rows=  463,361 numeric=  4 categorical= 47 features= 291
+damage     rows=  963,078 numeric=  0 categorical=  1 features=  13
+distract   rows=  463,642 numeric=  0 categorical=  1 features=  12
+drimpair   rows=  464,006 numeric=  0 categorical=  1 features=   9
+driverrf   rows=  472,183 numeric=  0 categorical=  1 features=  12
+factor     rows=  463,748 numeric=  0 categorical=  1 features=   5
+maneuver   rows=  463,381 numeric=  0 categorical=  1 features=   8
+vehiclesf  rows=  463,363 numeric=  0 categorical=  1 features=   2
+violatn    rows=  496,086 numeric=  0 categorical=  1 features=  13
+vision     rows=  463,494 numeric=  0 categorical=  1 features=   9
+vevent     rows=  653,716 numeric=  0 categorical=  3 features=  37
+vsoe       rows=  653,716 numeric=  0 categorical=  2 features=  25
+parkwork   rows=   14,400 numeric=  2 categorical= 30 features= 175
+pvehiclesf rows=   14,400 numeric=  0 categorical=  1 features=   4
+person     rows=  646,418 numeric=  2 categorical= 30 features= 177
+nmcrash    rows=   35,160 numeric=  0 categorical=  1 features=  13
+nmdistract rows=   25,963 numeric=  0 categorical=  1 features=  12
+nmimpair   rows=   25,991 numeric=  0 categorical=  1 features=   8
+nmprior    rows=   26,476 numeric=  0 categorical=  1 features=  13
+personrf   rows=  646,458 numeric=  0 categorical=  1 features=   2
+safetyeq   rows=   25,956 numeric=  0 categorical=  6 features=  22
+pbtype     rows=   25,775 numeric=  1 categorical= 19 features= 133
+vpicdecode rows=  428,629 numeric= 37 categorical= 68 features= 334
+vpictrailerdecode rows=    2,684 numeric=  3 categorical=  9 features=  49
+C:\Users\delan\Downloads\NHTSA_Road_Vehicle_Safety_Capstone_Last_Lap\src\build_crss_features.py:198: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  X["y_injury"] = np.select([sev == 0, sev.isin([1, 2, 3, 4, 5])], [0, 1], default=-1).astype("int8")
+C:\Users\delan\Downloads\NHTSA_Road_Vehicle_Safety_Capstone_Last_Lap\src\build_crss_features.py:199: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  X["y_serious"] = np.select([sev.isin([0, 1, 2]), sev.isin([3, 4])], [0, 1], default=-1).astype("int8")
+crashes: 264661 features: 1456
+               y_injury          y_serious
+YEAR                                      
+2020  0.539 (excl 1037)  0.140 (excl 1203)
+2021   0.523 (excl 944)  0.129 (excl 1078)
+2022   0.500 (excl 999)  0.131 (excl 1103)
+2023   0.505 (excl 937)  0.132 (excl 1040)
+2024   0.504 (excl 877)  0.127 (excl 1004)

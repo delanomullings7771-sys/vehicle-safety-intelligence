@@ -1,0 +1,253 @@
+written C:\Users\delan\Downloads\NHTSA_Road_Vehicle_Safety_Capstone_Last_Lap\documentation\Data_Dictionary.xlsx | CRSS fields 1,114 (definitions for 70%) | features 1,456 | complaint fields 51
+project_role
+EXCLUDED                                                        394
+USED                                                            303
+Repeated from the accident table (used there)                    61
+Text label of the code in STRATUM (code used instead)            26
+Text label of the code in URBANICITY (code used instead)         26
+Text label of the code in REGION (code used instead)             26
+Not used                                                          4
+Text label of the code in MONTH (code used instead)               3
+Text label of the code in HARM_EV (code used instead)             3
+Text label of the code in MAN_COLL (code used instead)            3
+Text label of the code in MINUTE (code used instead)              3
+Text label of the code in HOUR (code used instead)                3
+Text label of the code in SOE (code used instead)                 3
+Text label of the code in SCH_BUS (code used instead)             2
+Text label of the code in WEATHER (code used instead)             2
+Text label of the code in AOI1 (code used instead)                2
+Text label of the code in AOI2 (code used instead)                2
+Text label of the code in VNUMBER2 (code used instead)            2
+Text label of the code in MAKE (code used instead)                2
+Text label of the code in IMPACT1 (code used instead)             2
+Text label of the code in TOW_VEH (code used instead)             2
+Text label of the code in MOD_YEAR (code used instead)            2
+Text label of the code in BODY_TYP (code used instead)            2
+Text label of the code in MAK_MOD (code used instead)             2
+Text label of the code in EMER_USE (code used instead)            2
+Text label of the code in FIRE_EXP (code used instead)            2
+Text label of the code in VPICMODEL (code used instead)           2
+Text label of the code in VPICBODYCLASS (code used instead)       2
+Text label of the code in GVWR_TO (code used instead)             2
+Text label of the code in VPICMAKE (code used instead)            2
+Text label of the code in ICFINALBODY (code used instead)         2
+Text label of the code in GVWR_FROM (code used instead)           2
+Text label of the code in ROLLOVER (code used instead)            2
+Text label of the code in SPEC_USE (code used instead)            2
+Text label of the code in RELJCT2 (code used instead)             1
+Text label of the code in TYP_INT (code used instead)             1
+Replaced by NHTSA's imputed version LGTCON_IM                     1
+Text label of the code in LGT_COND (code used instead)            1
+Text label of the code in INT_HWY (code used instead)             1
+Text label of the code in WRK_ZONE (code used instead)            1
+Text label of the code in RELJCT2_IM (code used instead)          1
+Replaced by NHTSA's imputed version RELJCT2_IM                    1
+Text label of the code in RELJCT1 (code used instead)             1
+Replaced by NHTSA's imputed version RELJCT1_IM                    1
+Replaced by NHTSA's imputed version MANCOL_IM                     1
+Text label of the code in MAX_SEV (code used instead)             1
+Text label of the code in ALCOHOL (code used instead)             1
+Replaced by NHTSA's imputed version ALCHL_IM                      1
+Replaced by NHTSA's imputed version WKDY_IM                       1
+Replaced by NHTSA's imputed version WEATHR_IM                     1
+Text label of the code in REL_ROAD (code used instead)            1
+Text label of the code in YEAR (code used instead)                1
+Replaced by NHTSA's imputed version HOUR_IM                       1
+Text label of the code in DAY_WEEK (code used instead)            1
+Replaced by NHTSA's imputed version EVENT1_IM                     1
+Text label of the code in NUM_INJ (code used instead)             1
+Text label of the code in HIT_RUN (code used instead)             1
+Text label of the code in UNITTYPE (code used instead)            1
+Text label of the code in NUMOCCS (code used instead)             1
+Text label of the code in WEATHR_IM (code used instead)           1
+Text label of the code in NO_INJ_IM (code used instead)           1
+Text label of the code in MAXSEV_IM (code used instead)           1
+Text label of the code in ALCHL_IM (code used instead)            1
+Text label of the code in CRASHRF (code used instead)             1
+Text label of the code in LGTCON_IM (code used instead)           1
+Text label of the code in WKDY_IM (code used instead)             1
+Text label of the code in HOUR_IM (code used instead)             1
+Text label of the code in MINUTE_IM (code used instead)           1
+Text label of the code in EVENT1_IM (code used instead)           1
+Text label of the code in MANCOL_IM (code used instead)           1
+Text label of the code in RELJCT1_IM (code used instead)          1
+Text label of the code in MCARR_I2 (code used instead)            1
+Text label of the code in HAZ_CNO (code used instead)             1
+Text label of the code in HAZ_ID (code used instead)              1
+Text label of the code in HAZ_PLAC (code used instead)            1
+Text label of the code in HAZ_INV (code used instead)             1
+Text label of the code in HAZ_REL (code used instead)             1
+Text label of the code in TRAV_SP (code used instead)             1
+Text label of the code in ROLINLOC (code used instead)            1
+Text label of the code in BUS_USE (code used instead)             1
+Replaced by NHTSA's imputed version IMPACT1_IM                    1
+Text label of the code in MCARR_ID (code used instead)            1
+Text label of the code in V_CONFIG (code used instead)            1
+Text label of the code in CARGO_BT (code used instead)            1
+Replaced by NHTSA's imputed version MDLYR_IM                      1
+Text label of the code in VIN (code used instead)                 1
+Text label of the code in J_KNIFE (code used instead)             1
+Text label of the code in MCARR_I1 (code used instead)            1
+Text label of the code in MAX_VSEV (code used instead)            1
+Text label of the code in VEH_ALCH (code used instead)            1
+Replaced by NHTSA's imputed version V_ALCH_IM                     1
+Text label of the code in M_HARM (code used instead)              1
+Replaced by NHTSA's imputed version VEVENT_IM                     1
+Text label of the code in TOWED (code used instead)               1
+Text label of the code in DEFORMED (code used instead)            1
+Text label of the code in NUM_INJV (code used instead)            1
+Text label of the code in VALIGN (code used instead)              1
+Text label of the code in VPROFILE (code used instead)            1
+Text label of the code in DR_PRES (code used instead)             1
+Text label of the code in DR_ZIP (code used instead)              1
+Text label of the code in SPEEDREL (code used instead)            1
+Text label of the code in VTRAFWAY (code used instead)            1
+Text label of the code in VNUM_LAN (code used instead)            1
+Text label of the code in VSPD_LIM (code used instead)            1
+Text label of the code in P_CRASH2 (code used instead)            1
+Text label of the code in P_CRASH1 (code used instead)            1
+Replaced by NHTSA's imputed version PCRASH1_IM                    1
+Text label of the code in VTCONT_F (code used instead)            1
+Text label of the code in VTRAFCON (code used instead)            1
+Text label of the code in VSURCOND (code used instead)            1
+Text label of the code in PCRASH5 (code used instead)             1
+Text label of the code in P_CRASH3 (code used instead)            1
+Text label of the code in TRLR3VIN (code used instead)            1
+Text label of the code in TRLR2VIN (code used instead)            1
+Text label of the code in TRLR1VIN (code used instead)            1
+Text label of the code in ACC_TYPE (code used instead)            1
+Text label of the code in PCRASH4 (code used instead)             1
+Text label of the code in TRLR1GVWR (code used instead)           1
+Text label of the code in TRLR2GVWR (code used instead)           1
+Text label of the code in TRLR3GVWR (code used instead)           1
+Text label of the code in BDYTYP_IM (code used instead)           1
+Text label of the code in MDLYR_IM (code used instead)            1
+Text label of the code in IMPACT1_IM (code used instead)          1
+Text label of the code in VEVENT_IM (code used instead)           1
+Text label of the code in PCRASH1_IM (code used instead)          1
+Text label of the code in MXVSEV_IM (code used instead)           1
+Text label of the code in NUMINJ_IM (code used instead)           1
+Text label of the code in V_ALCH_IM (code used instead)           1
+Text label of the code in UNDEROVERRIDE (code used instead)       1
+Text label of the code in ACC_CONFIG (code used instead)          1
+Text label of the code in DAMAGE (code used instead)              1
+Text label of the code in DRDISTRACT (code used instead)          1
+Text label of the code in DRIMPAIR (code used instead)            1
+Text label of the code in DRIVERRF (code used instead)            1
+Text label of the code in VEHICLECC (code used instead)           1
+Text label of the code in MANEUVER (code used instead)            1
+Text label of the code in VEHICLESF (code used instead)           1
+Text label of the code in VIOLATION (code used instead)           1
+Text label of the code in VISION (code used instead)              1
+Text label of the code in AOI (code used instead)                 1
+Text label of the code in PNUMOCCS (code used instead)            1
+Text label of the code in PMONTH (code used instead)              1
+Text label of the code in PHOUR (code used instead)               1
+Text label of the code in PMINUTE (code used instead)             1
+Text label of the code in PHARM_EV (code used instead)            1
+Text label of the code in PMAN_COLL (code used instead)           1
+Text label of the code in PTYPE (code used instead)               1
+Text label of the code in PHIT_RUN (code used instead)            1
+Text label of the code in PMAKE (code used instead)               1
+Text label of the code in PMAK_MOD (code used instead)            1
+Text label of the code in PBODYTYP (code used instead)            1
+Text label of the code in PMODYEAR (code used instead)            1
+Text label of the code in PVIN (code used instead)                1
+Text label of the code in PTRAILER (code used instead)            1
+Text label of the code in PMCARR_I1 (code used instead)           1
+Text label of the code in PMCARR_I2 (code used instead)           1
+Text label of the code in PMCARR_ID (code used instead)           1
+Text label of the code in PV_CONFIG (code used instead)           1
+Text label of the code in PCARGTYP (code used instead)            1
+Text label of the code in PHAZ_INV (code used instead)            1
+Text label of the code in PHAZPLAC (code used instead)            1
+Text label of the code in PHAZ_ID (code used instead)             1
+Text label of the code in PHAZ_CNO (code used instead)            1
+Text label of the code in PHAZ_REL (code used instead)            1
+Text label of the code in PBUS_USE (code used instead)            1
+Text label of the code in PSP_USE (code used instead)             1
+Text label of the code in PEM_USE (code used instead)             1
+Text label of the code in PIMPACT1 (code used instead)            1
+Text label of the code in PVEH_SEV (code used instead)            1
+Text label of the code in PTOWED (code used instead)              1
+Text label of the code in PM_HARM (code used instead)             1
+Text label of the code in PFIRE (code used instead)               1
+Text label of the code in PTRLR1VIN (code used instead)           1
+Text label of the code in PTRLR2VIN (code used instead)           1
+Text label of the code in PTRLR3VIN (code used instead)           1
+Text label of the code in PVPICMAKE (code used instead)           1
+Text label of the code in PVPICMODEL (code used instead)          1
+Text label of the code in PVPICBODYCLASS (code used instead)      1
+Text label of the code in PICFINALBODY (code used instead)        1
+Text label of the code in PGVWR_FROM (code used instead)          1
+Text label of the code in PGVWR_TO (code used instead)            1
+Text label of the code in PTRLR1GVWR (code used instead)          1
+Text label of the code in PTRLR2GVWR (code used instead)          1
+Text label of the code in PTRLR3GVWR (code used instead)          1
+Text label of the code in PUNDEROVERRIDE (code used instead)      1
+Text label of the code in PVEHICLESF (code used instead)          1
+Replaced by NHTSA's imputed version AGE_IM                        1
+Text label of the code in AGE (code used instead)                 1
+Replaced by NHTSA's imputed version SEX_IM                        1
+Text label of the code in SEX (code used instead)                 1
+Text label of the code in PER_TYP (code used instead)             1
+Text label of the code in INJ_SEV (code used instead)             1
+Replaced by NHTSA's imputed version SEAT_IM                       1
+Text label of the code in SEAT_POS (code used instead)            1
+Text label of the code in REST_USE (code used instead)            1
+Text label of the code in HELM_USE (code used instead)            1
+Text label of the code in HELM_MIS (code used instead)            1
+Text label of the code in REST_MIS (code used instead)            1
+Text label of the code in AIR_BAG (code used instead)             1
+Replaced by NHTSA's imputed version EJECT_IM                      1
+Text label of the code in EJECTION (code used instead)            1
+Replaced by NHTSA's imputed version PERALCH_IM                    1
+Text label of the code in DRINKING (code used instead)            1
+Text label of the code in ALC_STATUS (code used instead)          1
+Text label of the code in ATST_TYP (code used instead)            1
+Text label of the code in ALC_RES (code used instead)             1
+Text label of the code in DRUGS (code used instead)               1
+Text label of the code in HOSPITAL (code used instead)            1
+Text label of the code in LOCATION (code used instead)            1
+Text label of the code in SEX_IM (code used instead)              1
+Text label of the code in INJSEV_IM (code used instead)           1
+Text label of the code in EJECT_IM (code used instead)            1
+Text label of the code in PERALCH_IM (code used instead)          1
+Text label of the code in SEAT_IM (code used instead)             1
+Text label of the code in AGE_IM (code used instead)              1
+Text label of the code in DEVTYPE (code used instead)             1
+Text label of the code in DEVMOTOR (code used instead)            1
+Text label of the code in NMCC (code used instead)                1
+Text label of the code in NMDISTRACT (code used instead)          1
+Text label of the code in NMIMPAIR (code used instead)            1
+Text label of the code in NMACTION (code used instead)            1
+Text label of the code in PERSONRF (code used instead)            1
+Text label of the code in NMHELMET (code used instead)            1
+Text label of the code in NMPROPAD (code used instead)            1
+Text label of the code in NMOTHPRO (code used instead)            1
+Text label of the code in NMREFCLO (code used instead)            1
+Text label of the code in NMLIGHT (code used instead)             1
+Text label of the code in NMOTHPRE (code used instead)            1
+Text label of the code in PBPTYPE (code used instead)             1
+Text label of the code in PBAGE (code used instead)               1
+Text label of the code in PBSEX (code used instead)               1
+Text label of the code in PBCWALK (code used instead)             1
+Text label of the code in PBSWALK (code used instead)             1
+Text label of the code in PBSZONE (code used instead)             1
+Text label of the code in PEDCTYPE (code used instead)            1
+Text label of the code in BIKECTYPE (code used instead)           1
+Text label of the code in PEDLOC (code used instead)              1
+Text label of the code in BIKELOC (code used instead)             1
+Text label of the code in PEDPOS (code used instead)              1
+Text label of the code in BIKEPOS (code used instead)             1
+Text label of the code in PEDDIR (code used instead)              1
+Text label of the code in BIKEDIR (code used instead)             1
+Text label of the code in MOTDIR (code used instead)              1
+Text label of the code in MOTMAN (code used instead)              1
+Text label of the code in PEDLEG (code used instead)              1
+Text label of the code in PEDSNR (code used instead)              1
+Text label of the code in PEDCGP (code used instead)              1
+Text label of the code in BIKECGP (code used instead)             1
+fields without a manual definition (excluding NAME labels): 1
+  table       field
+weather WEATHERCODE
