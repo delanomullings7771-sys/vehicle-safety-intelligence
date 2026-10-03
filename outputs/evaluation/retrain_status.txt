@@ -1,0 +1,11 @@
+2026-10-02T20:30:18 START S1 y_injury
+2026-10-02T21:18:06 END S1 y_injury exit=0
+2026-10-02T21:18:06 START S2 y_serious
+2026-10-02T22:22:23 END S2 y_serious exit=0
+2026-10-02T22:22:23 START compact app models
+2026-10-02T22:23:39 END compact app models exit=0
+2026-10-02T22:23:39 START export artifacts
+2026-10-02T22:23:59 END export artifacts exit=0
+2026-10-02T22:23:59 START api tests
+2026-10-02T22:24:16 END api tests exit=0
+DONE

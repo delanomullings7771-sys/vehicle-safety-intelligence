@@ -1,3 +1,10 @@
+crash_form.json                       0.0 MB
+crash_y_injury.joblib                 0.5 MB
+crash_y_serious.joblib                0.4 MB
+model_card.json                       0.0 MB
+text_U1.joblib                       47.8 MB
+text_U2.joblib                        6.2 MB
+vehicle_profiles.parquet              0.4 MB
 {
  "models": [
   {

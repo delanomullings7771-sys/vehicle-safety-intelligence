@@ -16,6 +16,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import pyarrow as pa
+import pyarrow.parquet as pq
 from sklearn.base import clone
 from sklearn.calibration import calibration_curve
 from sklearn.compose import ColumnTransformer
@@ -31,6 +33,7 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.tree import DecisionTreeClassifier
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from crss_transformers import MedianImputer32
 from project_paths import (CRSS_TEST_YEAR, CRSS_TRAIN_YEARS, CRSS_VALIDATION_YEAR, EVALUATION_DIR,
                            PROCESSED_DIR, PROJECT_ROOT, TABLE_DIR)
 
@@ -60,12 +63,23 @@ def describe_params(m) -> str:
                        if k.split("__")[-1] in ("C", "max_depth", "min_samples_leaf", "max_leaf_nodes")})
 
 
+def load_features() -> pd.DataFrame:
+    """Read the crash table without keeping Arrow's copy alive (halves peak memory)."""
+    table = pq.read_table(PROCESSED_DIR / "crss_crash_features.parquet")
+    df = table.to_pandas(split_blocks=True, self_destruct=True)
+    del table
+    pa.default_memory_pool().release_unused()
+    floats = df.select_dtypes("float64").columns
+    df[floats] = df[floats].astype(np.float32)
+    return df
+
+
 def preprocessor(cat: list[str], num: list[str]) -> ColumnTransformer:
     """Fitted once per feature set on training years; scaling happens inside the LR pipeline."""
     return ColumnTransformer([
         ("cat", Pipeline([("impute", SimpleImputer(strategy="constant", fill_value=-9)),
                           ("onehot", OneHotEncoder(handle_unknown="ignore", sparse_output=False, dtype=np.float32))]), cat),
-        ("num", SimpleImputer(strategy="median"), num),
+        ("num", MedianImputer32(), num),
     ], verbose_feature_names_out=False)
 
 
@@ -84,14 +98,31 @@ def best_threshold(y, p) -> float:
 
 
 def drop_redundant(X: pd.DataFrame) -> list[str]:
-    """Remove constant and exactly duplicated columns (decided on training data only)."""
-    X = X.loc[:, X.nunique(dropna=False) > 1]
-    return X.T.drop_duplicates().index.tolist()
+    """Remove constant and exactly duplicated columns (decided on training data only).
+
+    Columns are compared by a fingerprint of their values, which avoids transposing the
+    whole training matrix (the transpose needed several GB once the VIN-decode fields were added).
+    """
+    keep, seen = [], set()
+    for c in X.columns:
+        v = X[c].to_numpy()
+        if pd.Series(v).nunique(dropna=False) <= 1:
+            continue
+        key = hash(np.nan_to_num(v.astype(np.float64), nan=-1e300).tobytes())
+        if key not in seen:
+            seen.add(key)
+            keep.append(c)
+    return keep
 
 
-def run(target: str, df: pd.DataFrame, reg: pd.DataFrame) -> pd.DataFrame:
-    d = df[df[target] >= 0]
-    tr, va, te = (d[d.YEAR.isin(CRSS_TRAIN_YEARS)], d[d.YEAR == CRSS_VALIDATION_YEAR], d[d.YEAR == CRSS_TEST_YEAR])
+def run(target: str, reg: pd.DataFrame) -> pd.DataFrame:
+    df = load_features()
+    # One copy per partition, containing only what modelling needs.
+    cols = reg.index.tolist() + [target, "WEIGHT", "YEAR"]
+    known = df[target] >= 0
+    tr, va, te = (df.loc[known & m, cols] for m in (df.YEAR.isin(CRSS_TRAIN_YEARS), df.YEAR == CRSS_VALIDATION_YEAR,
+                                                     df.YEAR == CRSS_TEST_YEAR))
+    del df  # only the three partitions are needed from here on
     rows, fitted, arrays = [], {}, {}
     for fset in ["all", "no_post_crash"]:
         feats = reg.index.tolist() if fset == "all" else reg.index[reg.group != "post_crash"].tolist()
@@ -99,8 +130,8 @@ def run(target: str, df: pd.DataFrame, reg: pd.DataFrame) -> pd.DataFrame:
         cat = [f for f in feats if reg.loc[f, "kind"] == "categorical_code"]
         num = [f for f in feats if f not in cat]
         prep = preprocessor(cat, num).fit(tr[feats])
-        Xtr, Xva, Xte = (prep.transform(x[feats]).astype(np.float32) for x in (tr, va, te))
-        arrays[fset] = (prep, feats, Xtr, Xva, Xte)
+        Xtr, Xva, Xte = (prep.transform(x[feats]).astype(np.float32, copy=False) for x in (tr, va, te))
+        arrays[fset] = (prep, feats)  # matrices are rebuilt for the selected set to limit memory
         balanced_options = [False, True] if target == "y_serious" else [False]
         for balanced in balanced_options:
             for family, models in candidates(balanced).items():
@@ -135,6 +166,7 @@ def run(target: str, df: pd.DataFrame, reg: pd.DataFrame) -> pd.DataFrame:
                     row["drift_gap_auc_val_minus_test"] = row["validation_roc_auc"] - row["test_roc_auc"]
                 rows.append(row)
                 fitted[(fset, balanced, family)] = (m, thr, pte)
+        del Xtr, Xva, Xte
     res = pd.DataFrame(rows)
 
     # Select on validation only: best PR-AUC among non-dummy models with the full feature set.
@@ -142,7 +174,8 @@ def run(target: str, df: pd.DataFrame, reg: pd.DataFrame) -> pd.DataFrame:
     sel = cand.iloc[0]
     key = (sel.feature_set, sel.class_weight == "balanced", sel.model)
     m, thr, pte = fitted[key]
-    prep, feats, Xtr, Xva, Xte = arrays[sel.feature_set]
+    prep, feats = arrays[sel.feature_set]
+    Xtr, Xva, Xte = (prep.transform(x[feats]).astype(np.float32, copy=False) for x in (tr, va, te))
     pipe = Pipeline([("prep", prep), ("model", m)])
     res["selected"] = (res.feature_set == sel.feature_set) & (res.class_weight == sel.class_weight) & (res.model == sel.model)
     ytr, yva = tr[target].values, va[target].values
@@ -194,11 +227,10 @@ def run(target: str, df: pd.DataFrame, reg: pd.DataFrame) -> pd.DataFrame:
 
 
 def main() -> None:
-    df = pd.read_parquet(PROCESSED_DIR / "crss_crash_features.parquet")
     reg = pd.read_csv(TABLE_DIR / "crss_feature_register.csv").set_index("feature")
     targets = sys.argv[1:] or ["y_injury", "y_serious"]
     for t in targets:
-        res = run(t, df, reg)
+        res = run(t, reg)
         res.to_csv(EVALUATION_DIR / f"crss_{t}_model_comparison.csv", index=False)
         cols = ["feature_set", "class_weight", "model", "validation_roc_auc", "validation_pr_auc", "test_roc_auc",
                 "test_pr_auc", "test_f1", "overfit_gap_auc_train_minus_val", "selected"]

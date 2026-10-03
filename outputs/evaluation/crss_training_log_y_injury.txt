@@ -1,0 +1,59 @@
+  y_injury all           bal=False Dummy (prior)        {}                                 val AUC=0.5000 (0s)
+  y_injury all           bal=False Logistic Regression  {"C": 0.01}                        val AUC=0.8953 (22s)
+  y_injury all           bal=False Logistic Regression  {"C": 0.1}                         val AUC=0.8939 (42s)
+  y_injury all           bal=False Logistic Regression  {"C": 1.0}                         val AUC=0.8926 (46s)
+  y_injury all           bal=False Decision Tree        {"max_depth": 6, "max_leaf_nodes": null, "min_samples_leaf": 50} val AUC=0.8631 (45s)
+  y_injury all           bal=False Decision Tree        {"max_depth": 10, "max_leaf_nodes": null, "min_samples_leaf": 50} val AUC=0.8816 (67s)
+  y_injury all           bal=False Decision Tree        {"max_depth": 14, "max_leaf_nodes": null, "min_samples_leaf": 50} val AUC=0.8831 (115s)
+  y_injury all           bal=False Random Forest        {"max_depth": null, "max_leaf_nodes": null, "min_samples_leaf": 5} val AUC=0.8983 (164s)
+  y_injury all           bal=False Random Forest        {"max_depth": null, "max_leaf_nodes": null, "min_samples_leaf": 20} val AUC=0.8965 (141s)
+  y_injury all           bal=False Gradient Boosting    {"max_depth": null, "max_leaf_nodes": 31, "min_samples_leaf": 20} val AUC=0.9062 (219s)
+  y_injury all           bal=False Gradient Boosting    {"max_depth": null, "max_leaf_nodes": 63, "min_samples_leaf": 20} val AUC=0.9063 (187s)
+  y_injury no_post_crash bal=False Dummy (prior)        {}                                 val AUC=0.5000 (0s)
+  y_injury no_post_crash bal=False Logistic Regression  {"C": 0.01}                        val AUC=0.8859 (25s)
+  y_injury no_post_crash bal=False Logistic Regression  {"C": 0.1}                         val AUC=0.8839 (38s)
+  y_injury no_post_crash bal=False Logistic Regression  {"C": 1.0}                         val AUC=0.8820 (47s)
+  y_injury no_post_crash bal=False Decision Tree        {"max_depth": 6, "max_leaf_nodes": null, "min_samples_leaf": 50} val AUC=0.8482 (61s)
+  y_injury no_post_crash bal=False Decision Tree        {"max_depth": 10, "max_leaf_nodes": null, "min_samples_leaf": 50} val AUC=0.8716 (93s)
+  y_injury no_post_crash bal=False Decision Tree        {"max_depth": 14, "max_leaf_nodes": null, "min_samples_leaf": 50} val AUC=0.8772 (107s)
+  y_injury no_post_crash bal=False Random Forest        {"max_depth": null, "max_leaf_nodes": null, "min_samples_leaf": 5} val AUC=0.8880 (220s)
+  y_injury no_post_crash bal=False Random Forest        {"max_depth": null, "max_leaf_nodes": null, "min_samples_leaf": 20} val AUC=0.8856 (131s)
+  y_injury no_post_crash bal=False Gradient Boosting    {"max_depth": null, "max_leaf_nodes": 31, "min_samples_leaf": 20} val AUC=0.8979 (147s)
+  y_injury no_post_crash bal=False Gradient Boosting    {"max_depth": null, "max_leaf_nodes": 63, "min_samples_leaf": 20} val AUC=0.8980 (115s)
+  learning curve {'train_rows': 7996, 'train_auc': 0.984220831016896, 'validation_auc': 0.89059878996089}
+  learning curve {'train_rows': 15992, 'train_auc': 0.9650507420287354, 'validation_auc': 0.8958529177832701}
+  learning curve {'train_rows': 39980, 'train_auc': 0.9492336008392845, 'validation_auc': 0.9005158602080017}
+  learning curve {'train_rows': 79960, 'train_auc': 0.9283880128044548, 'validation_auc': 0.9038474210865085}
+  learning curve {'train_rows': 159920, 'train_auc': 0.922422864897646, 'validation_auc': 0.9063327763896695}
+             feature  importance    table        group
+  person__EJECT_IM=8    0.131564   person crash_record
+ vehicle__DEFORMED=6    0.011497  vehicle   post_crash
+   person__AIR_BAG=9    0.010081   person crash_record
+   person__AIR_BAG=8    0.008320   person crash_record
+ person__REST_USE=20    0.004989   person crash_record
+    vehicle__TOWED=5    0.004269  vehicle   post_crash
+   person__AIR_BAG=1    0.003138   person crash_record
+      vevent__n_rows    0.002799   vevent crash_record
+    person__SEX_IM=2    0.002787   person crash_record
+ vehicle__VNUM_LAN=8    0.002674  vehicle crash_record
+         acc__REGION    0.002626 accident crash_record
+    vehicle__TOWED=6    0.002621  vehicle   post_crash
+ person__AGE_IM__max    0.001823   person crash_record
+      pbtype__n_rows    0.001615   pbtype crash_record
+person__PERALCH_IM=1    0.001447   person crash_record
+  vehicle__HIT_RUN=0    0.001262  vehicle crash_record
+  person__AIR_BAG=20    0.001039   person crash_record
+     person__DRUGS=8    0.001038   person crash_record
+     vevent__AOI1=12    0.001011   vevent crash_record
+drimpair__DRIMPAIR=1    0.000984 drimpair crash_record
+  feature_set class_weight               model  validation_roc_auc  validation_pr_auc  test_roc_auc  test_pr_auc  test_f1  overfit_gap_auc_train_minus_val  selected
+          all         none       Dummy (prior)              0.5000             0.5148        0.5000       0.5130      NaN                              NaN     False
+          all         none Logistic Regression              0.8953             0.9094        0.8857       0.8992   0.8136                          -0.0038     False
+          all         none       Decision Tree              0.8831             0.8908        0.8837       0.8902   0.8097                           0.0095     False
+          all         none       Random Forest              0.8983             0.9119        0.8986       0.9114   0.8214                           0.0731     False
+          all         none   Gradient Boosting              0.9063             0.9191        0.9066       0.9188   0.8284                           0.0177      True
+no_post_crash         none       Dummy (prior)              0.5000             0.5148        0.5000       0.5130      NaN                              NaN     False
+no_post_crash         none Logistic Regression              0.8859             0.9022        0.8764       0.8922   0.8013                          -0.0048     False
+no_post_crash         none       Decision Tree              0.8772             0.8881        0.8768       0.8853   0.8024                           0.0031     False
+no_post_crash         none       Random Forest              0.8880             0.9045        0.8890       0.9043   0.8124                           0.0815     False
+no_post_crash         none   Gradient Boosting              0.8980             0.9128        0.8982       0.9126   0.8181                           0.0124     False

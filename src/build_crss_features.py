@@ -1,5 +1,8 @@
 """Build one-row-per-crash CRSS analytical table from all 28 tables, 2020-2024.
 
+The 26 crash, vehicle and person tables describe what happened; the two vPIC tables hold the
+manufacturer specification decoded from each vehicle's VIN (fitted safety systems, weight, power).
+
 Every documented field is considered. Fields are removed only when they are identifiers,
 sampling-design variables or encodings of the injury outcome (see LEAKAGE / DESIGN below).
 Child tables (vehicle, person and multi-row risk-factor tables) are aggregated to crash
@@ -23,7 +26,7 @@ from project_paths import CRSS_TRAIN_YEARS, CRSS_YEARS, PROCESSED_DIR, TABLE_DIR
 TOP_K = 12          # most frequent codes per field (learned on training years)
 MIN_SHARE = 0.002   # ignore codes rarer than this in training data
 
-KEYS = {"CASENUM", "VEH_NO", "PER_NO", "EVENTNUM", "VEVENTNUM", "VNUMBER1", "VNUMBER2", "VNumber2"}
+KEYS = {"CASENUM", "VEH_NO", "PER_NO", "EVENTNUM", "VEVENTNUM", "VNUMBER1", "VNUMBER2", "VNumber2", "TRAILER_NO"}
 DESIGN = {"PSU", "PSU_VAR", "PSUSTRAT", "STRATUM", "PJ", "WEIGHT", "YEAR"}
 # Fields that encode the outcome being predicted (target leakage).
 LEAKAGE = {
@@ -46,7 +49,14 @@ IDENTIFIERS = {
     "PTRLR3VIN": "identifier", "PMCARR_ID": "identifier", "PMCARR_I1": "identifier", "PMCARR_I2": "identifier",
     "PMAK_MOD": "identifier", "PMODEL": "identifier", "PVPICMAKE": "identifier", "PVPICMODEL": "identifier",
     "PHAZ_ID": "identifier", "PHAZ_CNO": "identifier", "PMINUTE": "clock minute",
+    # vPIC VIN-decode tables
+    "VEHICLEDESCRIPTOR": "partial VIN pattern", "VINDECODEDON": "decode timestamp",
+    "MAKEID": "make identifier (make kept via MAKE)", "MODELID": "model identifier",
+    "MANUFACTURERFULLNAMEID": "manufacturer identifier (make kept via MAKE)",
+    "MODELYEAR": "duplicate of MOD_YEAR", "DISPLACEMENTCI": "duplicate of DISPLACEMENTL (other unit)",
+    "DISPLACEMENTCC": "duplicate of DISPLACEMENTL (other unit)",
 }
+VPIC_TABLES = {"vpicdecode", "vpictrailerdecode"}
 # Recorded after the crash by investigation, kept but tagged for sensitivity analysis.
 POST_CRASH = {"DEFORMED", "TOWED", "DAMAGE", "ALC_RES", "ATST_TYP", "ALC_STATUS", "DRUG_RES",
               "PTOWED", "PIMPACT1"}
@@ -67,6 +77,7 @@ TABLE_LEVEL = {  # table -> grain
     "parkwork": "vehicle", "pvehiclesf": "vehicle",
     "person": "person", "nmcrash": "person", "nmdistract": "person", "nmimpair": "person",
     "nmprior": "person", "personrf": "person", "safetyeq": "person", "pbtype": "person",
+    "vpicdecode": "vehicle", "vpictrailerdecode": "vehicle",
 }
 
 
@@ -93,6 +104,11 @@ def field_lists(table: str, df: pd.DataFrame) -> tuple[list[str], list[str]]:
         for imp, raw in imputed_raw.items():
             if imp in cols and raw in cols:
                 cols.remove(raw)
+    if table in VPIC_TABLES:
+        # Text columns are labels of the coded *ID columns or free notes; codes and measurements are used.
+        cols = [c for c in cols if pd.api.types.is_numeric_dtype(df[c])]
+        categorical = [c for c in cols if c.endswith("ID")]
+        return [c for c in cols if c not in categorical], categorical
     numeric = [c for c in cols if c in NUMERIC]
     categorical = [c for c in cols if c not in NUMERIC]
     return numeric, categorical
@@ -100,7 +116,7 @@ def field_lists(table: str, df: pd.DataFrame) -> tuple[list[str], list[str]]:
 
 def clean_numeric(s: pd.Series, field: str) -> pd.Series:
     s = pd.to_numeric(s, errors="coerce")
-    return s.where(s < NUMERIC[field])
+    return s.where(s < NUMERIC.get(field, np.inf))
 
 
 def learn_vocab(train: pd.DataFrame, categorical: list[str]) -> dict[str, list]:
@@ -148,7 +164,9 @@ def main() -> None:
         for c in union.columns:
             reason = (LEAKAGE.get(c) or IDENTIFIERS.get(c)
                       or ("sampling design / split variable" if c in DESIGN else None)
-                      or ("key" if c in KEYS else None))
+                      or ("key" if c in KEYS else None)
+                      or ("text label of a coded *ID field, or free-text note"
+                          if table in VPIC_TABLES and not pd.api.types.is_numeric_dtype(union[c]) else None))
             if reason:
                 excluded.append({"table": table, "field": c, "reason": reason})
         train = union[union["YEAR"].isin(CRSS_TRAIN_YEARS)]

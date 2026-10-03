@@ -57,8 +57,8 @@ person.REST_USE = Shoulder and Lap Belt Used (count) crash_record 0.608496 highe
    person.REST_MIS = No Indication of Misuse (count) crash_record 0.608342 higher -> less likely
      vehicle.V_ALCH_IM = No Alcohol Involved (count) crash_record 0.608227 higher -> less likely
                            vehicle.TOWED = 2 (count)   post_crash 0.607527 higher -> more likely
-                                person.MOD_YEAR__max crash_record 0.605283 higher -> less likely
-             vehicle.DEFORMED = Minor Damage (count)   post_crash 0.604876 higher -> less likely
+             vpicdecode.AIRBAGLOCFRONTID = 3 (count) crash_record 0.605866 higher -> less likely
+               vpicdecode.SEATBELTTYPEID = 1 (count) crash_record 0.605523 higher -> less likely
  year    target  sample_rate  weighted_national_rate  weighted_crashes_millions
  2020  y_injury       0.5493                  0.2901                     5.0705
  2020 y_serious       0.1430                  0.0320                     5.0588
