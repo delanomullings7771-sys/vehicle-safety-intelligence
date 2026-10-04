@@ -1,0 +1,13 @@
+{
+ "near_constant_removed": 160,
+ "correlated_removed_after_near_constant": 175,
+ "pca_variance_explained": {
+  "10": 0.179,
+  "25": 0.261,
+  "50": 0.343,
+  "100": 0.455,
+  "200": 0.591
+ },
+ "encoded_columns": 1410,
+ "l1_best_C": 0.01
+}

@@ -1,0 +1,13 @@
+target,method,retain,features_needed,full_features
+y_injury,Mutual information top-k,95% of full validation PR-AUC,25.0,1410
+y_injury,Mutual information top-k,99% of full validation PR-AUC,200.0,1410
+y_injury,Permutation importance top-k,95% of full validation PR-AUC,10.0,1410
+y_injury,Permutation importance top-k,99% of full validation PR-AUC,50.0,1410
+y_injury,PCA components,95% of full validation PR-AUC,25.0,1410
+y_injury,PCA components,99% of full validation PR-AUC,,1410
+y_serious,Mutual information top-k,95% of full validation PR-AUC,200.0,1410
+y_serious,Mutual information top-k,99% of full validation PR-AUC,,1410
+y_serious,Permutation importance top-k,95% of full validation PR-AUC,100.0,1410
+y_serious,Permutation importance top-k,99% of full validation PR-AUC,200.0,1410
+y_serious,PCA components,95% of full validation PR-AUC,,1410
+y_serious,PCA components,99% of full validation PR-AUC,,1410

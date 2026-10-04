@@ -1,0 +1,79 @@
+y_injury: 159,920 training crashes x 1410 encoded columns | GB {'max_leaf_nodes': 63, 'min_samples_leaf': 20}
+  All features                 k= 1410 Gradient Boosting    val PR-AUC 0.9190 (153.1s)
+  Near-constant removed        k= 1250 Gradient Boosting    val PR-AUC 0.9191 (109.5s)
+  Correlation pruned (|r|>0.95) k= 1076 Gradient Boosting    val PR-AUC 0.9186 (90.3s)
+  Mutual information top-k     k=   10 Gradient Boosting    val PR-AUC 0.7705 (1.4s)
+  Mutual information top-k     k=   25 Gradient Boosting    val PR-AUC 0.8800 (2.9s)
+  Mutual information top-k     k=   50 Gradient Boosting    val PR-AUC 0.8994 (4.7s)
+  Mutual information top-k     k=  100 Gradient Boosting    val PR-AUC 0.9064 (8.0s)
+  Mutual information top-k     k=  200 Gradient Boosting    val PR-AUC 0.9136 (18.7s)
+  Mutual information top-k     k=  400 Gradient Boosting    val PR-AUC 0.9169 (41.6s)
+  Permutation importance top-k k=   10 Gradient Boosting    val PR-AUC 0.8879 (1.8s)
+  Permutation importance top-k k=   25 Gradient Boosting    val PR-AUC 0.9079 (3.4s)
+  Permutation importance top-k k=   50 Gradient Boosting    val PR-AUC 0.9155 (7.0s)
+  Permutation importance top-k k=  100 Gradient Boosting    val PR-AUC 0.9183 (11.3s)
+  Permutation importance top-k k=  200 Gradient Boosting    val PR-AUC 0.9190 (23.0s)
+  Permutation importance top-k k=  400 Gradient Boosting    val PR-AUC 0.9192 (43.6s)
+  L1 logistic (C=0.0002)       k=   24 Logistic Regression  val PR-AUC 0.8910 (21.3s)
+  L1 logistic (C=0.0005)       k=   46 Logistic Regression  val PR-AUC 0.9016 (16.9s)
+  L1 logistic (C=0.001)        k=   81 Logistic Regression  val PR-AUC 0.9060 (14.4s)
+  L1 logistic (C=0.003)        k=  229 Logistic Regression  val PR-AUC 0.9095 (26.3s)
+  L1 logistic (C=0.01)         k=  559 Logistic Regression  val PR-AUC 0.9106 (65.5s)
+  L1 logistic (C=0.05)         k=  969 Logistic Regression  val PR-AUC 0.9105 (499.9s)
+  L1-selected (C=0.01) then GB k=  559 Gradient Boosting    val PR-AUC 0.9184 (53.1s)
+  PCA components               k=   10 Gradient Boosting    val PR-AUC 0.8711 (5.1s)
+  PCA components               k=   10 Logistic Regression  val PR-AUC 0.8482 (0.3s)
+  PCA components               k=   25 Gradient Boosting    val PR-AUC 0.8827 (5.8s)
+  PCA components               k=   25 Logistic Regression  val PR-AUC 0.8726 (0.5s)
+  PCA components               k=   50 Gradient Boosting    val PR-AUC 0.8851 (10.6s)
+  PCA components               k=   50 Logistic Regression  val PR-AUC 0.8767 (0.8s)
+  PCA components               k=  100 Gradient Boosting    val PR-AUC 0.8874 (18.6s)
+  PCA components               k=  100 Logistic Regression  val PR-AUC 0.8817 (1.6s)
+  PCA components               k=  200 Gradient Boosting    val PR-AUC 0.8880 (42.5s)
+  PCA components               k=  200 Logistic Regression  val PR-AUC 0.8916 (2.3s)
+y_serious: 159,516 training crashes x 1410 encoded columns | GB {'max_leaf_nodes': 31, 'min_samples_leaf': 20}
+  All features                 k= 1410 Gradient Boosting    val PR-AUC 0.6471 (122.0s)
+  Near-constant removed        k= 1250 Gradient Boosting    val PR-AUC 0.6481 (168.9s)
+  Correlation pruned (|r|>0.95) k= 1075 Gradient Boosting    val PR-AUC 0.6465 (95.5s)
+  Mutual information top-k     k=   10 Gradient Boosting    val PR-AUC 0.4783 (2.0s)
+  Mutual information top-k     k=   25 Gradient Boosting    val PR-AUC 0.5138 (4.3s)
+  Mutual information top-k     k=   50 Gradient Boosting    val PR-AUC 0.5364 (7.0s)
+  Mutual information top-k     k=  100 Gradient Boosting    val PR-AUC 0.5925 (13.9s)
+  Mutual information top-k     k=  200 Gradient Boosting    val PR-AUC 0.6164 (22.7s)
+  Mutual information top-k     k=  400 Gradient Boosting    val PR-AUC 0.6333 (43.3s)
+  Permutation importance top-k k=   10 Gradient Boosting    val PR-AUC 0.5142 (2.0s)
+  Permutation importance top-k k=   25 Gradient Boosting    val PR-AUC 0.5496 (4.4s)
+  Permutation importance top-k k=   50 Gradient Boosting    val PR-AUC 0.6109 (8.6s)
+  Permutation importance top-k k=  100 Gradient Boosting    val PR-AUC 0.6385 (13.2s)
+  Permutation importance top-k k=  200 Gradient Boosting    val PR-AUC 0.6461 (24.6s)
+  Permutation importance top-k k=  400 Gradient Boosting    val PR-AUC 0.6478 (39.2s)
+  L1 logistic (C=0.0002)       k=   15 Logistic Regression  val PR-AUC 0.4819 (16.7s)
+  L1 logistic (C=0.0005)       k=   47 Logistic Regression  val PR-AUC 0.5448 (13.3s)
+  L1 logistic (C=0.001)        k=   81 Logistic Regression  val PR-AUC 0.5700 (14.4s)
+  L1 logistic (C=0.003)        k=  205 Logistic Regression  val PR-AUC 0.5915 (24.2s)
+  L1 logistic (C=0.01)         k=  554 Logistic Regression  val PR-AUC 0.5954 (88.0s)
+  L1 logistic (C=0.05)         k=  992 Logistic Regression  val PR-AUC 0.5710 (447.6s)
+  L1-selected (C=0.01) then GB k=  554 Gradient Boosting    val PR-AUC 0.6445 (48.5s)
+  PCA components               k=   10 Gradient Boosting    val PR-AUC 0.4437 (4.4s)
+  PCA components               k=   10 Logistic Regression  val PR-AUC 0.3468 (0.3s)
+  PCA components               k=   25 Gradient Boosting    val PR-AUC 0.4979 (4.9s)
+  PCA components               k=   25 Logistic Regression  val PR-AUC 0.4625 (0.3s)
+  PCA components               k=   50 Gradient Boosting    val PR-AUC 0.5052 (8.6s)
+  PCA components               k=   50 Logistic Regression  val PR-AUC 0.4654 (0.8s)
+  PCA components               k=  100 Gradient Boosting    val PR-AUC 0.5179 (13.8s)
+  PCA components               k=  100 Logistic Regression  val PR-AUC 0.4904 (1.1s)
+  PCA components               k=  200 Gradient Boosting    val PR-AUC 0.5163 (32.7s)
+  PCA components               k=  200 Logistic Regression  val PR-AUC 0.2841 (2.1s)
+   target                       method                        retain  features_needed  full_features
+ y_injury     Mutual information top-k 95% of full validation PR-AUC             25.0           1410
+ y_injury     Mutual information top-k 99% of full validation PR-AUC            200.0           1410
+ y_injury Permutation importance top-k 95% of full validation PR-AUC             10.0           1410
+ y_injury Permutation importance top-k 99% of full validation PR-AUC             50.0           1410
+ y_injury               PCA components 95% of full validation PR-AUC             25.0           1410
+ y_injury               PCA components 99% of full validation PR-AUC              NaN           1410
+y_serious     Mutual information top-k 95% of full validation PR-AUC            200.0           1410
+y_serious     Mutual information top-k 99% of full validation PR-AUC              NaN           1410
+y_serious Permutation importance top-k 95% of full validation PR-AUC            100.0           1410
+y_serious Permutation importance top-k 99% of full validation PR-AUC            200.0           1410
+y_serious               PCA components 95% of full validation PR-AUC              NaN           1410
+y_serious               PCA components 99% of full validation PR-AUC              NaN           1410
