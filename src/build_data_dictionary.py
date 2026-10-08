@@ -192,6 +192,12 @@ def crss_feature_list(raw: pd.DataFrame) -> pd.DataFrame:
 def selection(raw: pd.DataFrame, features: pd.DataFrame) -> tuple:
     """Field selection (notebook 04, Part B): what happened to each used field, and the 50 final-model fields."""
     sel_dir = OUTPUT_DIR / "selection"
+    if not (sel_dir / "crss_selected_features.json").exists():
+        # First build, before select_crash_features.py has run (it reads the field roles from this dictionary).
+        print("No field selection yet: selection columns left empty; rerun after select_crash_features.py")
+        return (raw.assign(selection_status=""), features.assign(source="", in_final_model=""),
+                pd.DataFrame(columns=["step", "fields", "note"]),
+                pd.DataFrame(columns=["table", "field", "used_by", "title", "definition", "features_built"]))
     sel = json.loads((sel_dir / "crss_selected_features.json").read_text())
     s1, s2 = set(sel["y_injury"]["fields"]), set(sel["y_serious"]["fields"])
     f1, f2 = set(sel["y_injury"]["features"]), set(sel["y_serious"]["features"])
@@ -238,7 +244,8 @@ def write(sheets: dict) -> None:
                 cell.fill = PatternFill("solid", fgColor="1F4E79")
                 cell.alignment = Alignment(wrap_text=True, vertical="top")
             for i, col in enumerate(df.columns, start=1):
-                width = min(70, max(12, int(df[col].astype(str).str.len().quantile(0.9)) + 2, len(str(col)) + 2))
+                q = df[col].astype(str).str.len().quantile(0.9) if len(df) else 0
+                width = min(70, max(12, int(q) + 2, len(str(col)) + 2))
                 ws.column_dimensions[get_column_letter(i)].width = width
                 if width >= 40:
                     for cell in ws[get_column_letter(i)][1:]:

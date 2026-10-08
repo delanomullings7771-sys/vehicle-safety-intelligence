@@ -30,21 +30,56 @@ Each task compares a dummy baseline with 3-4 model families: Logistic Regression
 
 ## Reproduce
 
+### 1. Environment
+Python 3.12 (developed on 3.12.14, Windows 11, 12 cores, about 15 GB RAM).
+
+```
+py -3.12 -m venv .venv
+.venv/Scripts/python.exe -m pip install -r requirements.txt
+```
+
+### 2. Get the raw data (about 6 GB unzipped; not in the repository)
+Download from NHTSA and unzip into `data/raw/` with this layout (the scripts look for exactly these paths):
+
+| File | Download | Unzip to |
+|---|---|---|
+| CRSS 2020-2024 (one zip per year) | `https://static.nhtsa.gov/nhtsa/downloads/CRSS/<year>/CRSS<year>CSV.zip` | `data/raw/crss/<year>/CRSS<year>CSV/` (28 CSV files, e.g. `accident.csv`) |
+| Vehicle Owner Complaints (flat file) | `https://static.nhtsa.gov/odi/ffdd/cmpl/FLAT_CMPL.zip` | `data/raw/complaints/FLAT_CMPL/FLAT_CMPL.txt` |
+
+* **CRSS is fixed:** the five zips used here are byte-for-byte the files NHTSA serves today (checked by size on 8 Oct 2026), so the crash results reproduce exactly.
+* **The complaint file grows:** NHTSA adds complaints continuously. This project used the copy downloaded on 29 Sep 2026 (last complaint received 24 Sep 2026; 2,250,304 rows; SHA-256 `ca2d3fe0c53a7b2ecc5a5354162914ae21e046d7766452a1ee8825ea0ceb4ad1`). A newer download adds complaints to the 2024-2026 test period, so the text-model test results will differ slightly; training and validation (to 2023) are unchanged. `src/audit_raw_data.py` prints the hash of the file you have.
+
+### 3. Run the pipeline in this order
+Total about 4.5 hours, most of it `train_crss.py` (about 3 hours).
+
 ```
 .venv/Scripts/python.exe src/audit_raw_data.py          # raw inventory and hashes
-.venv/Scripts/python.exe src/build_crss_features.py     # crash-level table from all 28 tables
-.venv/Scripts/python.exe src/build_complaints.py        # one row per complaint, harmonised components
+.venv/Scripts/python.exe src/build_crss_features.py     # crash-level table from all 28 tables (about 4 min)
+.venv/Scripts/python.exe src/build_complaints.py        # one row per complaint, harmonised components (about 15 min)
+.venv/Scripts/python.exe src/build_data_dictionary.py   # first pass: field roles (field selection reads them)
 .venv/Scripts/python.exe src/eda_crss.py                # EDA and statistical tests (CRSS)
 .venv/Scripts/python.exe src/eda_complaints.py          # EDA, tests and exposure linkage (complaints)
 .venv/Scripts/python.exe src/build_vehicle_profiles.py  # integrated make/model/year profiles
 .venv/Scripts/python.exe src/train_crss.py              # benchmark crash models (all fields)
+.venv/Scripts/python.exe feature_reduction/feature_reduction.py  # reduction study (notebook 05b)
 .venv/Scripts/python.exe src/select_crash_features.py   # field selection: ablation, post-crash, 98% rule
 .venv/Scripts/python.exe src/train_crss_final.py        # final S1, S2 on the selected features
 .venv/Scripts/python.exe src/train_text.py              # U1, U2
-.venv/Scripts/python.exe src/build_data_dictionary.py   # documentation/Data_Dictionary.xlsx
+.venv/Scripts/python.exe src/build_data_dictionary.py   # second pass: adds each field's selection status
 .venv/Scripts/python.exe src/export_artifacts.py        # deployment artifacts; checks the crash feature builder
 .venv/Scripts/python.exe -m pytest tests -q             # end-to-end API tests
 ```
+
+All random steps use a fixed seed (42), so a rerun gives the same results.
+
+### 4. Notebooks
+Notebooks 01-06 and 05b (in `notebooks/`) read the saved outputs, so they can be opened and re-run without retraining once the steps above (or just the data steps) have run. To execute them all:
+
+```
+.venv/Scripts/jupyter-nbconvert.exe --to notebook --execute --inplace notebooks/*.ipynb
+```
+
+Without the raw data, notebooks 01 and 06 and the API tests still run from the committed outputs and `app/api/artifacts/`.
 
 ## Run the application locally
 
