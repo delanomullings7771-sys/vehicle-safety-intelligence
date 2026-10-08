@@ -1,0 +1,5645 @@
+{
+ "examples": [
+  {
+   "id": "crash-1",
+   "casenum": "202406024830",
+   "year": 2024,
+   "label": "No injury recorded; low predicted risk",
+   "recorded_outcome": "No Apparent Injury (O)",
+   "y_injury": 0,
+   "y_serious": 0,
+   "record": {
+    "accident": [
+     {
+      "CASENUM": 202406024830,
+      "ALCHL_IM": 2,
+      "EVENT1_IM": 12,
+      "HOUR_IM": 21,
+      "LGTCON_IM": 3,
+      "MANCOL_IM": 1,
+      "REGION": 3,
+      "RELJCT2_IM": 3,
+      "URBANICITY": 1
+     }
+    ],
+    "cevent": [
+     {
+      "CASENUM": 202406024830,
+      "AOI1": 12,
+      "AOI2": 6,
+      "SOE": 12
+     }
+    ],
+    "distract": [
+     {
+      "CASENUM": 202406024830,
+      "VEH_NO": 1,
+      "DRDISTRACT": 93
+     },
+     {
+      "CASENUM": 202406024830,
+      "VEH_NO": 2,
+      "DRDISTRACT": 0
+     }
+    ],
+    "drimpair": [
+     {
+      "CASENUM": 202406024830,
+      "VEH_NO": 1,
+      "DRIMPAIR": 0
+     },
+     {
+      "CASENUM": 202406024830,
+      "VEH_NO": 2,
+      "DRIMPAIR": 0
+     }
+    ],
+    "driverrf": [
+     {
+      "CASENUM": 202406024830,
+      "VEH_NO": 1,
+      "DRIVERRF": 6
+     },
+     {
+      "CASENUM": 202406024830,
+      "VEH_NO": 2,
+      "DRIVERRF": 0
+     }
+    ],
+    "maneuver": [
+     {
+      "CASENUM": 202406024830,
+      "VEH_NO": 1,
+      "MANEUVER": 98
+     },
+     {
+      "CASENUM": 202406024830,
+      "VEH_NO": 2,
+      "MANEUVER": 0
+     }
+    ],
+    "pbtype": [],
+    "person": [
+     {
+      "CASENUM": 202406024830,
+      "VEH_NO": 1,
+      "PER_NO": 1,
+      "AGE_IM": 57,
+      "AIR_BAG": 20,
+      "BODY_TYP": 2,
+      "DRUGS": 0,
+      "EJECT_IM": 0,
+      "GVWR_FROM": 11,
+      "IMPACT1": 12,
+      "MOD_YEAR": 2021,
+      "PERALCH_IM": 0,
+      "PER_TYP": 1,
+      "REST_MIS": 0,
+      "REST_USE": 3,
+      "SEX_IM": 2
+     },
+     {
+      "CASENUM": 202406024830,
+      "VEH_NO": 2,
+      "PER_NO": 1,
+      "AGE_IM": 22,
+      "AIR_BAG": 20,
+      "BODY_TYP": 14,
+      "DRUGS": 0,
+      "EJECT_IM": 0,
+      "GVWR_FROM": 11,
+      "IMPACT1": 6,
+      "MOD_YEAR": 2023,
+      "PERALCH_IM": 0,
+      "PER_TYP": 1,
+      "REST_MIS": 0,
+      "REST_USE": 3,
+      "SEX_IM": 1
+     }
+    ],
+    "personrf": [
+     {
+      "CASENUM": 202406024830,
+      "VEH_NO": 1,
+      "PER_NO": 1,
+      "PERSONRF": 0
+     },
+     {
+      "CASENUM": 202406024830,
+      "VEH_NO": 2,
+      "PER_NO": 1,
+      "PERSONRF": 0
+     }
+    ],
+    "vehicle": [
+     {
+      "CASENUM": 202406024830,
+      "VEH_NO": 1,
+      "BODY_TYP": 2,
+      "HIT_RUN": 0,
+      "IMPACT1_IM": 12,
+      "MDLYR_IM": 2021,
+      "PCRASH1_IM": 1,
+      "P_CRASH2": 50,
+      "SPEEDREL": 0,
+      "TRAV_SP": 2,
+      "VEVENT_IM": 12,
+      "VNUM_LAN": 8,
+      "VPROFILE": 1,
+      "VSPD_LIM": 45,
+      "VSURCOND": 1,
+      "VTRAFCON": 3,
+      "VTRAFWAY": 7,
+      "V_CONFIG": 0
+     },
+     {
+      "CASENUM": 202406024830,
+      "VEH_NO": 2,
+      "BODY_TYP": 14,
+      "HIT_RUN": 0,
+      "IMPACT1_IM": 6,
+      "MDLYR_IM": 2023,
+      "PCRASH1_IM": 5,
+      "P_CRASH2": 53,
+      "SPEEDREL": 0,
+      "TRAV_SP": 0,
+      "VEVENT_IM": 12,
+      "VNUM_LAN": 8,
+      "VPROFILE": 1,
+      "VSPD_LIM": 45,
+      "VSURCOND": 1,
+      "VTRAFCON": 3,
+      "VTRAFWAY": 7,
+      "V_CONFIG": 0
+     }
+    ],
+    "vevent": [
+     {
+      "CASENUM": 202406024830,
+      "VEH_NO": 1
+     },
+     {
+      "CASENUM": 202406024830,
+      "VEH_NO": 2
+     }
+    ],
+    "violatn": [
+     {
+      "CASENUM": 202406024830,
+      "VEH_NO": 1,
+      "VIOLATION": 0
+     },
+     {
+      "CASENUM": 202406024830,
+      "VEH_NO": 2,
+      "VIOLATION": 0
+     }
+    ]
+   },
+   "display": [
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "ALCHL_IM",
+     "label": "Alcohol Involved in Crash",
+     "value": "No Alcohol Involved"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "EVENT1_IM",
+     "label": "First Harmful Event",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "HOUR_IM",
+     "label": "Hour of Crash",
+     "value": "9:00pm-9:59pm"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "LGTCON_IM",
+     "label": "Light Condition",
+     "value": "Dark - Lighted"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "MANCOL_IM",
+     "label": "Manner of Collision of the First Harmful Event",
+     "value": "Front-to-Rear"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "REGION",
+     "label": "Region of the Country",
+     "value": "South (MD, DE, DC, WV, VA, KY, TN, NC, SC, GA, FL, AL, MS, LA, AR, OK, TX)"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "RELJCT2_IM",
+     "label": "Relation to Junction\u2014Specific Location",
+     "value": "Intersection-Related"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "URBANICITY",
+     "label": "Urbanicity",
+     "value": "Urban Area"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 1",
+     "field": "AOI1",
+     "label": "Area of Impact (This Vehicle)",
+     "value": "12 Clock Point"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 1",
+     "field": "AOI2",
+     "label": "Area of Impact (Other Vehicle)",
+     "value": "6 Clock Point"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 1",
+     "field": "SOE",
+     "label": "Sequence of Events",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "2-door sedan,hardtop,coupe"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "HIT_RUN",
+     "label": "Hit-and-Run",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "IMPACT1_IM",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "12 Clock Point"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "MDLYR_IM",
+     "label": "Vehicle Model Year",
+     "value": "2021"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "PCRASH1_IM",
+     "label": "Pre-Event Movement (Prior to Recognition of Critical Event)",
+     "value": "Going Straight"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "P_CRASH2",
+     "label": "Critical Event\u2014Precrash",
+     "value": "Other vehicle stopped"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "SPEEDREL",
+     "label": "Speeding Related",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "TRAV_SP",
+     "label": "Travel Speed",
+     "value": "002 MPH"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VEVENT_IM",
+     "label": "Most Harmful Event",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VNUM_LAN",
+     "label": "Total Lanes in Roadway",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VPROFILE",
+     "label": "Roadway Grade",
+     "value": "Level"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VSPD_LIM",
+     "label": "Speed Limit",
+     "value": "45 MPH"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VSURCOND",
+     "label": "Roadway Surface Conditions",
+     "value": "Dry"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VTRAFCON",
+     "label": "Traffic Control Device",
+     "value": "Traffic control signal(on colors) not known whether or not Pedestrian Signal"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VTRAFWAY",
+     "label": "Trafficway Description",
+     "value": "Two-Way Divided, Unknown if Unprotected Median or Positive Median Barrier"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "V_CONFIG",
+     "label": "Vehicle Configuration",
+     "value": "Not Applicable"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "Compact Utility (Utility Vehicle Categories \"Small\" and \"Midsize\")"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "HIT_RUN",
+     "label": "Hit-and-Run",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "IMPACT1_IM",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "6 Clock Point"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "MDLYR_IM",
+     "label": "Vehicle Model Year",
+     "value": "2023"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "PCRASH1_IM",
+     "label": "Pre-Event Movement (Prior to Recognition of Critical Event)",
+     "value": "Stopped in Roadway"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "P_CRASH2",
+     "label": "Critical Event\u2014Precrash",
+     "value": "Traveling in same direction with higher speed"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "SPEEDREL",
+     "label": "Speeding Related",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "TRAV_SP",
+     "label": "Travel Speed",
+     "value": "Stopped Motor Vehicle In- Transport"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VEVENT_IM",
+     "label": "Most Harmful Event",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VNUM_LAN",
+     "label": "Total Lanes in Roadway",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VPROFILE",
+     "label": "Roadway Grade",
+     "value": "Level"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VSPD_LIM",
+     "label": "Speed Limit",
+     "value": "45 MPH"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VSURCOND",
+     "label": "Roadway Surface Conditions",
+     "value": "Dry"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VTRAFCON",
+     "label": "Traffic Control Device",
+     "value": "Traffic control signal(on colors) not known whether or not Pedestrian Signal"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VTRAFWAY",
+     "label": "Trafficway Description",
+     "value": "Two-Way Divided, Unknown if Unprotected Median or Positive Median Barrier"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "V_CONFIG",
+     "label": "Vehicle Configuration",
+     "value": "Not Applicable"
+    },
+    {
+     "table": "drimpair",
+     "unit": "Vehicle 1",
+     "field": "DRIMPAIR",
+     "label": "Condition (Impairment) at Time of Crash\u2014Driver",
+     "value": "None/Apparently Normal"
+    },
+    {
+     "table": "drimpair",
+     "unit": "Vehicle 2",
+     "field": "DRIMPAIR",
+     "label": "Condition (Impairment) at Time of Crash\u2014Driver",
+     "value": "None/Apparently Normal"
+    },
+    {
+     "table": "distract",
+     "unit": "Vehicle 1",
+     "field": "DRDISTRACT",
+     "label": "Driver Distracted By",
+     "value": "Inattention (Inattentive), Details Unknown"
+    },
+    {
+     "table": "distract",
+     "unit": "Vehicle 2",
+     "field": "DRDISTRACT",
+     "label": "Driver Distracted By",
+     "value": "Not Distracted"
+    },
+    {
+     "table": "driverrf",
+     "unit": "Vehicle 1",
+     "field": "DRIVERRF",
+     "label": "Related Factors\u2014Driver Level",
+     "value": "Careless Driving, Inattentive Operation, Improper Driving, Driving Without Due Care"
+    },
+    {
+     "table": "driverrf",
+     "unit": "Vehicle 2",
+     "field": "DRIVERRF",
+     "label": "Related Factors\u2014Driver Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "maneuver",
+     "unit": "Vehicle 1",
+     "field": "MANEUVER",
+     "label": "Driver Maneuvered to Avoid",
+     "value": "Not Reported"
+    },
+    {
+     "table": "maneuver",
+     "unit": "Vehicle 2",
+     "field": "MANEUVER",
+     "label": "Driver Maneuvered to Avoid",
+     "value": "Driver Did Not Maneuver to Avoid"
+    },
+    {
+     "table": "violatn",
+     "unit": "Vehicle 1",
+     "field": "VIOLATION",
+     "label": "Citations Issued",
+     "value": "nan"
+    },
+    {
+     "table": "violatn",
+     "unit": "Vehicle 2",
+     "field": "VIOLATION",
+     "label": "Citations Issued",
+     "value": "nan"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "AGE_IM",
+     "label": "Age",
+     "value": "57 Years"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "AIR_BAG",
+     "label": "Air Bag Deployed",
+     "value": "Not Deployed"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "2-door sedan,hardtop,coupe"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "DRUGS",
+     "label": "Police Reported Drug Involvement",
+     "value": "No (drugs not involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "EJECT_IM",
+     "label": "Ejection",
+     "value": "Not Ejected"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "GVWR_FROM",
+     "label": "Power Unit Gross Vehicle Weight Rating (GVWR)",
+     "value": "Class 1: 6,000 lbs. or less (2,722 kg or less)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "IMPACT1",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "12 Clock Point"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "MOD_YEAR",
+     "label": "Vehicle Model Year",
+     "value": "2021"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "PERALCH_IM",
+     "label": "Police Reported Alcohol Involvement",
+     "value": "No (Alcohol Not Involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "PER_TYP",
+     "label": "Person Type",
+     "value": "Driver of a Motor Vehicle In-Transport"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "REST_MIS",
+     "label": "Indication of Restraint System Misuse",
+     "value": "No Indication of Misuse"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "REST_USE",
+     "label": "Restraint System Use",
+     "value": "Shoulder and Lap Belt Used"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "SEX_IM",
+     "label": "Sex",
+     "value": "Female"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "AGE_IM",
+     "label": "Age",
+     "value": "22 Years"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "AIR_BAG",
+     "label": "Air Bag Deployed",
+     "value": "Not Deployed"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "Compact Utility (Utility Vehicle Categories \"Small\" and \"Midsize\")"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "DRUGS",
+     "label": "Police Reported Drug Involvement",
+     "value": "No (drugs not involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "EJECT_IM",
+     "label": "Ejection",
+     "value": "Not Ejected"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "GVWR_FROM",
+     "label": "Power Unit Gross Vehicle Weight Rating (GVWR)",
+     "value": "Class 1: 6,000 lbs. or less (2,722 kg or less)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "IMPACT1",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "6 Clock Point"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "MOD_YEAR",
+     "label": "Vehicle Model Year",
+     "value": "2023"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "PERALCH_IM",
+     "label": "Police Reported Alcohol Involvement",
+     "value": "No (Alcohol Not Involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "PER_TYP",
+     "label": "Person Type",
+     "value": "Driver of a Motor Vehicle In-Transport"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "REST_MIS",
+     "label": "Indication of Restraint System Misuse",
+     "value": "No Indication of Misuse"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "REST_USE",
+     "label": "Restraint System Use",
+     "value": "Shoulder and Lap Belt Used"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "SEX_IM",
+     "label": "Sex",
+     "value": "Male"
+    },
+    {
+     "table": "personrf",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "PERSONRF",
+     "label": "Related Factors\u2014Person Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "personrf",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "PERSONRF",
+     "label": "Related Factors\u2014Person Level",
+     "value": "None Noted"
+    }
+   ],
+   "training_features": {
+    "acc__ALCHL_IM": 2.0,
+    "acc__EVENT1_IM": 12.0,
+    "acc__HOUR_IM": -1.0,
+    "acc__LGTCON_IM": 3.0,
+    "acc__MANCOL_IM": 1.0,
+    "acc__REGION": 3.0,
+    "acc__RELJCT2_IM": 3.0,
+    "acc__URBANICITY": 1.0,
+    "cevent__AOI1=2": 0.0,
+    "cevent__AOI2=77": 0.0,
+    "cevent__SOE=1": 0.0,
+    "cevent__SOE=34": 0.0,
+    "cevent__n_rows": 1.0,
+    "distract__DRDISTRACT=0": 1.0,
+    "distract__DRDISTRACT=96": 0.0,
+    "distract__DRDISTRACT=99": 0.0,
+    "drimpair__DRIMPAIR=0": 2.0,
+    "drimpair__DRIMPAIR=1": 0.0,
+    "drimpair__DRIMPAIR=98": 0.0,
+    "drimpair__DRIMPAIR=99": 0.0,
+    "driverrf__DRIVERRF=0": 1.0,
+    "driverrf__DRIVERRF=36": 0.0,
+    "driverrf__DRIVERRF=6": 1.0,
+    "maneuver__MANEUVER=92": 0.0,
+    "pbtype__PEDPOS=3": 0.0,
+    "person__AGE_IM__max": 57.0,
+    "person__AGE_IM__min": 22.0,
+    "person__AIR_BAG=1": 0.0,
+    "person__AIR_BAG=20": 2.0,
+    "person__AIR_BAG=8": 0.0,
+    "person__AIR_BAG=9": 0.0,
+    "person__AIR_BAG=98": 0.0,
+    "person__BODY_TYP=66.0": 0.0,
+    "person__DRUGS=0": 2.0,
+    "person__DRUGS=1": 0.0,
+    "person__DRUGS=9": 0.0,
+    "person__EJECT_IM=0": 2.0,
+    "person__EJECT_IM=1": 0.0,
+    "person__EJECT_IM=8": 0.0,
+    "person__GVWR_FROM=18.0": 0.0,
+    "person__IMPACT1=12.0": 1.0,
+    "person__IMPACT1=6.0": 1.0,
+    "person__MOD_YEAR__max": 2023.0,
+    "person__MOD_YEAR__min": 2021.0,
+    "person__PERALCH_IM=1": 0.0,
+    "person__PER_TYP=2": 0.0,
+    "person__REST_MIS=0": 2.0,
+    "person__REST_MIS=7": 0.0,
+    "person__REST_USE=20": 0.0,
+    "person__REST_USE=98": 0.0,
+    "person__REST_USE=99": 0.0,
+    "person__SEX_IM=2": 1.0,
+    "person__n_rows": 2.0,
+    "personrf__PERSONRF=0": 2.0,
+    "vehicle__BODY_TYP=14": 1.0,
+    "vehicle__HIT_RUN=0": 2.0,
+    "vehicle__HIT_RUN=1": 0.0,
+    "vehicle__IMPACT1_IM=12": 1.0,
+    "vehicle__IMPACT1_IM=9": 0.0,
+    "vehicle__MDLYR_IM__max": 2023.0,
+    "vehicle__PCRASH1_IM=1": 1.0,
+    "vehicle__P_CRASH2=62": 0.0,
+    "vehicle__SPEEDREL=3": 0.0,
+    "vehicle__SPEEDREL=5": 0.0,
+    "vehicle__TRAV_SP__max": 2.0,
+    "vehicle__TRAV_SP__min": 0.0,
+    "vehicle__VEVENT_IM=11": 0.0,
+    "vehicle__VEVENT_IM=24": 0.0,
+    "vehicle__VNUM_LAN=4": 0.0,
+    "vehicle__VNUM_LAN=8": 2.0,
+    "vehicle__VPROFILE=8": 0.0,
+    "vehicle__VSPD_LIM__max": 45.0,
+    "vehicle__VSURCOND=1": 2.0,
+    "vehicle__VTRAFCON=20": 0.0,
+    "vehicle__VTRAFWAY=7": 2.0,
+    "vehicle__VTRAFWAY=8": 0.0,
+    "vehicle__V_CONFIG=0": 2.0,
+    "vevent__n_rows": 2.0,
+    "violatn__VIOLATION=0": 2.0
+   }
+  },
+  {
+   "id": "crash-2",
+   "casenum": "202405818149",
+   "year": 2024,
+   "label": "Injury, not serious; injury flagged",
+   "recorded_outcome": "Possible Injury (C)",
+   "y_injury": 1,
+   "y_serious": 0,
+   "record": {
+    "accident": [
+     {
+      "CASENUM": 202405818149,
+      "ALCHL_IM": 2,
+      "EVENT1_IM": 12,
+      "HOUR_IM": 7,
+      "LGTCON_IM": 1,
+      "MANCOL_IM": 6,
+      "REGION": 3,
+      "RELJCT2_IM": 2,
+      "URBANICITY": 1
+     }
+    ],
+    "cevent": [
+     {
+      "CASENUM": 202405818149,
+      "AOI1": 12,
+      "AOI2": 3,
+      "SOE": 12
+     },
+     {
+      "CASENUM": 202405818149,
+      "AOI1": 11,
+      "AOI2": 11,
+      "SOE": 12
+     }
+    ],
+    "distract": [
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 1,
+      "DRDISTRACT": 96
+     },
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 2,
+      "DRDISTRACT": 96
+     },
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 3,
+      "DRDISTRACT": 96
+     }
+    ],
+    "drimpair": [
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 1,
+      "DRIMPAIR": 98
+     },
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 2,
+      "DRIMPAIR": 98
+     },
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 3,
+      "DRIMPAIR": 98
+     }
+    ],
+    "driverrf": [
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 1,
+      "DRIVERRF": 0
+     },
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 2,
+      "DRIVERRF": 0
+     },
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 3,
+      "DRIVERRF": 0
+     }
+    ],
+    "maneuver": [
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 1,
+      "MANEUVER": 0
+     },
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 2,
+      "MANEUVER": 98
+     },
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 3,
+      "MANEUVER": 0
+     }
+    ],
+    "pbtype": [],
+    "person": [
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 1,
+      "PER_NO": 1,
+      "AGE_IM": 22,
+      "AIR_BAG": 9,
+      "BODY_TYP": 4,
+      "DRUGS": 8,
+      "EJECT_IM": 0,
+      "GVWR_FROM": 11,
+      "IMPACT1": 3,
+      "MOD_YEAR": 2018,
+      "PERALCH_IM": 0,
+      "PER_TYP": 1,
+      "REST_MIS": 0,
+      "REST_USE": 3,
+      "SEX_IM": 1
+     },
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 2,
+      "PER_NO": 1,
+      "AGE_IM": 41,
+      "AIR_BAG": 9,
+      "BODY_TYP": 15,
+      "DRUGS": 8,
+      "EJECT_IM": 0,
+      "GVWR_FROM": 12,
+      "IMPACT1": 12,
+      "MOD_YEAR": 2023,
+      "PERALCH_IM": 0,
+      "PER_TYP": 1,
+      "REST_MIS": 0,
+      "REST_USE": 3,
+      "SEX_IM": 2
+     },
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 3,
+      "PER_NO": 1,
+      "AGE_IM": 55,
+      "AIR_BAG": 20,
+      "BODY_TYP": 3,
+      "DRUGS": 8,
+      "EJECT_IM": 0,
+      "GVWR_FROM": 11,
+      "IMPACT1": 11,
+      "MOD_YEAR": 2014,
+      "PERALCH_IM": 0,
+      "PER_TYP": 1,
+      "REST_MIS": 0,
+      "REST_USE": 3,
+      "SEX_IM": 2
+     }
+    ],
+    "personrf": [
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 1,
+      "PER_NO": 1,
+      "PERSONRF": 0
+     },
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 2,
+      "PER_NO": 1,
+      "PERSONRF": 0
+     },
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 3,
+      "PER_NO": 1,
+      "PERSONRF": 0
+     }
+    ],
+    "vehicle": [
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 1,
+      "BODY_TYP": 4,
+      "HIT_RUN": 0,
+      "IMPACT1_IM": 3,
+      "MDLYR_IM": 2018,
+      "PCRASH1_IM": 11,
+      "P_CRASH2": 15,
+      "SPEEDREL": 0,
+      "TRAV_SP": 998,
+      "VEVENT_IM": 12,
+      "VNUM_LAN": 2,
+      "VPROFILE": 2,
+      "VSPD_LIM": 35,
+      "VSURCOND": 1,
+      "VTRAFCON": 0,
+      "VTRAFWAY": 1,
+      "V_CONFIG": 0
+     },
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 2,
+      "BODY_TYP": 15,
+      "HIT_RUN": 0,
+      "IMPACT1_IM": 12,
+      "MDLYR_IM": 2023,
+      "PCRASH1_IM": 1,
+      "P_CRASH2": 62,
+      "SPEEDREL": 0,
+      "TRAV_SP": 998,
+      "VEVENT_IM": 12,
+      "VNUM_LAN": 2,
+      "VPROFILE": 2,
+      "VSPD_LIM": 35,
+      "VSURCOND": 1,
+      "VTRAFCON": 0,
+      "VTRAFWAY": 1,
+      "V_CONFIG": 0
+     },
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 3,
+      "BODY_TYP": 3,
+      "HIT_RUN": 0,
+      "IMPACT1_IM": 11,
+      "MDLYR_IM": 2014,
+      "PCRASH1_IM": 5,
+      "P_CRASH2": 67,
+      "SPEEDREL": 0,
+      "TRAV_SP": 0,
+      "VEVENT_IM": 12,
+      "VNUM_LAN": 2,
+      "VPROFILE": 1,
+      "VSPD_LIM": 35,
+      "VSURCOND": 98,
+      "VTRAFCON": 20,
+      "VTRAFWAY": 1,
+      "V_CONFIG": 0
+     }
+    ],
+    "vevent": [
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 1
+     },
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 1
+     },
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 2
+     },
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 3
+     }
+    ],
+    "violatn": [
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 1,
+      "VIOLATION": 38
+     },
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 2,
+      "VIOLATION": 0
+     },
+     {
+      "CASENUM": 202405818149,
+      "VEH_NO": 3,
+      "VIOLATION": 0
+     }
+    ]
+   },
+   "display": [
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "ALCHL_IM",
+     "label": "Alcohol Involved in Crash",
+     "value": "No Alcohol Involved"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "EVENT1_IM",
+     "label": "First Harmful Event",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "HOUR_IM",
+     "label": "Hour of Crash",
+     "value": "7:00am-7:59am"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "LGTCON_IM",
+     "label": "Light Condition",
+     "value": "Daylight"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "MANCOL_IM",
+     "label": "Manner of Collision of the First Harmful Event",
+     "value": "Angle"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "REGION",
+     "label": "Region of the Country",
+     "value": "South (MD, DE, DC, WV, VA, KY, TN, NC, SC, GA, FL, AL, MS, LA, AR, OK, TX)"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "RELJCT2_IM",
+     "label": "Relation to Junction\u2014Specific Location",
+     "value": "Intersection"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "URBANICITY",
+     "label": "Urbanicity",
+     "value": "Urban Area"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 1",
+     "field": "AOI1",
+     "label": "Area of Impact (This Vehicle)",
+     "value": "12 Clock Point"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 1",
+     "field": "AOI2",
+     "label": "Area of Impact (Other Vehicle)",
+     "value": "3 Clock Point"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 1",
+     "field": "SOE",
+     "label": "Sequence of Events",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 2",
+     "field": "AOI1",
+     "label": "Area of Impact (This Vehicle)",
+     "value": "11 Clock Point"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 2",
+     "field": "AOI2",
+     "label": "Area of Impact (Other Vehicle)",
+     "value": "11 Clock Point"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 2",
+     "field": "SOE",
+     "label": "Sequence of Events",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "4-door sedan, hardtop"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "HIT_RUN",
+     "label": "Hit-and-Run",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "IMPACT1_IM",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "3 Clock Point"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "MDLYR_IM",
+     "label": "Vehicle Model Year",
+     "value": "2018"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "PCRASH1_IM",
+     "label": "Pre-Event Movement (Prior to Recognition of Critical Event)",
+     "value": "Turning Left"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "P_CRASH2",
+     "label": "Critical Event\u2014Precrash",
+     "value": "Turning Left"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "SPEEDREL",
+     "label": "Speeding Related",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "TRAV_SP",
+     "label": "Travel Speed",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VEVENT_IM",
+     "label": "Most Harmful Event",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VNUM_LAN",
+     "label": "Total Lanes in Roadway",
+     "value": "Two lanes"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VPROFILE",
+     "label": "Roadway Grade",
+     "value": "Grade, Unknown Slope"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VSPD_LIM",
+     "label": "Speed Limit",
+     "value": "35 MPH"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VSURCOND",
+     "label": "Roadway Surface Conditions",
+     "value": "Dry"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VTRAFCON",
+     "label": "Traffic Control Device",
+     "value": "No Controls"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VTRAFWAY",
+     "label": "Trafficway Description",
+     "value": "Two-Way, Not Divided"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "V_CONFIG",
+     "label": "Vehicle Configuration",
+     "value": "Not Applicable"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "Large utility (ANSI D16.1 Utility Vehicle Categories and \"Full Size\" and \"Large\")"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "HIT_RUN",
+     "label": "Hit-and-Run",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "IMPACT1_IM",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "12 Clock Point"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "MDLYR_IM",
+     "label": "Vehicle Model Year",
+     "value": "2023"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "PCRASH1_IM",
+     "label": "Pre-Event Movement (Prior to Recognition of Critical Event)",
+     "value": "Going Straight"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "P_CRASH2",
+     "label": "Critical Event\u2014Precrash",
+     "value": "From opposite direction  over left lane line"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "SPEEDREL",
+     "label": "Speeding Related",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "TRAV_SP",
+     "label": "Travel Speed",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VEVENT_IM",
+     "label": "Most Harmful Event",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VNUM_LAN",
+     "label": "Total Lanes in Roadway",
+     "value": "Two lanes"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VPROFILE",
+     "label": "Roadway Grade",
+     "value": "Grade, Unknown Slope"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VSPD_LIM",
+     "label": "Speed Limit",
+     "value": "35 MPH"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VSURCOND",
+     "label": "Roadway Surface Conditions",
+     "value": "Dry"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VTRAFCON",
+     "label": "Traffic Control Device",
+     "value": "No Controls"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VTRAFWAY",
+     "label": "Trafficway Description",
+     "value": "Two-Way, Not Divided"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "V_CONFIG",
+     "label": "Vehicle Configuration",
+     "value": "Not Applicable"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 3",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "3-door/2-door hatchback"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 3",
+     "field": "HIT_RUN",
+     "label": "Hit-and-Run",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 3",
+     "field": "IMPACT1_IM",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "11 Clock Point"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 3",
+     "field": "MDLYR_IM",
+     "label": "Vehicle Model Year",
+     "value": "2014"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 3",
+     "field": "PCRASH1_IM",
+     "label": "Pre-Event Movement (Prior to Recognition of Critical Event)",
+     "value": "Stopped in Roadway"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 3",
+     "field": "P_CRASH2",
+     "label": "Critical Event\u2014Precrash",
+     "value": "From crossing street, turning into opposite direction"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 3",
+     "field": "SPEEDREL",
+     "label": "Speeding Related",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 3",
+     "field": "TRAV_SP",
+     "label": "Travel Speed",
+     "value": "Stopped Motor Vehicle In- Transport"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 3",
+     "field": "VEVENT_IM",
+     "label": "Most Harmful Event",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 3",
+     "field": "VNUM_LAN",
+     "label": "Total Lanes in Roadway",
+     "value": "Two lanes"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 3",
+     "field": "VPROFILE",
+     "label": "Roadway Grade",
+     "value": "Level"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 3",
+     "field": "VSPD_LIM",
+     "label": "Speed Limit",
+     "value": "35 MPH"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 3",
+     "field": "VSURCOND",
+     "label": "Roadway Surface Conditions",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 3",
+     "field": "VTRAFCON",
+     "label": "Traffic Control Device",
+     "value": "Stop Sign"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 3",
+     "field": "VTRAFWAY",
+     "label": "Trafficway Description",
+     "value": "Two-Way, Not Divided"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 3",
+     "field": "V_CONFIG",
+     "label": "Vehicle Configuration",
+     "value": "Not Applicable"
+    },
+    {
+     "table": "drimpair",
+     "unit": "Vehicle 1",
+     "field": "DRIMPAIR",
+     "label": "Condition (Impairment) at Time of Crash\u2014Driver",
+     "value": "Not Reported"
+    },
+    {
+     "table": "drimpair",
+     "unit": "Vehicle 2",
+     "field": "DRIMPAIR",
+     "label": "Condition (Impairment) at Time of Crash\u2014Driver",
+     "value": "Not Reported"
+    },
+    {
+     "table": "drimpair",
+     "unit": "Vehicle 3",
+     "field": "DRIMPAIR",
+     "label": "Condition (Impairment) at Time of Crash\u2014Driver",
+     "value": "Not Reported"
+    },
+    {
+     "table": "distract",
+     "unit": "Vehicle 1",
+     "field": "DRDISTRACT",
+     "label": "Driver Distracted By",
+     "value": "Not Reported"
+    },
+    {
+     "table": "distract",
+     "unit": "Vehicle 2",
+     "field": "DRDISTRACT",
+     "label": "Driver Distracted By",
+     "value": "Not Reported"
+    },
+    {
+     "table": "distract",
+     "unit": "Vehicle 3",
+     "field": "DRDISTRACT",
+     "label": "Driver Distracted By",
+     "value": "Not Reported"
+    },
+    {
+     "table": "driverrf",
+     "unit": "Vehicle 1",
+     "field": "DRIVERRF",
+     "label": "Related Factors\u2014Driver Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "driverrf",
+     "unit": "Vehicle 2",
+     "field": "DRIVERRF",
+     "label": "Related Factors\u2014Driver Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "driverrf",
+     "unit": "Vehicle 3",
+     "field": "DRIVERRF",
+     "label": "Related Factors\u2014Driver Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "maneuver",
+     "unit": "Vehicle 1",
+     "field": "MANEUVER",
+     "label": "Driver Maneuvered to Avoid",
+     "value": "Driver Did Not Maneuver to Avoid"
+    },
+    {
+     "table": "maneuver",
+     "unit": "Vehicle 2",
+     "field": "MANEUVER",
+     "label": "Driver Maneuvered to Avoid",
+     "value": "Not Reported"
+    },
+    {
+     "table": "maneuver",
+     "unit": "Vehicle 3",
+     "field": "MANEUVER",
+     "label": "Driver Maneuvered to Avoid",
+     "value": "Driver Did Not Maneuver to Avoid"
+    },
+    {
+     "table": "violatn",
+     "unit": "Vehicle 1",
+     "field": "VIOLATION",
+     "label": "Citations Issued",
+     "value": "Fail to obey yield sign"
+    },
+    {
+     "table": "violatn",
+     "unit": "Vehicle 2",
+     "field": "VIOLATION",
+     "label": "Citations Issued",
+     "value": "nan"
+    },
+    {
+     "table": "violatn",
+     "unit": "Vehicle 3",
+     "field": "VIOLATION",
+     "label": "Citations Issued",
+     "value": "nan"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "AGE_IM",
+     "label": "Age",
+     "value": "22 Years"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "AIR_BAG",
+     "label": "Air Bag Deployed",
+     "value": "Deployment- Unknown Location"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "4-door sedan, hardtop"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "DRUGS",
+     "label": "Police Reported Drug Involvement",
+     "value": "Not Reported"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "EJECT_IM",
+     "label": "Ejection",
+     "value": "Not Ejected"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "GVWR_FROM",
+     "label": "Power Unit Gross Vehicle Weight Rating (GVWR)",
+     "value": "Class 1: 6,000 lbs. or less (2,722 kg or less)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "IMPACT1",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "3 Clock Point"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "MOD_YEAR",
+     "label": "Vehicle Model Year",
+     "value": "2018"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "PERALCH_IM",
+     "label": "Police Reported Alcohol Involvement",
+     "value": "No (Alcohol Not Involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "PER_TYP",
+     "label": "Person Type",
+     "value": "Driver of a Motor Vehicle In-Transport"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "REST_MIS",
+     "label": "Indication of Restraint System Misuse",
+     "value": "No Indication of Misuse"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "REST_USE",
+     "label": "Restraint System Use",
+     "value": "Shoulder and Lap Belt Used"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "SEX_IM",
+     "label": "Sex",
+     "value": "Male"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "AGE_IM",
+     "label": "Age",
+     "value": "41 Years"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "AIR_BAG",
+     "label": "Air Bag Deployed",
+     "value": "Deployment- Unknown Location"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "Large utility (ANSI D16.1 Utility Vehicle Categories and \"Full Size\" and \"Large\")"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "DRUGS",
+     "label": "Police Reported Drug Involvement",
+     "value": "Not Reported"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "EJECT_IM",
+     "label": "Ejection",
+     "value": "Not Ejected"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "GVWR_FROM",
+     "label": "Power Unit Gross Vehicle Weight Rating (GVWR)",
+     "value": "Class 2: 6,001 - 10,000 lbs. (2,722 - 4,536 kg)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "IMPACT1",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "12 Clock Point"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "MOD_YEAR",
+     "label": "Vehicle Model Year",
+     "value": "2023"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "PERALCH_IM",
+     "label": "Police Reported Alcohol Involvement",
+     "value": "No (Alcohol Not Involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "PER_TYP",
+     "label": "Person Type",
+     "value": "Driver of a Motor Vehicle In-Transport"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "REST_MIS",
+     "label": "Indication of Restraint System Misuse",
+     "value": "No Indication of Misuse"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "REST_USE",
+     "label": "Restraint System Use",
+     "value": "Shoulder and Lap Belt Used"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "SEX_IM",
+     "label": "Sex",
+     "value": "Female"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 3)",
+     "field": "AGE_IM",
+     "label": "Age",
+     "value": "55 Years"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 3)",
+     "field": "AIR_BAG",
+     "label": "Air Bag Deployed",
+     "value": "Not Deployed"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 3)",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "3-door/2-door hatchback"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 3)",
+     "field": "DRUGS",
+     "label": "Police Reported Drug Involvement",
+     "value": "Not Reported"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 3)",
+     "field": "EJECT_IM",
+     "label": "Ejection",
+     "value": "Not Ejected"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 3)",
+     "field": "GVWR_FROM",
+     "label": "Power Unit Gross Vehicle Weight Rating (GVWR)",
+     "value": "Class 1: 6,000 lbs. or less (2,722 kg or less)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 3)",
+     "field": "IMPACT1",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "11 Clock Point"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 3)",
+     "field": "MOD_YEAR",
+     "label": "Vehicle Model Year",
+     "value": "2014"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 3)",
+     "field": "PERALCH_IM",
+     "label": "Police Reported Alcohol Involvement",
+     "value": "No (Alcohol Not Involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 3)",
+     "field": "PER_TYP",
+     "label": "Person Type",
+     "value": "Driver of a Motor Vehicle In-Transport"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 3)",
+     "field": "REST_MIS",
+     "label": "Indication of Restraint System Misuse",
+     "value": "No Indication of Misuse"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 3)",
+     "field": "REST_USE",
+     "label": "Restraint System Use",
+     "value": "Shoulder and Lap Belt Used"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 3)",
+     "field": "SEX_IM",
+     "label": "Sex",
+     "value": "Female"
+    },
+    {
+     "table": "personrf",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "PERSONRF",
+     "label": "Related Factors\u2014Person Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "personrf",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "PERSONRF",
+     "label": "Related Factors\u2014Person Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "personrf",
+     "unit": "Person 1 (vehicle 3)",
+     "field": "PERSONRF",
+     "label": "Related Factors\u2014Person Level",
+     "value": "None Noted"
+    }
+   ],
+   "training_features": {
+    "acc__ALCHL_IM": 2.0,
+    "acc__EVENT1_IM": 12.0,
+    "acc__HOUR_IM": 7.0,
+    "acc__LGTCON_IM": 1.0,
+    "acc__MANCOL_IM": 6.0,
+    "acc__REGION": 3.0,
+    "acc__RELJCT2_IM": 2.0,
+    "acc__URBANICITY": 1.0,
+    "cevent__AOI1=2": 0.0,
+    "cevent__AOI2=77": 0.0,
+    "cevent__SOE=1": 0.0,
+    "cevent__SOE=34": 0.0,
+    "cevent__n_rows": 2.0,
+    "distract__DRDISTRACT=0": 0.0,
+    "distract__DRDISTRACT=96": 3.0,
+    "distract__DRDISTRACT=99": 0.0,
+    "drimpair__DRIMPAIR=0": 0.0,
+    "drimpair__DRIMPAIR=1": 0.0,
+    "drimpair__DRIMPAIR=98": 3.0,
+    "drimpair__DRIMPAIR=99": 0.0,
+    "driverrf__DRIVERRF=0": 3.0,
+    "driverrf__DRIVERRF=36": 0.0,
+    "driverrf__DRIVERRF=6": 0.0,
+    "maneuver__MANEUVER=92": 0.0,
+    "pbtype__PEDPOS=3": 0.0,
+    "person__AGE_IM__max": 55.0,
+    "person__AGE_IM__min": 22.0,
+    "person__AIR_BAG=1": 0.0,
+    "person__AIR_BAG=20": 1.0,
+    "person__AIR_BAG=8": 0.0,
+    "person__AIR_BAG=9": 2.0,
+    "person__AIR_BAG=98": 0.0,
+    "person__BODY_TYP=66.0": 0.0,
+    "person__DRUGS=0": 0.0,
+    "person__DRUGS=1": 0.0,
+    "person__DRUGS=9": 0.0,
+    "person__EJECT_IM=0": 3.0,
+    "person__EJECT_IM=1": 0.0,
+    "person__EJECT_IM=8": 0.0,
+    "person__GVWR_FROM=18.0": 0.0,
+    "person__IMPACT1=12.0": 1.0,
+    "person__IMPACT1=6.0": 0.0,
+    "person__MOD_YEAR__max": 2023.0,
+    "person__MOD_YEAR__min": 2014.0,
+    "person__PERALCH_IM=1": 0.0,
+    "person__PER_TYP=2": 0.0,
+    "person__REST_MIS=0": 3.0,
+    "person__REST_MIS=7": 0.0,
+    "person__REST_USE=20": 0.0,
+    "person__REST_USE=98": 0.0,
+    "person__REST_USE=99": 0.0,
+    "person__SEX_IM=2": 2.0,
+    "person__n_rows": 3.0,
+    "personrf__PERSONRF=0": 3.0,
+    "vehicle__BODY_TYP=14": 0.0,
+    "vehicle__HIT_RUN=0": 3.0,
+    "vehicle__HIT_RUN=1": 0.0,
+    "vehicle__IMPACT1_IM=12": 1.0,
+    "vehicle__IMPACT1_IM=9": 0.0,
+    "vehicle__MDLYR_IM__max": 2023.0,
+    "vehicle__PCRASH1_IM=1": 1.0,
+    "vehicle__P_CRASH2=62": 1.0,
+    "vehicle__SPEEDREL=3": 0.0,
+    "vehicle__SPEEDREL=5": 0.0,
+    "vehicle__TRAV_SP__max": 0.0,
+    "vehicle__TRAV_SP__min": 0.0,
+    "vehicle__VEVENT_IM=11": 0.0,
+    "vehicle__VEVENT_IM=24": 0.0,
+    "vehicle__VNUM_LAN=4": 0.0,
+    "vehicle__VNUM_LAN=8": 0.0,
+    "vehicle__VPROFILE=8": 0.0,
+    "vehicle__VSPD_LIM__max": 35.0,
+    "vehicle__VSURCOND=1": 2.0,
+    "vehicle__VTRAFCON=20": 1.0,
+    "vehicle__VTRAFWAY=7": 0.0,
+    "vehicle__VTRAFWAY=8": 0.0,
+    "vehicle__V_CONFIG=0": 3.0,
+    "vevent__n_rows": 4.0,
+    "violatn__VIOLATION=0": 2.0
+   }
+  },
+  {
+   "id": "crash-3",
+   "casenum": "202405637028",
+   "year": 2024,
+   "label": "Serious or fatal; high predicted risk",
+   "recorded_outcome": "Suspected Serious Injury (A)",
+   "y_injury": 1,
+   "y_serious": 1,
+   "record": {
+    "accident": [
+     {
+      "CASENUM": 202405637028,
+      "ALCHL_IM": 2,
+      "EVENT1_IM": 12,
+      "HOUR_IM": 5,
+      "LGTCON_IM": 3,
+      "MANCOL_IM": 6,
+      "REGION": 2,
+      "RELJCT2_IM": 2,
+      "URBANICITY": 1
+     }
+    ],
+    "cevent": [
+     {
+      "CASENUM": 202405637028,
+      "AOI1": 12,
+      "AOI2": 9,
+      "SOE": 12
+     }
+    ],
+    "distract": [
+     {
+      "CASENUM": 202405637028,
+      "VEH_NO": 1,
+      "DRDISTRACT": 99
+     },
+     {
+      "CASENUM": 202405637028,
+      "VEH_NO": 2,
+      "DRDISTRACT": 0
+     }
+    ],
+    "drimpair": [
+     {
+      "CASENUM": 202405637028,
+      "VEH_NO": 1,
+      "DRIMPAIR": 99
+     },
+     {
+      "CASENUM": 202405637028,
+      "VEH_NO": 2,
+      "DRIMPAIR": 0
+     }
+    ],
+    "driverrf": [
+     {
+      "CASENUM": 202405637028,
+      "VEH_NO": 1,
+      "DRIVERRF": 0
+     },
+     {
+      "CASENUM": 202405637028,
+      "VEH_NO": 2,
+      "DRIVERRF": 0
+     }
+    ],
+    "maneuver": [
+     {
+      "CASENUM": 202405637028,
+      "VEH_NO": 1,
+      "MANEUVER": 98
+     },
+     {
+      "CASENUM": 202405637028,
+      "VEH_NO": 2,
+      "MANEUVER": 98
+     }
+    ],
+    "pbtype": [],
+    "person": [
+     {
+      "CASENUM": 202405637028,
+      "VEH_NO": 1,
+      "PER_NO": 1,
+      "AGE_IM": 24,
+      "AIR_BAG": 8,
+      "BODY_TYP": 6,
+      "DRUGS": 0,
+      "EJECT_IM": 0,
+      "GVWR_FROM": 11,
+      "IMPACT1": 9,
+      "MOD_YEAR": 2021,
+      "PERALCH_IM": 0,
+      "PER_TYP": 1,
+      "REST_MIS": 7,
+      "REST_USE": 20,
+      "SEX_IM": 2
+     },
+     {
+      "CASENUM": 202405637028,
+      "VEH_NO": 2,
+      "PER_NO": 1,
+      "AGE_IM": 39,
+      "AIR_BAG": 8,
+      "BODY_TYP": 14,
+      "DRUGS": 0,
+      "EJECT_IM": 0,
+      "GVWR_FROM": 11,
+      "IMPACT1": 12,
+      "MOD_YEAR": 2018,
+      "PERALCH_IM": 0,
+      "PER_TYP": 1,
+      "REST_MIS": 7,
+      "REST_USE": 99,
+      "SEX_IM": 1
+     }
+    ],
+    "personrf": [
+     {
+      "CASENUM": 202405637028,
+      "VEH_NO": 1,
+      "PER_NO": 1,
+      "PERSONRF": 0
+     },
+     {
+      "CASENUM": 202405637028,
+      "VEH_NO": 2,
+      "PER_NO": 1,
+      "PERSONRF": 0
+     }
+    ],
+    "vehicle": [
+     {
+      "CASENUM": 202405637028,
+      "VEH_NO": 1,
+      "BODY_TYP": 6,
+      "HIT_RUN": 0,
+      "IMPACT1_IM": 9,
+      "MDLYR_IM": 2021,
+      "PCRASH1_IM": 1,
+      "P_CRASH2": 17,
+      "SPEEDREL": 3,
+      "TRAV_SP": 998,
+      "VEVENT_IM": 12,
+      "VNUM_LAN": 8,
+      "VPROFILE": 1,
+      "VSPD_LIM": 20,
+      "VSURCOND": 98,
+      "VTRAFCON": 20,
+      "VTRAFWAY": 1,
+      "V_CONFIG": 0
+     },
+     {
+      "CASENUM": 202405637028,
+      "VEH_NO": 2,
+      "BODY_TYP": 14,
+      "HIT_RUN": 0,
+      "IMPACT1_IM": 12,
+      "MDLYR_IM": 2018,
+      "PCRASH1_IM": 1,
+      "P_CRASH2": 66,
+      "SPEEDREL": 0,
+      "TRAV_SP": 998,
+      "VEVENT_IM": 12,
+      "VNUM_LAN": 8,
+      "VPROFILE": 1,
+      "VSPD_LIM": 20,
+      "VSURCOND": 1,
+      "VTRAFCON": 20,
+      "VTRAFWAY": 1,
+      "V_CONFIG": 0
+     }
+    ],
+    "vevent": [
+     {
+      "CASENUM": 202405637028,
+      "VEH_NO": 1
+     },
+     {
+      "CASENUM": 202405637028,
+      "VEH_NO": 2
+     }
+    ],
+    "violatn": [
+     {
+      "CASENUM": 202405637028,
+      "VEH_NO": 1,
+      "VIOLATION": 0
+     },
+     {
+      "CASENUM": 202405637028,
+      "VEH_NO": 2,
+      "VIOLATION": 0
+     }
+    ]
+   },
+   "display": [
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "ALCHL_IM",
+     "label": "Alcohol Involved in Crash",
+     "value": "No Alcohol Involved"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "EVENT1_IM",
+     "label": "First Harmful Event",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "HOUR_IM",
+     "label": "Hour of Crash",
+     "value": "5:00am-5:59am"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "LGTCON_IM",
+     "label": "Light Condition",
+     "value": "Dark - Lighted"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "MANCOL_IM",
+     "label": "Manner of Collision of the First Harmful Event",
+     "value": "Angle"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "REGION",
+     "label": "Region of the Country",
+     "value": "Midwest (OH, IN, IL, MI, WI, MN, ND, SD, NE, IA, MO, KS)"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "RELJCT2_IM",
+     "label": "Relation to Junction\u2014Specific Location",
+     "value": "Intersection"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "URBANICITY",
+     "label": "Urbanicity",
+     "value": "Urban Area"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 1",
+     "field": "AOI1",
+     "label": "Area of Impact (This Vehicle)",
+     "value": "12 Clock Point"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 1",
+     "field": "AOI2",
+     "label": "Area of Impact (Other Vehicle)",
+     "value": "9 Clock Point"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 1",
+     "field": "SOE",
+     "label": "Sequence of Events",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "Station Wagon (excluding van and truck based)"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "HIT_RUN",
+     "label": "Hit-and-Run",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "IMPACT1_IM",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "9 Clock Point"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "MDLYR_IM",
+     "label": "Vehicle Model Year",
+     "value": "2021"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "PCRASH1_IM",
+     "label": "Pre-Event Movement (Prior to Recognition of Critical Event)",
+     "value": "Going Straight"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "P_CRASH2",
+     "label": "Critical Event\u2014Precrash",
+     "value": "Crossing Over (Passing Through) Junction"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "SPEEDREL",
+     "label": "Speeding Related",
+     "value": "Yes, Exceeded Speed Limit"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "TRAV_SP",
+     "label": "Travel Speed",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VEVENT_IM",
+     "label": "Most Harmful Event",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VNUM_LAN",
+     "label": "Total Lanes in Roadway",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VPROFILE",
+     "label": "Roadway Grade",
+     "value": "Level"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VSPD_LIM",
+     "label": "Speed Limit",
+     "value": "20 MPH"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VSURCOND",
+     "label": "Roadway Surface Conditions",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VTRAFCON",
+     "label": "Traffic Control Device",
+     "value": "Stop Sign"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VTRAFWAY",
+     "label": "Trafficway Description",
+     "value": "Two-Way, Not Divided"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "V_CONFIG",
+     "label": "Vehicle Configuration",
+     "value": "Not Applicable"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "Compact Utility (Utility Vehicle Categories \"Small\" and \"Midsize\")"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "HIT_RUN",
+     "label": "Hit-and-Run",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "IMPACT1_IM",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "12 Clock Point"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "MDLYR_IM",
+     "label": "Vehicle Model Year",
+     "value": "2018"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "PCRASH1_IM",
+     "label": "Pre-Event Movement (Prior to Recognition of Critical Event)",
+     "value": "Going Straight"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "P_CRASH2",
+     "label": "Critical Event\u2014Precrash",
+     "value": "From crossing street, across path"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "SPEEDREL",
+     "label": "Speeding Related",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "TRAV_SP",
+     "label": "Travel Speed",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VEVENT_IM",
+     "label": "Most Harmful Event",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VNUM_LAN",
+     "label": "Total Lanes in Roadway",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VPROFILE",
+     "label": "Roadway Grade",
+     "value": "Level"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VSPD_LIM",
+     "label": "Speed Limit",
+     "value": "20 MPH"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VSURCOND",
+     "label": "Roadway Surface Conditions",
+     "value": "Dry"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VTRAFCON",
+     "label": "Traffic Control Device",
+     "value": "Stop Sign"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VTRAFWAY",
+     "label": "Trafficway Description",
+     "value": "Two-Way, Not Divided"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "V_CONFIG",
+     "label": "Vehicle Configuration",
+     "value": "Not Applicable"
+    },
+    {
+     "table": "drimpair",
+     "unit": "Vehicle 1",
+     "field": "DRIMPAIR",
+     "label": "Condition (Impairment) at Time of Crash\u2014Driver",
+     "value": "Reported as Unknown if Impaired"
+    },
+    {
+     "table": "drimpair",
+     "unit": "Vehicle 2",
+     "field": "DRIMPAIR",
+     "label": "Condition (Impairment) at Time of Crash\u2014Driver",
+     "value": "None/Apparently Normal"
+    },
+    {
+     "table": "distract",
+     "unit": "Vehicle 1",
+     "field": "DRDISTRACT",
+     "label": "Driver Distracted By",
+     "value": "Reported as Unknown if Distracted"
+    },
+    {
+     "table": "distract",
+     "unit": "Vehicle 2",
+     "field": "DRDISTRACT",
+     "label": "Driver Distracted By",
+     "value": "Not Distracted"
+    },
+    {
+     "table": "driverrf",
+     "unit": "Vehicle 1",
+     "field": "DRIVERRF",
+     "label": "Related Factors\u2014Driver Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "driverrf",
+     "unit": "Vehicle 2",
+     "field": "DRIVERRF",
+     "label": "Related Factors\u2014Driver Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "maneuver",
+     "unit": "Vehicle 1",
+     "field": "MANEUVER",
+     "label": "Driver Maneuvered to Avoid",
+     "value": "Not Reported"
+    },
+    {
+     "table": "maneuver",
+     "unit": "Vehicle 2",
+     "field": "MANEUVER",
+     "label": "Driver Maneuvered to Avoid",
+     "value": "Not Reported"
+    },
+    {
+     "table": "violatn",
+     "unit": "Vehicle 1",
+     "field": "VIOLATION",
+     "label": "Citations Issued",
+     "value": "nan"
+    },
+    {
+     "table": "violatn",
+     "unit": "Vehicle 2",
+     "field": "VIOLATION",
+     "label": "Citations Issued",
+     "value": "nan"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "AGE_IM",
+     "label": "Age",
+     "value": "24 Years"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "AIR_BAG",
+     "label": "Air Bag Deployed",
+     "value": "Deployed- Combination"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "Station Wagon (excluding van and truck based)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "DRUGS",
+     "label": "Police Reported Drug Involvement",
+     "value": "No (drugs not involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "EJECT_IM",
+     "label": "Ejection",
+     "value": "Not Ejected"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "GVWR_FROM",
+     "label": "Power Unit Gross Vehicle Weight Rating (GVWR)",
+     "value": "Class 1: 6,000 lbs. or less (2,722 kg or less)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "IMPACT1",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "9 Clock Point"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "MOD_YEAR",
+     "label": "Vehicle Model Year",
+     "value": "2021"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "PERALCH_IM",
+     "label": "Police Reported Alcohol Involvement",
+     "value": "No (Alcohol Not Involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "PER_TYP",
+     "label": "Person Type",
+     "value": "Driver of a Motor Vehicle In-Transport"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "REST_MIS",
+     "label": "Indication of Restraint System Misuse",
+     "value": "None Used/Not Applicable"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "REST_USE",
+     "label": "Restraint System Use",
+     "value": "None Used/Not Applicable"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "SEX_IM",
+     "label": "Sex",
+     "value": "Female"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "AGE_IM",
+     "label": "Age",
+     "value": "39 Years"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "AIR_BAG",
+     "label": "Air Bag Deployed",
+     "value": "Deployed- Combination"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "Compact Utility (Utility Vehicle Categories \"Small\" and \"Midsize\")"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "DRUGS",
+     "label": "Police Reported Drug Involvement",
+     "value": "No (drugs not involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "EJECT_IM",
+     "label": "Ejection",
+     "value": "Not Ejected"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "GVWR_FROM",
+     "label": "Power Unit Gross Vehicle Weight Rating (GVWR)",
+     "value": "Class 1: 6,000 lbs. or less (2,722 kg or less)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "IMPACT1",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "12 Clock Point"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "MOD_YEAR",
+     "label": "Vehicle Model Year",
+     "value": "2018"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "PERALCH_IM",
+     "label": "Police Reported Alcohol Involvement",
+     "value": "No (Alcohol Not Involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "PER_TYP",
+     "label": "Person Type",
+     "value": "Driver of a Motor Vehicle In-Transport"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "REST_MIS",
+     "label": "Indication of Restraint System Misuse",
+     "value": "None Used/Not Applicable"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "REST_USE",
+     "label": "Restraint System Use",
+     "value": "Reported as Unknown"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "SEX_IM",
+     "label": "Sex",
+     "value": "Male"
+    },
+    {
+     "table": "personrf",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "PERSONRF",
+     "label": "Related Factors\u2014Person Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "personrf",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "PERSONRF",
+     "label": "Related Factors\u2014Person Level",
+     "value": "None Noted"
+    }
+   ],
+   "training_features": {
+    "acc__ALCHL_IM": 2.0,
+    "acc__EVENT1_IM": 12.0,
+    "acc__HOUR_IM": -1.0,
+    "acc__LGTCON_IM": 3.0,
+    "acc__MANCOL_IM": 6.0,
+    "acc__REGION": 2.0,
+    "acc__RELJCT2_IM": 2.0,
+    "acc__URBANICITY": 1.0,
+    "cevent__AOI1=2": 0.0,
+    "cevent__AOI2=77": 0.0,
+    "cevent__SOE=1": 0.0,
+    "cevent__SOE=34": 0.0,
+    "cevent__n_rows": 1.0,
+    "distract__DRDISTRACT=0": 1.0,
+    "distract__DRDISTRACT=96": 0.0,
+    "distract__DRDISTRACT=99": 1.0,
+    "drimpair__DRIMPAIR=0": 1.0,
+    "drimpair__DRIMPAIR=1": 0.0,
+    "drimpair__DRIMPAIR=98": 0.0,
+    "drimpair__DRIMPAIR=99": 1.0,
+    "driverrf__DRIVERRF=0": 2.0,
+    "driverrf__DRIVERRF=36": 0.0,
+    "driverrf__DRIVERRF=6": 0.0,
+    "maneuver__MANEUVER=92": 0.0,
+    "pbtype__PEDPOS=3": 0.0,
+    "person__AGE_IM__max": 39.0,
+    "person__AGE_IM__min": 24.0,
+    "person__AIR_BAG=1": 0.0,
+    "person__AIR_BAG=20": 0.0,
+    "person__AIR_BAG=8": 2.0,
+    "person__AIR_BAG=9": 0.0,
+    "person__AIR_BAG=98": 0.0,
+    "person__BODY_TYP=66.0": 0.0,
+    "person__DRUGS=0": 2.0,
+    "person__DRUGS=1": 0.0,
+    "person__DRUGS=9": 0.0,
+    "person__EJECT_IM=0": 2.0,
+    "person__EJECT_IM=1": 0.0,
+    "person__EJECT_IM=8": 0.0,
+    "person__GVWR_FROM=18.0": 0.0,
+    "person__IMPACT1=12.0": 1.0,
+    "person__IMPACT1=6.0": 0.0,
+    "person__MOD_YEAR__max": 2021.0,
+    "person__MOD_YEAR__min": 2018.0,
+    "person__PERALCH_IM=1": 0.0,
+    "person__PER_TYP=2": 0.0,
+    "person__REST_MIS=0": 0.0,
+    "person__REST_MIS=7": 2.0,
+    "person__REST_USE=20": 1.0,
+    "person__REST_USE=98": 0.0,
+    "person__REST_USE=99": 1.0,
+    "person__SEX_IM=2": 1.0,
+    "person__n_rows": 2.0,
+    "personrf__PERSONRF=0": 2.0,
+    "vehicle__BODY_TYP=14": 1.0,
+    "vehicle__HIT_RUN=0": 2.0,
+    "vehicle__HIT_RUN=1": 0.0,
+    "vehicle__IMPACT1_IM=12": 1.0,
+    "vehicle__IMPACT1_IM=9": 1.0,
+    "vehicle__MDLYR_IM__max": 2021.0,
+    "vehicle__PCRASH1_IM=1": 2.0,
+    "vehicle__P_CRASH2=62": 0.0,
+    "vehicle__SPEEDREL=3": 1.0,
+    "vehicle__SPEEDREL=5": 0.0,
+    "vehicle__TRAV_SP__max": null,
+    "vehicle__TRAV_SP__min": null,
+    "vehicle__VEVENT_IM=11": 0.0,
+    "vehicle__VEVENT_IM=24": 0.0,
+    "vehicle__VNUM_LAN=4": 0.0,
+    "vehicle__VNUM_LAN=8": 2.0,
+    "vehicle__VPROFILE=8": 0.0,
+    "vehicle__VSPD_LIM__max": 20.0,
+    "vehicle__VSURCOND=1": 1.0,
+    "vehicle__VTRAFCON=20": 2.0,
+    "vehicle__VTRAFWAY=7": 0.0,
+    "vehicle__VTRAFWAY=8": 0.0,
+    "vehicle__V_CONFIG=0": 2.0,
+    "vevent__n_rows": 2.0,
+    "violatn__VIOLATION=0": 2.0
+   }
+  },
+  {
+   "id": "crash-4",
+   "casenum": "202406117886",
+   "year": 2024,
+   "label": "Serious or fatal; serious flagged",
+   "recorded_outcome": "Suspected Serious Injury (A)",
+   "y_injury": 1,
+   "y_serious": 1,
+   "record": {
+    "accident": [
+     {
+      "CASENUM": 202406117886,
+      "ALCHL_IM": 1,
+      "EVENT1_IM": 12,
+      "HOUR_IM": 21,
+      "LGTCON_IM": 3,
+      "MANCOL_IM": 8,
+      "REGION": 4,
+      "RELJCT2_IM": 1,
+      "URBANICITY": 1
+     }
+    ],
+    "cevent": [
+     {
+      "CASENUM": 202406117886,
+      "AOI1": 98,
+      "AOI2": 63,
+      "SOE": 12
+     },
+     {
+      "CASENUM": 202406117886,
+      "AOI1": 55,
+      "AOI2": 55,
+      "SOE": 63
+     },
+     {
+      "CASENUM": 202406117886,
+      "AOI1": 0,
+      "AOI2": 77,
+      "SOE": 1
+     },
+     {
+      "CASENUM": 202406117886,
+      "AOI1": 98,
+      "AOI2": 77,
+      "SOE": 42
+     },
+     {
+      "CASENUM": 202406117886,
+      "AOI1": 98,
+      "AOI2": 77,
+      "SOE": 38
+     }
+    ],
+    "distract": [
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 1,
+      "DRDISTRACT": 96
+     },
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 2,
+      "DRDISTRACT": 96
+     }
+    ],
+    "drimpair": [
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 1,
+      "DRIMPAIR": 9
+     },
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 2,
+      "DRIMPAIR": 0
+     }
+    ],
+    "driverrf": [
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 1,
+      "DRIVERRF": 51
+     },
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 1,
+      "DRIVERRF": 60
+     },
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 2,
+      "DRIVERRF": 0
+     }
+    ],
+    "maneuver": [
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 1,
+      "MANEUVER": 98
+     },
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 2,
+      "MANEUVER": 98
+     }
+    ],
+    "pbtype": [],
+    "person": [
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 1,
+      "PER_NO": 1,
+      "AGE_IM": 23,
+      "AIR_BAG": 1,
+      "BODY_TYP": 14,
+      "DRUGS": 0,
+      "EJECT_IM": 0,
+      "GVWR_FROM": 11,
+      "IMPACT1": 98,
+      "MOD_YEAR": 2015,
+      "PERALCH_IM": 1,
+      "PER_TYP": 1,
+      "REST_MIS": 0,
+      "REST_USE": 3,
+      "SEX_IM": 1
+     },
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 2,
+      "PER_NO": 1,
+      "AGE_IM": 30,
+      "AIR_BAG": 9,
+      "BODY_TYP": 14,
+      "DRUGS": 0,
+      "EJECT_IM": 0,
+      "GVWR_FROM": 11,
+      "IMPACT1": 63,
+      "MOD_YEAR": 2019,
+      "PERALCH_IM": 0,
+      "PER_TYP": 1,
+      "REST_MIS": 0,
+      "REST_USE": 3,
+      "SEX_IM": 1
+     },
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 2,
+      "PER_NO": 2,
+      "AGE_IM": 29,
+      "AIR_BAG": 9,
+      "BODY_TYP": 14,
+      "DRUGS": 0,
+      "EJECT_IM": 0,
+      "GVWR_FROM": 11,
+      "IMPACT1": 63,
+      "MOD_YEAR": 2019,
+      "PERALCH_IM": 0,
+      "PER_TYP": 2,
+      "REST_MIS": 0,
+      "REST_USE": 3,
+      "SEX_IM": 2
+     }
+    ],
+    "personrf": [
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 1,
+      "PER_NO": 1,
+      "PERSONRF": 0
+     },
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 2,
+      "PER_NO": 1,
+      "PERSONRF": 0
+     },
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 2,
+      "PER_NO": 2,
+      "PERSONRF": 0
+     }
+    ],
+    "vehicle": [
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 1,
+      "BODY_TYP": 14,
+      "HIT_RUN": 0,
+      "IMPACT1_IM": 9,
+      "MDLYR_IM": 2015,
+      "PCRASH1_IM": 1,
+      "P_CRASH2": 54,
+      "SPEEDREL": 3,
+      "TRAV_SP": 998,
+      "VEVENT_IM": 1,
+      "VNUM_LAN": 8,
+      "VPROFILE": 2,
+      "VSPD_LIM": 45,
+      "VSURCOND": 2,
+      "VTRAFCON": 97,
+      "VTRAFWAY": 8,
+      "V_CONFIG": 0
+     },
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 2,
+      "BODY_TYP": 14,
+      "HIT_RUN": 0,
+      "IMPACT1_IM": 63,
+      "MDLYR_IM": 2019,
+      "PCRASH1_IM": 1,
+      "P_CRASH2": 54,
+      "SPEEDREL": 0,
+      "TRAV_SP": 998,
+      "VEVENT_IM": 12,
+      "VNUM_LAN": 8,
+      "VPROFILE": 2,
+      "VSPD_LIM": 45,
+      "VSURCOND": 2,
+      "VTRAFCON": 97,
+      "VTRAFWAY": 8,
+      "V_CONFIG": 0
+     }
+    ],
+    "vevent": [
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 1
+     },
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 1
+     },
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 1
+     },
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 1
+     },
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 1
+     },
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 2
+     }
+    ],
+    "violatn": [
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 1,
+      "VIOLATION": 11
+     },
+     {
+      "CASENUM": 202406117886,
+      "VEH_NO": 2,
+      "VIOLATION": 0
+     }
+    ]
+   },
+   "display": [
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "ALCHL_IM",
+     "label": "Alcohol Involved in Crash",
+     "value": "Alcohol Involved"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "EVENT1_IM",
+     "label": "First Harmful Event",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "HOUR_IM",
+     "label": "Hour of Crash",
+     "value": "9:00pm-9:59pm"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "LGTCON_IM",
+     "label": "Light Condition",
+     "value": "Dark - Lighted"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "MANCOL_IM",
+     "label": "Manner of Collision of the First Harmful Event",
+     "value": "Sideswipe - Opposite Direction"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "REGION",
+     "label": "Region of the Country",
+     "value": "West (MT, ID, WA, OR, CA, NV, NM, AZ, UT, CO, WY, AK, HI)"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "RELJCT2_IM",
+     "label": "Relation to Junction\u2014Specific Location",
+     "value": "Non-Junction"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "URBANICITY",
+     "label": "Urbanicity",
+     "value": "Urban Area"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 1",
+     "field": "AOI1",
+     "label": "Area of Impact (This Vehicle)",
+     "value": "Not Reported"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 1",
+     "field": "AOI2",
+     "label": "Area of Impact (Other Vehicle)",
+     "value": "Left-Back Side"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 1",
+     "field": "SOE",
+     "label": "Sequence of Events",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 2",
+     "field": "AOI1",
+     "label": "Area of Impact (This Vehicle)",
+     "value": "Non-Harmful Event"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 2",
+     "field": "AOI2",
+     "label": "Area of Impact (Other Vehicle)",
+     "value": "Non-Harmful Event"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 2",
+     "field": "SOE",
+     "label": "Sequence of Events",
+     "value": "Ran Off Roadway - Right"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 3",
+     "field": "AOI1",
+     "label": "Area of Impact (This Vehicle)",
+     "value": "Non-Collision"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 3",
+     "field": "AOI2",
+     "label": "Area of Impact (Other Vehicle)",
+     "value": "Not a Motor Vehicle"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 3",
+     "field": "SOE",
+     "label": "Sequence of Events",
+     "value": "Rollover/Overturn"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 4",
+     "field": "AOI1",
+     "label": "Area of Impact (This Vehicle)",
+     "value": "Not Reported"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 4",
+     "field": "AOI2",
+     "label": "Area of Impact (Other Vehicle)",
+     "value": "Not a Motor Vehicle"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 4",
+     "field": "SOE",
+     "label": "Sequence of Events",
+     "value": "Tree (Standing Only)"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 5",
+     "field": "AOI1",
+     "label": "Area of Impact (This Vehicle)",
+     "value": "Not Reported"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 5",
+     "field": "AOI2",
+     "label": "Area of Impact (Other Vehicle)",
+     "value": "Not a Motor Vehicle"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 5",
+     "field": "SOE",
+     "label": "Sequence of Events",
+     "value": "Fence"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "Compact Utility (Utility Vehicle Categories \"Small\" and \"Midsize\")"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "HIT_RUN",
+     "label": "Hit-and-Run",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "IMPACT1_IM",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "9 Clock Point"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "MDLYR_IM",
+     "label": "Vehicle Model Year",
+     "value": "2015"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "PCRASH1_IM",
+     "label": "Pre-Event Movement (Prior to Recognition of Critical Event)",
+     "value": "Going Straight"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "P_CRASH2",
+     "label": "Critical Event\u2014Precrash",
+     "value": "Traveling in opposite direction"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "SPEEDREL",
+     "label": "Speeding Related",
+     "value": "Yes, Exceeded Speed Limit"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "TRAV_SP",
+     "label": "Travel Speed",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VEVENT_IM",
+     "label": "Most Harmful Event",
+     "value": "Rollover/Overturn"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VNUM_LAN",
+     "label": "Total Lanes in Roadway",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VPROFILE",
+     "label": "Roadway Grade",
+     "value": "Grade, Unknown Slope"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VSPD_LIM",
+     "label": "Speed Limit",
+     "value": "45 MPH"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VSURCOND",
+     "label": "Roadway Surface Conditions",
+     "value": "Wet"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VTRAFCON",
+     "label": "Traffic Control Device",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VTRAFWAY",
+     "label": "Trafficway Description",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "V_CONFIG",
+     "label": "Vehicle Configuration",
+     "value": "Not Applicable"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "Compact Utility (Utility Vehicle Categories \"Small\" and \"Midsize\")"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "HIT_RUN",
+     "label": "Hit-and-Run",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "IMPACT1_IM",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "Left-Back Side"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "MDLYR_IM",
+     "label": "Vehicle Model Year",
+     "value": "2019"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "PCRASH1_IM",
+     "label": "Pre-Event Movement (Prior to Recognition of Critical Event)",
+     "value": "Going Straight"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "P_CRASH2",
+     "label": "Critical Event\u2014Precrash",
+     "value": "Traveling in opposite direction"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "SPEEDREL",
+     "label": "Speeding Related",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "TRAV_SP",
+     "label": "Travel Speed",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VEVENT_IM",
+     "label": "Most Harmful Event",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VNUM_LAN",
+     "label": "Total Lanes in Roadway",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VPROFILE",
+     "label": "Roadway Grade",
+     "value": "Grade, Unknown Slope"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VSPD_LIM",
+     "label": "Speed Limit",
+     "value": "45 MPH"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VSURCOND",
+     "label": "Roadway Surface Conditions",
+     "value": "Wet"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VTRAFCON",
+     "label": "Traffic Control Device",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VTRAFWAY",
+     "label": "Trafficway Description",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "V_CONFIG",
+     "label": "Vehicle Configuration",
+     "value": "Not Applicable"
+    },
+    {
+     "table": "drimpair",
+     "unit": "Vehicle 1",
+     "field": "DRIMPAIR",
+     "label": "Condition (Impairment) at Time of Crash\u2014Driver",
+     "value": "Under the Influence of Alcohol, Drugs or Medication"
+    },
+    {
+     "table": "drimpair",
+     "unit": "Vehicle 2",
+     "field": "DRIMPAIR",
+     "label": "Condition (Impairment) at Time of Crash\u2014Driver",
+     "value": "None/Apparently Normal"
+    },
+    {
+     "table": "distract",
+     "unit": "Vehicle 1",
+     "field": "DRDISTRACT",
+     "label": "Driver Distracted By",
+     "value": "Not Reported"
+    },
+    {
+     "table": "distract",
+     "unit": "Vehicle 2",
+     "field": "DRDISTRACT",
+     "label": "Driver Distracted By",
+     "value": "Not Reported"
+    },
+    {
+     "table": "driverrf",
+     "unit": "Vehicle 1",
+     "field": "DRIVERRF",
+     "label": "Related Factors\u2014Driver Level",
+     "value": "Driving on Wrong Side of Two-Way Trafficway (Intentional or Unintentional)"
+    },
+    {
+     "table": "driverrf",
+     "unit": "Vehicle 1",
+     "field": "DRIVERRF",
+     "label": "Related Factors\u2014Driver Level",
+     "value": "Alcohol and/or Drug Test Refused"
+    },
+    {
+     "table": "driverrf",
+     "unit": "Vehicle 2",
+     "field": "DRIVERRF",
+     "label": "Related Factors\u2014Driver Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "maneuver",
+     "unit": "Vehicle 1",
+     "field": "MANEUVER",
+     "label": "Driver Maneuvered to Avoid",
+     "value": "Not Reported"
+    },
+    {
+     "table": "maneuver",
+     "unit": "Vehicle 2",
+     "field": "MANEUVER",
+     "label": "Driver Maneuvered to Avoid",
+     "value": "Not Reported"
+    },
+    {
+     "table": "violatn",
+     "unit": "Vehicle 1",
+     "field": "VIOLATION",
+     "label": "Citations Issued",
+     "value": "Driving while intoxicated (alcohol or drugs) or BAC above limit (any detectable BAC for CDLs)"
+    },
+    {
+     "table": "violatn",
+     "unit": "Vehicle 2",
+     "field": "VIOLATION",
+     "label": "Citations Issued",
+     "value": "nan"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "AGE_IM",
+     "label": "Age",
+     "value": "23 Years"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "AIR_BAG",
+     "label": "Air Bag Deployed",
+     "value": "Deployed- Front"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "Compact Utility (Utility Vehicle Categories \"Small\" and \"Midsize\")"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "DRUGS",
+     "label": "Police Reported Drug Involvement",
+     "value": "No (drugs not involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "EJECT_IM",
+     "label": "Ejection",
+     "value": "Not Ejected"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "GVWR_FROM",
+     "label": "Power Unit Gross Vehicle Weight Rating (GVWR)",
+     "value": "Class 1: 6,000 lbs. or less (2,722 kg or less)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "IMPACT1",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "Not Reported"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "MOD_YEAR",
+     "label": "Vehicle Model Year",
+     "value": "2015"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "PERALCH_IM",
+     "label": "Police Reported Alcohol Involvement",
+     "value": "Yes (Alcohol Involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "PER_TYP",
+     "label": "Person Type",
+     "value": "Driver of a Motor Vehicle In-Transport"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "REST_MIS",
+     "label": "Indication of Restraint System Misuse",
+     "value": "No Indication of Misuse"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "REST_USE",
+     "label": "Restraint System Use",
+     "value": "Shoulder and Lap Belt Used"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "SEX_IM",
+     "label": "Sex",
+     "value": "Male"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "AGE_IM",
+     "label": "Age",
+     "value": "30 Years"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "AIR_BAG",
+     "label": "Air Bag Deployed",
+     "value": "Deployment- Unknown Location"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "Compact Utility (Utility Vehicle Categories \"Small\" and \"Midsize\")"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "DRUGS",
+     "label": "Police Reported Drug Involvement",
+     "value": "No (drugs not involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "EJECT_IM",
+     "label": "Ejection",
+     "value": "Not Ejected"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "GVWR_FROM",
+     "label": "Power Unit Gross Vehicle Weight Rating (GVWR)",
+     "value": "Class 1: 6,000 lbs. or less (2,722 kg or less)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "IMPACT1",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "Left-Back Side"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "MOD_YEAR",
+     "label": "Vehicle Model Year",
+     "value": "2019"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "PERALCH_IM",
+     "label": "Police Reported Alcohol Involvement",
+     "value": "No (Alcohol Not Involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "PER_TYP",
+     "label": "Person Type",
+     "value": "Driver of a Motor Vehicle In-Transport"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "REST_MIS",
+     "label": "Indication of Restraint System Misuse",
+     "value": "No Indication of Misuse"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "REST_USE",
+     "label": "Restraint System Use",
+     "value": "Shoulder and Lap Belt Used"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "SEX_IM",
+     "label": "Sex",
+     "value": "Male"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "AGE_IM",
+     "label": "Age",
+     "value": "29 Years"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "AIR_BAG",
+     "label": "Air Bag Deployed",
+     "value": "Deployment- Unknown Location"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "Compact Utility (Utility Vehicle Categories \"Small\" and \"Midsize\")"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "DRUGS",
+     "label": "Police Reported Drug Involvement",
+     "value": "No (drugs not involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "EJECT_IM",
+     "label": "Ejection",
+     "value": "Not Ejected"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "GVWR_FROM",
+     "label": "Power Unit Gross Vehicle Weight Rating (GVWR)",
+     "value": "Class 1: 6,000 lbs. or less (2,722 kg or less)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "IMPACT1",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "Left-Back Side"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "MOD_YEAR",
+     "label": "Vehicle Model Year",
+     "value": "2019"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "PERALCH_IM",
+     "label": "Police Reported Alcohol Involvement",
+     "value": "No (Alcohol Not Involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "PER_TYP",
+     "label": "Person Type",
+     "value": "Passenger of a Motor Vehicle In-Transport"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "REST_MIS",
+     "label": "Indication of Restraint System Misuse",
+     "value": "No Indication of Misuse"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "REST_USE",
+     "label": "Restraint System Use",
+     "value": "Shoulder and Lap Belt Used"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "SEX_IM",
+     "label": "Sex",
+     "value": "Female"
+    },
+    {
+     "table": "personrf",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "PERSONRF",
+     "label": "Related Factors\u2014Person Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "personrf",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "PERSONRF",
+     "label": "Related Factors\u2014Person Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "personrf",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "PERSONRF",
+     "label": "Related Factors\u2014Person Level",
+     "value": "None Noted"
+    }
+   ],
+   "training_features": {
+    "acc__ALCHL_IM": 1.0,
+    "acc__EVENT1_IM": 12.0,
+    "acc__HOUR_IM": -1.0,
+    "acc__LGTCON_IM": 3.0,
+    "acc__MANCOL_IM": 8.0,
+    "acc__REGION": 4.0,
+    "acc__RELJCT2_IM": 1.0,
+    "acc__URBANICITY": 1.0,
+    "cevent__AOI1=2": 0.0,
+    "cevent__AOI2=77": 3.0,
+    "cevent__SOE=1": 1.0,
+    "cevent__SOE=34": 0.0,
+    "cevent__n_rows": 5.0,
+    "distract__DRDISTRACT=0": 0.0,
+    "distract__DRDISTRACT=96": 2.0,
+    "distract__DRDISTRACT=99": 0.0,
+    "drimpair__DRIMPAIR=0": 1.0,
+    "drimpair__DRIMPAIR=1": 0.0,
+    "drimpair__DRIMPAIR=98": 0.0,
+    "drimpair__DRIMPAIR=99": 0.0,
+    "driverrf__DRIVERRF=0": 1.0,
+    "driverrf__DRIVERRF=36": 0.0,
+    "driverrf__DRIVERRF=6": 0.0,
+    "maneuver__MANEUVER=92": 0.0,
+    "pbtype__PEDPOS=3": 0.0,
+    "person__AGE_IM__max": 30.0,
+    "person__AGE_IM__min": 23.0,
+    "person__AIR_BAG=1": 1.0,
+    "person__AIR_BAG=20": 0.0,
+    "person__AIR_BAG=8": 0.0,
+    "person__AIR_BAG=9": 2.0,
+    "person__AIR_BAG=98": 0.0,
+    "person__BODY_TYP=66.0": 0.0,
+    "person__DRUGS=0": 3.0,
+    "person__DRUGS=1": 0.0,
+    "person__DRUGS=9": 0.0,
+    "person__EJECT_IM=0": 3.0,
+    "person__EJECT_IM=1": 0.0,
+    "person__EJECT_IM=8": 0.0,
+    "person__GVWR_FROM=18.0": 0.0,
+    "person__IMPACT1=12.0": 0.0,
+    "person__IMPACT1=6.0": 0.0,
+    "person__MOD_YEAR__max": 2019.0,
+    "person__MOD_YEAR__min": 2015.0,
+    "person__PERALCH_IM=1": 1.0,
+    "person__PER_TYP=2": 1.0,
+    "person__REST_MIS=0": 3.0,
+    "person__REST_MIS=7": 0.0,
+    "person__REST_USE=20": 0.0,
+    "person__REST_USE=98": 0.0,
+    "person__REST_USE=99": 0.0,
+    "person__SEX_IM=2": 1.0,
+    "person__n_rows": 3.0,
+    "personrf__PERSONRF=0": 3.0,
+    "vehicle__BODY_TYP=14": 2.0,
+    "vehicle__HIT_RUN=0": 2.0,
+    "vehicle__HIT_RUN=1": 0.0,
+    "vehicle__IMPACT1_IM=12": 0.0,
+    "vehicle__IMPACT1_IM=9": 1.0,
+    "vehicle__MDLYR_IM__max": 2019.0,
+    "vehicle__PCRASH1_IM=1": 2.0,
+    "vehicle__P_CRASH2=62": 0.0,
+    "vehicle__SPEEDREL=3": 1.0,
+    "vehicle__SPEEDREL=5": 0.0,
+    "vehicle__TRAV_SP__max": null,
+    "vehicle__TRAV_SP__min": null,
+    "vehicle__VEVENT_IM=11": 0.0,
+    "vehicle__VEVENT_IM=24": 0.0,
+    "vehicle__VNUM_LAN=4": 0.0,
+    "vehicle__VNUM_LAN=8": 2.0,
+    "vehicle__VPROFILE=8": 0.0,
+    "vehicle__VSPD_LIM__max": 45.0,
+    "vehicle__VSURCOND=1": 0.0,
+    "vehicle__VTRAFCON=20": 0.0,
+    "vehicle__VTRAFWAY=7": 0.0,
+    "vehicle__VTRAFWAY=8": 2.0,
+    "vehicle__V_CONFIG=0": 2.0,
+    "vevent__n_rows": 6.0,
+    "violatn__VIOLATION=0": 1.0
+   }
+  },
+  {
+   "id": "crash-5",
+   "casenum": "202405811016",
+   "year": 2024,
+   "label": "Serious or fatal, but scored below the threshold (a miss)",
+   "recorded_outcome": "Suspected Serious Injury (A)",
+   "y_injury": 1,
+   "y_serious": 1,
+   "record": {
+    "accident": [
+     {
+      "CASENUM": 202405811016,
+      "ALCHL_IM": 2,
+      "EVENT1_IM": 9,
+      "HOUR_IM": 8,
+      "LGTCON_IM": 1,
+      "MANCOL_IM": 0,
+      "REGION": 3,
+      "RELJCT2_IM": 3,
+      "URBANICITY": 1
+     }
+    ],
+    "cevent": [
+     {
+      "CASENUM": 202405811016,
+      "AOI1": 12,
+      "AOI2": 77,
+      "SOE": 9
+     }
+    ],
+    "distract": [
+     {
+      "CASENUM": 202405811016,
+      "VEH_NO": 1,
+      "DRDISTRACT": 99
+     }
+    ],
+    "drimpair": [
+     {
+      "CASENUM": 202405811016,
+      "VEH_NO": 1,
+      "DRIMPAIR": 0
+     }
+    ],
+    "driverrf": [
+     {
+      "CASENUM": 202405811016,
+      "VEH_NO": 1,
+      "DRIVERRF": 0
+     }
+    ],
+    "maneuver": [
+     {
+      "CASENUM": 202405811016,
+      "VEH_NO": 1,
+      "MANEUVER": 98
+     }
+    ],
+    "pbtype": [
+     {
+      "CASENUM": 202405811016,
+      "VEH_NO": 0,
+      "PER_NO": 1,
+      "PEDPOS": 77
+     }
+    ],
+    "person": [
+     {
+      "CASENUM": 202405811016,
+      "VEH_NO": 0,
+      "PER_NO": 1,
+      "AGE_IM": 16,
+      "AIR_BAG": 97,
+      "BODY_TYP": null,
+      "DRUGS": 0,
+      "EJECT_IM": 8,
+      "GVWR_FROM": null,
+      "IMPACT1": null,
+      "MOD_YEAR": null,
+      "PERALCH_IM": 0,
+      "PER_TYP": 6,
+      "REST_MIS": 8,
+      "REST_USE": 96,
+      "SEX_IM": 1
+     },
+     {
+      "CASENUM": 202405811016,
+      "VEH_NO": 1,
+      "PER_NO": 1,
+      "AGE_IM": 81,
+      "AIR_BAG": 20,
+      "BODY_TYP": 14,
+      "DRUGS": 0,
+      "EJECT_IM": 0,
+      "GVWR_FROM": 11,
+      "IMPACT1": 12,
+      "MOD_YEAR": 2016,
+      "PERALCH_IM": 0,
+      "PER_TYP": 1,
+      "REST_MIS": 0,
+      "REST_USE": 3,
+      "SEX_IM": 1
+     }
+    ],
+    "personrf": [
+     {
+      "CASENUM": 202405811016,
+      "VEH_NO": 0,
+      "PER_NO": 1,
+      "PERSONRF": 0
+     },
+     {
+      "CASENUM": 202405811016,
+      "VEH_NO": 1,
+      "PER_NO": 1,
+      "PERSONRF": 0
+     }
+    ],
+    "vehicle": [
+     {
+      "CASENUM": 202405811016,
+      "VEH_NO": 1,
+      "BODY_TYP": 14,
+      "HIT_RUN": 0,
+      "IMPACT1_IM": 12,
+      "MDLYR_IM": 2016,
+      "PCRASH1_IM": 10,
+      "P_CRASH2": 85,
+      "SPEEDREL": 0,
+      "TRAV_SP": 998,
+      "VEVENT_IM": 9,
+      "VNUM_LAN": 2,
+      "VPROFILE": 1,
+      "VSPD_LIM": 30,
+      "VSURCOND": 98,
+      "VTRAFCON": 0,
+      "VTRAFWAY": 1,
+      "V_CONFIG": 0
+     }
+    ],
+    "vevent": [
+     {
+      "CASENUM": 202405811016,
+      "VEH_NO": 1
+     }
+    ],
+    "violatn": [
+     {
+      "CASENUM": 202405811016,
+      "VEH_NO": 1,
+      "VIOLATION": 0
+     }
+    ]
+   },
+   "display": [
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "ALCHL_IM",
+     "label": "Alcohol Involved in Crash",
+     "value": "No Alcohol Involved"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "EVENT1_IM",
+     "label": "First Harmful Event",
+     "value": "Pedalcyclist"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "HOUR_IM",
+     "label": "Hour of Crash",
+     "value": "8:00am-8:59am"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "LGTCON_IM",
+     "label": "Light Condition",
+     "value": "Daylight"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "MANCOL_IM",
+     "label": "Manner of Collision of the First Harmful Event",
+     "value": "The First Harmful Event was Not a Collision with a Motor Vehicle In-Transport"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "REGION",
+     "label": "Region of the Country",
+     "value": "South (MD, DE, DC, WV, VA, KY, TN, NC, SC, GA, FL, AL, MS, LA, AR, OK, TX)"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "RELJCT2_IM",
+     "label": "Relation to Junction\u2014Specific Location",
+     "value": "Intersection-Related"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "URBANICITY",
+     "label": "Urbanicity",
+     "value": "Urban Area"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 1",
+     "field": "AOI1",
+     "label": "Area of Impact (This Vehicle)",
+     "value": "12 Clock Point"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 1",
+     "field": "AOI2",
+     "label": "Area of Impact (Other Vehicle)",
+     "value": "Not a Motor Vehicle"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 1",
+     "field": "SOE",
+     "label": "Sequence of Events",
+     "value": "Pedalcyclist"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "Compact Utility (Utility Vehicle Categories \"Small\" and \"Midsize\")"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "HIT_RUN",
+     "label": "Hit-and-Run",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "IMPACT1_IM",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "12 Clock Point"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "MDLYR_IM",
+     "label": "Vehicle Model Year",
+     "value": "2016"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "PCRASH1_IM",
+     "label": "Pre-Event Movement (Prior to Recognition of Critical Event)",
+     "value": "Turning Right"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "P_CRASH2",
+     "label": "Critical Event\u2014Precrash",
+     "value": "Pedalcyclist or other non-motorist unknown location"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "SPEEDREL",
+     "label": "Speeding Related",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "TRAV_SP",
+     "label": "Travel Speed",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VEVENT_IM",
+     "label": "Most Harmful Event",
+     "value": "Pedalcyclist"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VNUM_LAN",
+     "label": "Total Lanes in Roadway",
+     "value": "Two lanes"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VPROFILE",
+     "label": "Roadway Grade",
+     "value": "Level"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VSPD_LIM",
+     "label": "Speed Limit",
+     "value": "30 MPH"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VSURCOND",
+     "label": "Roadway Surface Conditions",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VTRAFCON",
+     "label": "Traffic Control Device",
+     "value": "No Controls"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VTRAFWAY",
+     "label": "Trafficway Description",
+     "value": "Two-Way, Not Divided"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "V_CONFIG",
+     "label": "Vehicle Configuration",
+     "value": "Not Applicable"
+    },
+    {
+     "table": "drimpair",
+     "unit": "Vehicle 1",
+     "field": "DRIMPAIR",
+     "label": "Condition (Impairment) at Time of Crash\u2014Driver",
+     "value": "None/Apparently Normal"
+    },
+    {
+     "table": "distract",
+     "unit": "Vehicle 1",
+     "field": "DRDISTRACT",
+     "label": "Driver Distracted By",
+     "value": "Reported as Unknown if Distracted"
+    },
+    {
+     "table": "driverrf",
+     "unit": "Vehicle 1",
+     "field": "DRIVERRF",
+     "label": "Related Factors\u2014Driver Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "maneuver",
+     "unit": "Vehicle 1",
+     "field": "MANEUVER",
+     "label": "Driver Maneuvered to Avoid",
+     "value": "Not Reported"
+    },
+    {
+     "table": "violatn",
+     "unit": "Vehicle 1",
+     "field": "VIOLATION",
+     "label": "Citations Issued",
+     "value": "nan"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1",
+     "field": "AGE_IM",
+     "label": "Age",
+     "value": "16 Years"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1",
+     "field": "AIR_BAG",
+     "label": "Air Bag Deployed",
+     "value": "Not a Motor Vehicle Occupant"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "nan"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1",
+     "field": "DRUGS",
+     "label": "Police Reported Drug Involvement",
+     "value": "No (drugs not involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1",
+     "field": "EJECT_IM",
+     "label": "Ejection",
+     "value": "Not Applicable"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1",
+     "field": "GVWR_FROM",
+     "label": "Power Unit Gross Vehicle Weight Rating (GVWR)",
+     "value": "nan"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1",
+     "field": "IMPACT1",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "nan"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1",
+     "field": "MOD_YEAR",
+     "label": "Vehicle Model Year",
+     "value": "nan"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1",
+     "field": "PERALCH_IM",
+     "label": "Police Reported Alcohol Involvement",
+     "value": "No (Alcohol Not Involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1",
+     "field": "PER_TYP",
+     "label": "Person Type",
+     "value": "Bicyclist"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1",
+     "field": "REST_MIS",
+     "label": "Indication of Restraint System Misuse",
+     "value": "Not a Motor Vehicle Occupant"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1",
+     "field": "REST_USE",
+     "label": "Restraint System Use",
+     "value": "Not a Motor Vehicle Occupant"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1",
+     "field": "SEX_IM",
+     "label": "Sex",
+     "value": "Male"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "AGE_IM",
+     "label": "Age",
+     "value": "81 Years"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "AIR_BAG",
+     "label": "Air Bag Deployed",
+     "value": "Not Deployed"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "Compact Utility (Utility Vehicle Categories \"Small\" and \"Midsize\")"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "DRUGS",
+     "label": "Police Reported Drug Involvement",
+     "value": "No (drugs not involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "EJECT_IM",
+     "label": "Ejection",
+     "value": "Not Ejected"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "GVWR_FROM",
+     "label": "Power Unit Gross Vehicle Weight Rating (GVWR)",
+     "value": "Class 1: 6,000 lbs. or less (2,722 kg or less)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "IMPACT1",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "12 Clock Point"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "MOD_YEAR",
+     "label": "Vehicle Model Year",
+     "value": "2016"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "PERALCH_IM",
+     "label": "Police Reported Alcohol Involvement",
+     "value": "No (Alcohol Not Involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "PER_TYP",
+     "label": "Person Type",
+     "value": "Driver of a Motor Vehicle In-Transport"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "REST_MIS",
+     "label": "Indication of Restraint System Misuse",
+     "value": "No Indication of Misuse"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "REST_USE",
+     "label": "Restraint System Use",
+     "value": "Shoulder and Lap Belt Used"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "SEX_IM",
+     "label": "Sex",
+     "value": "Male"
+    },
+    {
+     "table": "personrf",
+     "unit": "Person 1",
+     "field": "PERSONRF",
+     "label": "Related Factors\u2014Person Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "personrf",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "PERSONRF",
+     "label": "Related Factors\u2014Person Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "pbtype",
+     "unit": "Person 1",
+     "field": "PEDPOS",
+     "label": "NM11-PB32. Pedestrian Position",
+     "value": "Not a Pedestrian"
+    }
+   ],
+   "training_features": {
+    "acc__ALCHL_IM": 2.0,
+    "acc__EVENT1_IM": 9.0,
+    "acc__HOUR_IM": 8.0,
+    "acc__LGTCON_IM": 1.0,
+    "acc__MANCOL_IM": 0.0,
+    "acc__REGION": 3.0,
+    "acc__RELJCT2_IM": 3.0,
+    "acc__URBANICITY": 1.0,
+    "cevent__AOI1=2": 0.0,
+    "cevent__AOI2=77": 1.0,
+    "cevent__SOE=1": 0.0,
+    "cevent__SOE=34": 0.0,
+    "cevent__n_rows": 1.0,
+    "distract__DRDISTRACT=0": 0.0,
+    "distract__DRDISTRACT=96": 0.0,
+    "distract__DRDISTRACT=99": 1.0,
+    "drimpair__DRIMPAIR=0": 1.0,
+    "drimpair__DRIMPAIR=1": 0.0,
+    "drimpair__DRIMPAIR=98": 0.0,
+    "drimpair__DRIMPAIR=99": 0.0,
+    "driverrf__DRIVERRF=0": 1.0,
+    "driverrf__DRIVERRF=36": 0.0,
+    "driverrf__DRIVERRF=6": 0.0,
+    "maneuver__MANEUVER=92": 0.0,
+    "pbtype__PEDPOS=3": 0.0,
+    "person__AGE_IM__max": 81.0,
+    "person__AGE_IM__min": 16.0,
+    "person__AIR_BAG=1": 0.0,
+    "person__AIR_BAG=20": 1.0,
+    "person__AIR_BAG=8": 0.0,
+    "person__AIR_BAG=9": 0.0,
+    "person__AIR_BAG=98": 0.0,
+    "person__BODY_TYP=66.0": 0.0,
+    "person__DRUGS=0": 2.0,
+    "person__DRUGS=1": 0.0,
+    "person__DRUGS=9": 0.0,
+    "person__EJECT_IM=0": 1.0,
+    "person__EJECT_IM=1": 0.0,
+    "person__EJECT_IM=8": 1.0,
+    "person__GVWR_FROM=18.0": 0.0,
+    "person__IMPACT1=12.0": 1.0,
+    "person__IMPACT1=6.0": 0.0,
+    "person__MOD_YEAR__max": 2016.0,
+    "person__MOD_YEAR__min": 2016.0,
+    "person__PERALCH_IM=1": 0.0,
+    "person__PER_TYP=2": 0.0,
+    "person__REST_MIS=0": 1.0,
+    "person__REST_MIS=7": 0.0,
+    "person__REST_USE=20": 0.0,
+    "person__REST_USE=98": 0.0,
+    "person__REST_USE=99": 0.0,
+    "person__SEX_IM=2": 0.0,
+    "person__n_rows": 2.0,
+    "personrf__PERSONRF=0": 2.0,
+    "vehicle__BODY_TYP=14": 1.0,
+    "vehicle__HIT_RUN=0": 1.0,
+    "vehicle__HIT_RUN=1": 0.0,
+    "vehicle__IMPACT1_IM=12": 1.0,
+    "vehicle__IMPACT1_IM=9": 0.0,
+    "vehicle__MDLYR_IM__max": 2016.0,
+    "vehicle__PCRASH1_IM=1": 0.0,
+    "vehicle__P_CRASH2=62": 0.0,
+    "vehicle__SPEEDREL=3": 0.0,
+    "vehicle__SPEEDREL=5": 0.0,
+    "vehicle__TRAV_SP__max": null,
+    "vehicle__TRAV_SP__min": null,
+    "vehicle__VEVENT_IM=11": 0.0,
+    "vehicle__VEVENT_IM=24": 0.0,
+    "vehicle__VNUM_LAN=4": 0.0,
+    "vehicle__VNUM_LAN=8": 0.0,
+    "vehicle__VPROFILE=8": 0.0,
+    "vehicle__VSPD_LIM__max": 30.0,
+    "vehicle__VSURCOND=1": 0.0,
+    "vehicle__VTRAFCON=20": 0.0,
+    "vehicle__VTRAFWAY=7": 0.0,
+    "vehicle__VTRAFWAY=8": 0.0,
+    "vehicle__V_CONFIG=0": 1.0,
+    "vevent__n_rows": 1.0,
+    "violatn__VIOLATION=0": 1.0
+   }
+  },
+  {
+   "id": "crash-6",
+   "casenum": "202406093754",
+   "year": 2024,
+   "label": "No injury recorded, but flagged (a false alarm)",
+   "recorded_outcome": "No Apparent Injury (O)",
+   "y_injury": 0,
+   "y_serious": 0,
+   "record": {
+    "accident": [
+     {
+      "CASENUM": 202406093754,
+      "ALCHL_IM": 2,
+      "EVENT1_IM": 12,
+      "HOUR_IM": 17,
+      "LGTCON_IM": 1,
+      "MANCOL_IM": 6,
+      "REGION": 3,
+      "RELJCT2_IM": 2,
+      "URBANICITY": 1
+     }
+    ],
+    "cevent": [
+     {
+      "CASENUM": 202406093754,
+      "AOI1": 12,
+      "AOI2": 7,
+      "SOE": 12
+     }
+    ],
+    "distract": [
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 1,
+      "DRDISTRACT": 0
+     },
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 2,
+      "DRDISTRACT": 0
+     }
+    ],
+    "drimpair": [
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 1,
+      "DRIMPAIR": 0
+     },
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 2,
+      "DRIMPAIR": 0
+     }
+    ],
+    "driverrf": [
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 1,
+      "DRIVERRF": 0
+     },
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 2,
+      "DRIVERRF": 0
+     }
+    ],
+    "maneuver": [
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 1,
+      "MANEUVER": 98
+     },
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 2,
+      "MANEUVER": 98
+     }
+    ],
+    "pbtype": [],
+    "person": [
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 1,
+      "PER_NO": 1,
+      "AGE_IM": 33,
+      "AIR_BAG": 20,
+      "BODY_TYP": 14,
+      "DRUGS": 0,
+      "EJECT_IM": 0,
+      "GVWR_FROM": 11,
+      "IMPACT1": 12,
+      "MOD_YEAR": 2011,
+      "PERALCH_IM": 0,
+      "PER_TYP": 1,
+      "REST_MIS": 0,
+      "REST_USE": 3,
+      "SEX_IM": 1
+     },
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 2,
+      "PER_NO": 1,
+      "AGE_IM": 35,
+      "AIR_BAG": 8,
+      "BODY_TYP": 4,
+      "DRUGS": 0,
+      "EJECT_IM": 0,
+      "GVWR_FROM": 11,
+      "IMPACT1": 7,
+      "MOD_YEAR": 2020,
+      "PERALCH_IM": 0,
+      "PER_TYP": 1,
+      "REST_MIS": 0,
+      "REST_USE": 3,
+      "SEX_IM": 1
+     },
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 2,
+      "PER_NO": 2,
+      "AGE_IM": 69,
+      "AIR_BAG": 8,
+      "BODY_TYP": 4,
+      "DRUGS": 8,
+      "EJECT_IM": 0,
+      "GVWR_FROM": 11,
+      "IMPACT1": 7,
+      "MOD_YEAR": 2020,
+      "PERALCH_IM": 0,
+      "PER_TYP": 2,
+      "REST_MIS": 0,
+      "REST_USE": 3,
+      "SEX_IM": 2
+     }
+    ],
+    "personrf": [
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 1,
+      "PER_NO": 1,
+      "PERSONRF": 0
+     },
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 2,
+      "PER_NO": 1,
+      "PERSONRF": 0
+     },
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 2,
+      "PER_NO": 2,
+      "PERSONRF": 0
+     }
+    ],
+    "vehicle": [
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 1,
+      "BODY_TYP": 14,
+      "HIT_RUN": 0,
+      "IMPACT1_IM": 12,
+      "MDLYR_IM": 2011,
+      "PCRASH1_IM": 1,
+      "P_CRASH2": 17,
+      "SPEEDREL": 0,
+      "TRAV_SP": 45,
+      "VEVENT_IM": 12,
+      "VNUM_LAN": 3,
+      "VPROFILE": 1,
+      "VSPD_LIM": 45,
+      "VSURCOND": 1,
+      "VTRAFCON": 3,
+      "VTRAFWAY": 7,
+      "V_CONFIG": 0
+     },
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 2,
+      "BODY_TYP": 4,
+      "HIT_RUN": 0,
+      "IMPACT1_IM": 7,
+      "MDLYR_IM": 2020,
+      "PCRASH1_IM": 11,
+      "P_CRASH2": 66,
+      "SPEEDREL": 0,
+      "TRAV_SP": 15,
+      "VEVENT_IM": 12,
+      "VNUM_LAN": 2,
+      "VPROFILE": 1,
+      "VSPD_LIM": 45,
+      "VSURCOND": 98,
+      "VTRAFCON": 3,
+      "VTRAFWAY": 1,
+      "V_CONFIG": 0
+     }
+    ],
+    "vevent": [
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 1
+     },
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 2
+     }
+    ],
+    "violatn": [
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 1,
+      "VIOLATION": 72
+     },
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 1,
+      "VIOLATION": 39
+     },
+     {
+      "CASENUM": 202406093754,
+      "VEH_NO": 2,
+      "VIOLATION": 0
+     }
+    ]
+   },
+   "display": [
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "ALCHL_IM",
+     "label": "Alcohol Involved in Crash",
+     "value": "No Alcohol Involved"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "EVENT1_IM",
+     "label": "First Harmful Event",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "HOUR_IM",
+     "label": "Hour of Crash",
+     "value": "5:00pm-5:59pm"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "LGTCON_IM",
+     "label": "Light Condition",
+     "value": "Daylight"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "MANCOL_IM",
+     "label": "Manner of Collision of the First Harmful Event",
+     "value": "Angle"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "REGION",
+     "label": "Region of the Country",
+     "value": "South (MD, DE, DC, WV, VA, KY, TN, NC, SC, GA, FL, AL, MS, LA, AR, OK, TX)"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "RELJCT2_IM",
+     "label": "Relation to Junction\u2014Specific Location",
+     "value": "Intersection"
+    },
+    {
+     "table": "accident",
+     "unit": "Crash",
+     "field": "URBANICITY",
+     "label": "Urbanicity",
+     "value": "Urban Area"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 1",
+     "field": "AOI1",
+     "label": "Area of Impact (This Vehicle)",
+     "value": "12 Clock Point"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 1",
+     "field": "AOI2",
+     "label": "Area of Impact (Other Vehicle)",
+     "value": "7 Clock Point"
+    },
+    {
+     "table": "cevent",
+     "unit": "Crash event 1",
+     "field": "SOE",
+     "label": "Sequence of Events",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "Compact Utility (Utility Vehicle Categories \"Small\" and \"Midsize\")"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "HIT_RUN",
+     "label": "Hit-and-Run",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "IMPACT1_IM",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "12 Clock Point"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "MDLYR_IM",
+     "label": "Vehicle Model Year",
+     "value": "2011"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "PCRASH1_IM",
+     "label": "Pre-Event Movement (Prior to Recognition of Critical Event)",
+     "value": "Going Straight"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "P_CRASH2",
+     "label": "Critical Event\u2014Precrash",
+     "value": "Crossing Over (Passing Through) Junction"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "SPEEDREL",
+     "label": "Speeding Related",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "TRAV_SP",
+     "label": "Travel Speed",
+     "value": "045 MPH"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VEVENT_IM",
+     "label": "Most Harmful Event",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VNUM_LAN",
+     "label": "Total Lanes in Roadway",
+     "value": "Three lanes"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VPROFILE",
+     "label": "Roadway Grade",
+     "value": "Level"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VSPD_LIM",
+     "label": "Speed Limit",
+     "value": "45 MPH"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VSURCOND",
+     "label": "Roadway Surface Conditions",
+     "value": "Dry"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VTRAFCON",
+     "label": "Traffic Control Device",
+     "value": "Traffic control signal(on colors) not known whether or not Pedestrian Signal"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "VTRAFWAY",
+     "label": "Trafficway Description",
+     "value": "Two-Way Divided, Unknown if Unprotected Median or Positive Median Barrier"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 1",
+     "field": "V_CONFIG",
+     "label": "Vehicle Configuration",
+     "value": "Not Applicable"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "4-door sedan, hardtop"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "HIT_RUN",
+     "label": "Hit-and-Run",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "IMPACT1_IM",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "7 Clock Point"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "MDLYR_IM",
+     "label": "Vehicle Model Year",
+     "value": "2020"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "PCRASH1_IM",
+     "label": "Pre-Event Movement (Prior to Recognition of Critical Event)",
+     "value": "Turning Left"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "P_CRASH2",
+     "label": "Critical Event\u2014Precrash",
+     "value": "From crossing street, across path"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "SPEEDREL",
+     "label": "Speeding Related",
+     "value": "No"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "TRAV_SP",
+     "label": "Travel Speed",
+     "value": "015 MPH"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VEVENT_IM",
+     "label": "Most Harmful Event",
+     "value": "Motor Vehicle In-Transport"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VNUM_LAN",
+     "label": "Total Lanes in Roadway",
+     "value": "Two lanes"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VPROFILE",
+     "label": "Roadway Grade",
+     "value": "Level"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VSPD_LIM",
+     "label": "Speed Limit",
+     "value": "45 MPH"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VSURCOND",
+     "label": "Roadway Surface Conditions",
+     "value": "Not Reported"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VTRAFCON",
+     "label": "Traffic Control Device",
+     "value": "Traffic control signal(on colors) not known whether or not Pedestrian Signal"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "VTRAFWAY",
+     "label": "Trafficway Description",
+     "value": "Two-Way, Not Divided"
+    },
+    {
+     "table": "vehicle",
+     "unit": "Vehicle 2",
+     "field": "V_CONFIG",
+     "label": "Vehicle Configuration",
+     "value": "Not Applicable"
+    },
+    {
+     "table": "drimpair",
+     "unit": "Vehicle 1",
+     "field": "DRIMPAIR",
+     "label": "Condition (Impairment) at Time of Crash\u2014Driver",
+     "value": "None/Apparently Normal"
+    },
+    {
+     "table": "drimpair",
+     "unit": "Vehicle 2",
+     "field": "DRIMPAIR",
+     "label": "Condition (Impairment) at Time of Crash\u2014Driver",
+     "value": "None/Apparently Normal"
+    },
+    {
+     "table": "distract",
+     "unit": "Vehicle 1",
+     "field": "DRDISTRACT",
+     "label": "Driver Distracted By",
+     "value": "Not Distracted"
+    },
+    {
+     "table": "distract",
+     "unit": "Vehicle 2",
+     "field": "DRDISTRACT",
+     "label": "Driver Distracted By",
+     "value": "Not Distracted"
+    },
+    {
+     "table": "driverrf",
+     "unit": "Vehicle 1",
+     "field": "DRIVERRF",
+     "label": "Related Factors\u2014Driver Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "driverrf",
+     "unit": "Vehicle 2",
+     "field": "DRIVERRF",
+     "label": "Related Factors\u2014Driver Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "maneuver",
+     "unit": "Vehicle 1",
+     "field": "MANEUVER",
+     "label": "Driver Maneuvered to Avoid",
+     "value": "Not Reported"
+    },
+    {
+     "table": "maneuver",
+     "unit": "Vehicle 2",
+     "field": "MANEUVER",
+     "label": "Driver Maneuvered to Avoid",
+     "value": "Not Reported"
+    },
+    {
+     "table": "violatn",
+     "unit": "Vehicle 1",
+     "field": "VIOLATION",
+     "label": "Citations Issued",
+     "value": "Other driver license violations"
+    },
+    {
+     "table": "violatn",
+     "unit": "Vehicle 1",
+     "field": "VIOLATION",
+     "label": "Citations Issued",
+     "value": "Fail to obey traffic control device"
+    },
+    {
+     "table": "violatn",
+     "unit": "Vehicle 2",
+     "field": "VIOLATION",
+     "label": "Citations Issued",
+     "value": "nan"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "AGE_IM",
+     "label": "Age",
+     "value": "33 Years"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "AIR_BAG",
+     "label": "Air Bag Deployed",
+     "value": "Not Deployed"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "Compact Utility (Utility Vehicle Categories \"Small\" and \"Midsize\")"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "DRUGS",
+     "label": "Police Reported Drug Involvement",
+     "value": "No (drugs not involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "EJECT_IM",
+     "label": "Ejection",
+     "value": "Not Ejected"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "GVWR_FROM",
+     "label": "Power Unit Gross Vehicle Weight Rating (GVWR)",
+     "value": "Class 1: 6,000 lbs. or less (2,722 kg or less)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "IMPACT1",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "12 Clock Point"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "MOD_YEAR",
+     "label": "Vehicle Model Year",
+     "value": "2011"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "PERALCH_IM",
+     "label": "Police Reported Alcohol Involvement",
+     "value": "No (Alcohol Not Involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "PER_TYP",
+     "label": "Person Type",
+     "value": "Driver of a Motor Vehicle In-Transport"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "REST_MIS",
+     "label": "Indication of Restraint System Misuse",
+     "value": "No Indication of Misuse"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "REST_USE",
+     "label": "Restraint System Use",
+     "value": "Shoulder and Lap Belt Used"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "SEX_IM",
+     "label": "Sex",
+     "value": "Male"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "AGE_IM",
+     "label": "Age",
+     "value": "35 Years"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "AIR_BAG",
+     "label": "Air Bag Deployed",
+     "value": "Deployed- Combination"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "4-door sedan, hardtop"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "DRUGS",
+     "label": "Police Reported Drug Involvement",
+     "value": "No (drugs not involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "EJECT_IM",
+     "label": "Ejection",
+     "value": "Not Ejected"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "GVWR_FROM",
+     "label": "Power Unit Gross Vehicle Weight Rating (GVWR)",
+     "value": "Class 1: 6,000 lbs. or less (2,722 kg or less)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "IMPACT1",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "7 Clock Point"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "MOD_YEAR",
+     "label": "Vehicle Model Year",
+     "value": "2020"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "PERALCH_IM",
+     "label": "Police Reported Alcohol Involvement",
+     "value": "No (Alcohol Not Involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "PER_TYP",
+     "label": "Person Type",
+     "value": "Driver of a Motor Vehicle In-Transport"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "REST_MIS",
+     "label": "Indication of Restraint System Misuse",
+     "value": "No Indication of Misuse"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "REST_USE",
+     "label": "Restraint System Use",
+     "value": "Shoulder and Lap Belt Used"
+    },
+    {
+     "table": "person",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "SEX_IM",
+     "label": "Sex",
+     "value": "Male"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "AGE_IM",
+     "label": "Age",
+     "value": "69 Years"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "AIR_BAG",
+     "label": "Air Bag Deployed",
+     "value": "Deployed- Combination"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "BODY_TYP",
+     "label": "NCSA Body Type",
+     "value": "4-door sedan, hardtop"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "DRUGS",
+     "label": "Police Reported Drug Involvement",
+     "value": "Not Reported"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "EJECT_IM",
+     "label": "Ejection",
+     "value": "Not Ejected"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "GVWR_FROM",
+     "label": "Power Unit Gross Vehicle Weight Rating (GVWR)",
+     "value": "Class 1: 6,000 lbs. or less (2,722 kg or less)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "IMPACT1",
+     "label": "Areas of Impact\u2014Initial Contact Point",
+     "value": "7 Clock Point"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "MOD_YEAR",
+     "label": "Vehicle Model Year",
+     "value": "2020"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "PERALCH_IM",
+     "label": "Police Reported Alcohol Involvement",
+     "value": "No (Alcohol Not Involved)"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "PER_TYP",
+     "label": "Person Type",
+     "value": "Passenger of a Motor Vehicle In-Transport"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "REST_MIS",
+     "label": "Indication of Restraint System Misuse",
+     "value": "No Indication of Misuse"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "REST_USE",
+     "label": "Restraint System Use",
+     "value": "Shoulder and Lap Belt Used"
+    },
+    {
+     "table": "person",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "SEX_IM",
+     "label": "Sex",
+     "value": "Female"
+    },
+    {
+     "table": "personrf",
+     "unit": "Person 1 (vehicle 1)",
+     "field": "PERSONRF",
+     "label": "Related Factors\u2014Person Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "personrf",
+     "unit": "Person 1 (vehicle 2)",
+     "field": "PERSONRF",
+     "label": "Related Factors\u2014Person Level",
+     "value": "None Noted"
+    },
+    {
+     "table": "personrf",
+     "unit": "Person 2 (vehicle 2)",
+     "field": "PERSONRF",
+     "label": "Related Factors\u2014Person Level",
+     "value": "None Noted"
+    }
+   ],
+   "training_features": {
+    "acc__ALCHL_IM": 2.0,
+    "acc__EVENT1_IM": 12.0,
+    "acc__HOUR_IM": 17.0,
+    "acc__LGTCON_IM": 1.0,
+    "acc__MANCOL_IM": 6.0,
+    "acc__REGION": 3.0,
+    "acc__RELJCT2_IM": 2.0,
+    "acc__URBANICITY": 1.0,
+    "cevent__AOI1=2": 0.0,
+    "cevent__AOI2=77": 0.0,
+    "cevent__SOE=1": 0.0,
+    "cevent__SOE=34": 0.0,
+    "cevent__n_rows": 1.0,
+    "distract__DRDISTRACT=0": 2.0,
+    "distract__DRDISTRACT=96": 0.0,
+    "distract__DRDISTRACT=99": 0.0,
+    "drimpair__DRIMPAIR=0": 2.0,
+    "drimpair__DRIMPAIR=1": 0.0,
+    "drimpair__DRIMPAIR=98": 0.0,
+    "drimpair__DRIMPAIR=99": 0.0,
+    "driverrf__DRIVERRF=0": 2.0,
+    "driverrf__DRIVERRF=36": 0.0,
+    "driverrf__DRIVERRF=6": 0.0,
+    "maneuver__MANEUVER=92": 0.0,
+    "pbtype__PEDPOS=3": 0.0,
+    "person__AGE_IM__max": 69.0,
+    "person__AGE_IM__min": 33.0,
+    "person__AIR_BAG=1": 0.0,
+    "person__AIR_BAG=20": 1.0,
+    "person__AIR_BAG=8": 2.0,
+    "person__AIR_BAG=9": 0.0,
+    "person__AIR_BAG=98": 0.0,
+    "person__BODY_TYP=66.0": 0.0,
+    "person__DRUGS=0": 2.0,
+    "person__DRUGS=1": 0.0,
+    "person__DRUGS=9": 0.0,
+    "person__EJECT_IM=0": 3.0,
+    "person__EJECT_IM=1": 0.0,
+    "person__EJECT_IM=8": 0.0,
+    "person__GVWR_FROM=18.0": 0.0,
+    "person__IMPACT1=12.0": 1.0,
+    "person__IMPACT1=6.0": 0.0,
+    "person__MOD_YEAR__max": 2020.0,
+    "person__MOD_YEAR__min": 2011.0,
+    "person__PERALCH_IM=1": 0.0,
+    "person__PER_TYP=2": 1.0,
+    "person__REST_MIS=0": 3.0,
+    "person__REST_MIS=7": 0.0,
+    "person__REST_USE=20": 0.0,
+    "person__REST_USE=98": 0.0,
+    "person__REST_USE=99": 0.0,
+    "person__SEX_IM=2": 1.0,
+    "person__n_rows": 3.0,
+    "personrf__PERSONRF=0": 3.0,
+    "vehicle__BODY_TYP=14": 1.0,
+    "vehicle__HIT_RUN=0": 2.0,
+    "vehicle__HIT_RUN=1": 0.0,
+    "vehicle__IMPACT1_IM=12": 1.0,
+    "vehicle__IMPACT1_IM=9": 0.0,
+    "vehicle__MDLYR_IM__max": 2020.0,
+    "vehicle__PCRASH1_IM=1": 1.0,
+    "vehicle__P_CRASH2=62": 0.0,
+    "vehicle__SPEEDREL=3": 0.0,
+    "vehicle__SPEEDREL=5": 0.0,
+    "vehicle__TRAV_SP__max": 45.0,
+    "vehicle__TRAV_SP__min": 15.0,
+    "vehicle__VEVENT_IM=11": 0.0,
+    "vehicle__VEVENT_IM=24": 0.0,
+    "vehicle__VNUM_LAN=4": 0.0,
+    "vehicle__VNUM_LAN=8": 0.0,
+    "vehicle__VPROFILE=8": 0.0,
+    "vehicle__VSPD_LIM__max": 45.0,
+    "vehicle__VSURCOND=1": 1.0,
+    "vehicle__VTRAFCON=20": 0.0,
+    "vehicle__VTRAFWAY=7": 1.0,
+    "vehicle__VTRAFWAY=8": 0.0,
+    "vehicle__V_CONFIG=0": 2.0,
+    "vevent__n_rows": 2.0,
+    "violatn__VIOLATION=0": 1.0
+   }
+  }
+ ]
+}

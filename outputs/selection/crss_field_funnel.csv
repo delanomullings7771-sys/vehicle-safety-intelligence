@@ -1,0 +1,8 @@
+step,fields,note
+Raw fields in the 28 CRSS tables (counted per table),1114,
+"Excluded by rule: leakage, keys, identifiers, sampling design, VIN text labels",-394,155 distinct field names
+"Removed as duplicate information: text labels, repeats, replaced by imputed versions, constant",-417,
+Fields used to build the crash features (benchmark models),303,"summarised into 1,456 crash features"
+Removed after the ablation test: VIN-decoded specification fields (no predictive gain),-117,
+"Removed: post-crash fields (recorded after the crash; mostly reflect the outcome)",-8,
+Fields available to importance-based selection,178,

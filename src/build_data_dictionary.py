@@ -6,10 +6,12 @@ Field titles and definitions come from official NHTSA documentation:
 Each field's role in this project is taken from the build scripts' own registers, so the
 dictionary always matches what the code actually did.
 """
+import json
 import re
 import sys
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
@@ -18,7 +20,7 @@ from pypdf import PdfReader
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import build_complaints
 import build_crss_features as crss
-from project_paths import CRSS_YEARS, PROCESSED_DIR, PROJECT_ROOT, TABLE_DIR, crss_extracted_dir
+from project_paths import CRSS_YEARS, OUTPUT_DIR, PROCESSED_DIR, PROJECT_ROOT, TABLE_DIR, crss_extracted_dir
 
 DOCS = PROJECT_ROOT / "documentation"
 OUT = DOCS / "Data_Dictionary.xlsx"
@@ -187,6 +189,44 @@ def crss_feature_list(raw: pd.DataFrame) -> pd.DataFrame:
     return reg[["feature", "table", "grain", "field", "field_title", "kind", "group", "meaning"]]
 
 
+def selection(raw: pd.DataFrame, features: pd.DataFrame) -> tuple:
+    """Field selection (notebook 04, Part B): what happened to each used field, and the 50 final-model fields."""
+    sel_dir = OUTPUT_DIR / "selection"
+    sel = json.loads((sel_dir / "crss_selected_features.json").read_text())
+    s1, s2 = set(sel["y_injury"]["fields"]), set(sel["y_serious"]["fields"])
+    f1, f2 = set(sel["y_injury"]["features"]), set(sel["y_serious"]["features"])
+
+    def models(key, a, b):
+        return "S1 and S2" if key in a and key in b else ("S1" if key in a else ("S2" if key in b else ""))
+
+    key = raw.table + "." + raw.field
+    vin = raw.table.str.startswith("vpic") | raw.field.str.upper().str.startswith("VPIC")
+    used = raw.project_role.str.startswith("USED")
+    post = raw.project_role.str.contains("post-crash")
+    final = key.map(lambda k: models(k, s1, s2))
+    raw = raw.assign(selection_status=np.select(
+        [final != "", used & vin, used & post, used],
+        ["FINAL MODEL INPUT (" + final + ")", "Removed in field selection: VIN-decoded (ablation showed no gain)",
+         "Removed in field selection: post-crash (recorded after the crash)",
+         "Not selected: below the 98% importance rule"], ""))
+    features = features.assign(
+        source=np.select([features.table.str.startswith("vpic") | features.field.str.upper().str.startswith("VPIC"),
+                          features.group == "post_crash"], ["VIN-decoded", "post-crash"], "police-reported"),
+        in_final_model=features.feature.map(lambda f: models(f, f1, f2)))
+    funnel = pd.read_csv(sel_dir / "crss_field_funnel.csv").fillna("")
+    titles = raw.drop_duplicates(["table", "field"]).set_index(["table", "field"])
+    fin = pd.DataFrame([k.split(".") for k in sel["deployment_fields"]], columns=["table", "field"])
+    fin["used_by"] = [models(k, s1, s2) for k in sel["deployment_fields"]]
+    fin["title"] = [("Number of rows in this table for the crash" if f == "n_rows" else titles.title.get((t, f)))
+                    for t, f in zip(fin.table, fin.field)]
+    fin["definition"] = [None if f == "n_rows" else titles.definition.get((t, f)) for t, f in zip(fin.table, fin.field)]
+    prefix = lambda t: "acc" if t == "accident" else t
+    fin["features_built"] = [", ".join(sorted(x for x in f1 | f2 if x.split("__")[0] == prefix(t)
+                                              and x.split("__")[1].split("=")[0] == f))
+                             for t, f in zip(fin.table, fin.field)]
+    return raw, features, funnel, fin
+
+
 def write(sheets: dict) -> None:
     with pd.ExcelWriter(OUT, engine="openpyxl") as xl:
         for name, df in sheets.items():
@@ -211,6 +251,7 @@ def main() -> None:
     defs = crss_manual_definitions()
     raw = crss_raw_fields(defs)
     features = crss_feature_list(raw)
+    raw, features, funnel, final_fields = selection(raw, features)
     layout = complaint_layout()
     layout["project_role"] = layout.field.map(complaint_role)
     groups = [g for g in build_complaints.GROUPS]
@@ -243,39 +284,46 @@ def main() -> None:
         "crash_complaints": "Of which report a crash", "fire_complaints": "Of which report a fire",
         "injury_complaints": "Of which report an injury", "serious_share": "serious_complaints / complaints",
         "crss_sample_vehicles": "CRSS sampled vehicles of this make/model/year, 2020-2024",
-        "est_crash_involved": "Survey-weighted national estimate of crash-involved vehicles (exposure proxy)",
+        "est_crash_involved": "Survey-weighted national estimate of crash-involved vehicles, 2020-2024 (a proxy for exposure, not vehicles on the road)",
         "crash_injury_rate": "Weighted share of its crashes with injury (shown if at least 20 sampled vehicles)",
         "crash_serious_rate": "Weighted share of its crashes with serious or fatal injury",
         "crash_defect_rate": "Weighted share with a police-recorded vehicle defect",
         "crss_make_name": "Make as named in CRSS", "crss_model_name": "Model as named in CRSS",
-        "complaints_per_10k_crash_involved": "Complaints per 10,000 estimated crash-involved vehicles (exposure-adjusted rate)",
-        "complaint_rate_percentile": "Percentile of the exposure-adjusted rate among vehicles with reliable exposure",
+        "complaints_per_10k_crash_involved": "Complaints received 2020-2024 per 10,000 estimated crash-involved vehicles",
+        "complaint_rate_percentile": "Percentile of that rate among vehicles with at least 20 sampled CRSS vehicles",
     }
     prof = pd.DataFrame({"column": profiles.columns})
     prof["meaning"] = prof.column.map(profile_meaning).fillna(
         prof.column.str.replace("c__", "Complaints naming component group ", regex=False))
     about = pd.DataFrame({"item": [
-        "Project", "Sources", "Sheets", "CRSS fields", "CRSS features", "Complaint fields", "Complaint model table",
-        "Targets", "Component mapping", "Vehicle profiles", "Roles", "Regenerate"], "description": [
-        "Vehicle Safety Intelligence: MSc Applied Data Science capstone (COMP6830)",
+        "Project", "Sources", "Sheets", "CRSS fields", "CRSS features", "Field funnel", "Final model fields",
+        "Complaint fields", "Complaint model table", "Targets", "Component mapping", "Vehicle profiles", "Roles",
+        "Selection status", "Regenerate"], "description": [
+        "Vehicle Safety Intelligence: Linking Structured Crash Data and Unstructured Owner Complaints to Support Vehicle Safety Screening. MSc Applied Data Science capstone (COMP6830)",
         "NHTSA CRSS 2020-2024 (28 tables per year) and NHTSA Vehicle Owner Complaints (51 fields). Definitions are quoted from the CRSS Analytical User's Manual 2016-2024 and the official complaint file layout.",
         "One sheet per part of the data, described below.",
-        f"Every raw field in all 28 CRSS tables ({len(raw):,} table/field pairs): official title and definition, years present, and its role in this project.",
-        f"All {len(features):,} crash-level model features, with the field and code each one counts or summarises.",
+        f"Every raw field in all 28 CRSS tables ({len(raw):,} table/field pairs): official title and definition, years present, its role in data preparation and its status after field selection.",
+        f"All {len(features):,} crash-level features built in data preparation, with the field and code each one counts or summarises, its source tag, and whether the final S1/S2 models use it.",
+        "How the 1,114 raw CRSS fields become the 178 fields available to importance-based selection (notebook 04, Part B).",
+        f"The {len(final_fields)} CRSS fields the final crash models use (S1 13, S2 47): what a crash record must contain for the deployed crash tool.",
         "All 51 complaint fields with official descriptions and their role in this project.",
         "Columns of the prepared one-row-per-complaint table used by the text models.",
         "Exact definitions of the four model targets (S1, S2, U1, U2).",
         "How the 55 NHTSA component names were grouped into 19 component groups.",
         "Columns of the make/model/year table linking complaints to CRSS exposure (used by the web app).",
-        "USED = offered to the models; EXCLUDED = removed with the stated reason (leakage, identifier, design, key, text label); Replaced = NHTSA's imputed version used instead.",
+        "project_role (data preparation): USED = used to build the benchmark features; EXCLUDED = removed with the stated reason (leakage, identifier, design, key, text label); Replaced = NHTSA's imputed version used instead.",
+        "selection_status (field selection, notebook 04 Part B): FINAL MODEL INPUT, removed as VIN-decoded or post-crash, or not selected under the 98% rule.",
         "python src/build_data_dictionary.py (reads the build scripts' registers, so it always matches the code)."]})
-    write({"About": about, "CRSS fields": raw, "CRSS features": features,
+    write({"About": about, "CRSS fields": raw, "CRSS features": features, "Field funnel": funnel,
+           "Final model fields": final_fields,
            "Complaint fields": layout[["field_no", "field", "type", "official_description", "project_role"]],
            "Complaint model table": prepared, "Targets": targets, "Component mapping": mapping,
            "Vehicle profiles": prof})
     covered = raw.definition.notna().mean()
     print(f"written {OUT} | CRSS fields {len(raw):,} (definitions for {covered:.0%}) | features {len(features):,} | complaint fields {len(layout)}")
     print(raw.project_role.str.split(":").str[0].str.split(" -").str[0].value_counts().to_string())
+    print(raw.selection_status.replace("", "(not used)").str.split(":").str[0].value_counts().to_string())
+    print("final model fields:", len(final_fields))
     missing = raw[raw.definition.isna() & ~raw.field.str.endswith("NAME")]
     print("fields without a manual definition (excluding NAME labels):", len(missing))
     print(missing[["table", "field"]].head(30).to_string(index=False))

@@ -1,0 +1,41 @@
+                                                                                          step  fields                                 note
+                                          Raw fields in the 28 CRSS tables (counted per table)    1114                                     
+                Excluded by rule: leakage, keys, identifiers, sampling design, VIN text labels    -394             155 distinct field names
+Removed as duplicate information: text labels, repeats, replaced by imputed versions, constant    -417                                     
+Fields used to build the crash features (benchmark)    303 summarised into 1,456 crash features
+                   VIN-decoded specification fields removed (ablation showed no gain)    -117                                     
+                          post-crash fields removed (recorded after the crash; mostly reflect the outcome)      -8                                     
+                                                 Fields available to importance-based selection     178                                     
+y_injury no VIN {'n_features': 960, 'n_columns': 1053, 'validation_roc_auc': 0.9067, 'validation_pr_auc': 0.9195, 'test_roc_auc': 0.907, 'test_pr_auc': 0.9189, 'fit_seconds': 168.9}
+y_injury benchmark {'n_features': 907, 'n_columns': 1000, 'validation_roc_auc': 0.8986, 'validation_pr_auc': 0.9133, 'test_roc_auc': 0.8985, 'test_pr_auc': 0.9129, 'fit_seconds': 143.7}
+  y_injury k=  5 fields=  3 val PR-AUC 0.8550 (93.6%)
+  y_injury k= 10 fields=  8 val PR-AUC 0.8893 (97.4%)
+  y_injury k= 15 fields= 13 val PR-AUC 0.8957 (98.1%)
+  y_injury k= 20 fields= 16 val PR-AUC 0.8996 (98.5%)
+  y_injury k= 25 fields= 19 val PR-AUC 0.9016 (98.7%)
+  y_injury k= 30 fields= 21 val PR-AUC 0.9056 (99.2%)
+  y_injury k= 40 fields= 28 val PR-AUC 0.9092 (99.5%)
+  y_injury k= 50 fields= 35 val PR-AUC 0.9101 (99.7%)
+  y_injury k= 75 fields= 46 val PR-AUC 0.9121 (99.9%)
+  y_injury k=100 fields= 59 val PR-AUC 0.9127 (99.9%)
+  y_injury k=150 fields= 79 val PR-AUC 0.9128 (99.9%)
+  y_injury k=200 fields= 92 val PR-AUC 0.9129 (100.0%)
+  y_injury k=300 fields=117 val PR-AUC 0.9131 (100.0%)
+y_injury: selected k=15, 13 fields
+y_serious no VIN {'n_features': 960, 'n_columns': 1053, 'validation_roc_auc': 0.9004, 'validation_pr_auc': 0.6501, 'test_roc_auc': 0.902, 'test_pr_auc': 0.6423, 'fit_seconds': 109.8}
+y_serious benchmark {'n_features': 907, 'n_columns': 1000, 'validation_roc_auc': 0.8918, 'validation_pr_auc': 0.6273, 'test_roc_auc': 0.8919, 'test_pr_auc': 0.6159, 'fit_seconds': 96.9}
+  y_serious k=  5 fields=  5 val PR-AUC 0.4150 (66.2%)
+  y_serious k= 10 fields=  8 val PR-AUC 0.5073 (80.9%)
+  y_serious k= 15 fields= 11 val PR-AUC 0.5463 (87.1%)
+  y_serious k= 20 fields= 16 val PR-AUC 0.5724 (91.2%)
+  y_serious k= 25 fields= 20 val PR-AUC 0.5849 (93.2%)
+  y_serious k= 30 fields= 24 val PR-AUC 0.5973 (95.2%)
+  y_serious k= 40 fields= 28 val PR-AUC 0.6061 (96.6%)
+  y_serious k= 50 fields= 35 val PR-AUC 0.6119 (97.5%)
+  y_serious k= 75 fields= 47 val PR-AUC 0.6187 (98.6%)
+  y_serious k=100 fields= 58 val PR-AUC 0.6216 (99.1%)
+  y_serious k=150 fields= 82 val PR-AUC 0.6246 (99.6%)
+  y_serious k=200 fields=102 val PR-AUC 0.6247 (99.6%)
+  y_serious k=300 fields=129 val PR-AUC 0.6266 (99.9%)
+y_serious: selected k=75, 47 fields
+Fields the deployment must supply (union of S1 and S2): 50

@@ -20,7 +20,7 @@
       <nav class="tabs" role="tablist">
         <button role="tab" data-tab="overview" aria-selected="true">Overview</button>
         <button role="tab" data-tab="complaint">Complaint triage</button>
-        <button role="tab" data-tab="crash">Crash severity</button>
+        <button role="tab" data-tab="crash">Crash analysis</button>
         <button role="tab" data-tab="vehicle">Vehicle lookup</button>
       </nav>
     </div>
@@ -36,8 +36,8 @@
         <strong>unstructured</strong> owner-complaint narratives (NHTSA ODI, 1995–2026), linked at make, model and model year.</p>
       <div class="grid3">
         <article class="card"><h3>Complaint triage</h3><p>Reads a narrative, recommends the affected component groups and flags reports describing a crash, fire, injury or death.</p></article>
-        <article class="card"><h3>Crash severity</h3><p>Estimates whether a described crash is likely to involve injury, and serious or fatal injury, and shows the factors behind the estimate.</p></article>
-        <article class="card"><h3>Vehicle lookup</h3><p>Combines complaint volume with CRSS-estimated on-road exposure, so vehicles are compared fairly rather than by raw counts.</p></article>
+        <article class="card"><h3>Crash analysis</h3><p>Scores a police crash record (CRSS format) for injury and for serious or fatal injury, shows the fields behind each score, and compares it with the outcome the police recorded.</p></article>
+        <article class="card"><h3>Vehicle lookup</h3><p>Sets complaint volume against CRSS-estimated crash involvement (a proxy for exposure), so vehicles are compared fairly rather than by raw counts.</p></article>
       </div>
       <h2>Model performance on untouched test data</h2>
       <div id="metrics" class="metrics"><p class="muted">Loading…</p></div>
@@ -59,11 +59,19 @@
     </section>
 
     <section id="crash" class="panel" role="tabpanel" hidden>
-      <h2>Crash severity assessment</h2>
-      <p class="muted">Describe a police-reported crash. Leave a field blank if it is unknown; the result will say so.</p>
-      <form id="crash-form"><div id="crash-fields" class="fields"><p class="muted">Loading form…</p></div>
-        <div class="row"><button type="submit" class="primary">Assess crash</button>
-        <button type="reset" class="ghost">Clear</button></div>
+      <h2>Crash analysis</h2>
+      <p class="muted">Scores a police crash record in CRSS format with the final injury (S1) and serious-or-fatal (S2) models.
+        The record needs <span id="crash-nfields">50</span> CRSS fields from 12 tables; any other CRSS fields are ignored.
+        The demonstration uses real 2024 crashes, a year the models never saw in training.</p>
+      <form id="crash-form">
+        <label for="crash-pick">Crash record</label>
+        <select id="crash-pick"><option value="">Loading crashes…</option></select>
+        <div id="crash-record" class="result"></div>
+        <details>
+          <summary class="muted">Edit the record as CRSS JSON (for what-if checks)</summary>
+          <textarea id="crash-json" rows="10" spellcheck="false" aria-label="Crash record in CRSS format (JSON)"></textarea>
+        </details>
+        <div class="row"><button type="submit" class="primary">Score this record</button></div>
       </form>
       <div id="crash-result" class="result" aria-live="polite"></div>
     </section>

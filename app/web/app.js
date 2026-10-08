@@ -77,41 +77,60 @@ $("#complaint-form").addEventListener("submit", async (e) => {
   } catch (err) { showError(out, err); } finally { btn.disabled = false; }
 });
 
-// Crash severity
-let crashForm = null;
+// Crash analysis: real CRSS crash records scored by the final S1 and S2 models
+let crashExample = null;
+const crashRecordView = (ex) => {
+  const units = {};
+  ex.display.forEach((d) => { (units[d.unit] = units[d.unit] || []).push(d); });
+  return `<div class="box"><h3 style="margin-top:0">Crash ${esc(ex.casenum)} (CRSS ${esc(ex.year)})</h3>
+    <p class="muted">${esc(ex.label)}. The fields below are what the models read, as the police coded them; the outcome stays hidden until the record is scored.</p>
+    <div class="table-scroll"><table><thead><tr><th>Unit</th><th>Field</th><th>Recorded value</th></tr></thead><tbody>
+    ${Object.entries(units).map(([u, rows]) => rows.map((d, i) => `<tr><td>${i ? "" : esc(u)}</td><td>${esc(d.label)}</td><td>${esc(d.value)}</td></tr>`).join("")).join("")}
+    </tbody></table></div></div>`;
+};
+async function loadCrash(id) {
+  const view = $("#crash-record"); $("#crash-result").innerHTML = "";
+  if (!id) { view.innerHTML = ""; $("#crash-json").value = ""; crashExample = null; return; }
+  try {
+    crashExample = await api(`/api/crash/examples/${encodeURIComponent(id)}`);
+    view.innerHTML = crashRecordView(crashExample);
+    $("#crash-json").value = JSON.stringify(crashExample.record, null, 1);
+  } catch (e) { showError(view, e); }
+}
 (async () => {
   try {
-    crashForm = await api("/api/crash/form");
-    $("#crash-fields").innerHTML = crashForm.fields.map((f) => {
-      const help = f.help ? ` <span class="help">${esc(f.help)}</span>` : "";
-      if (f.type === "number") {
-        return `<div><label for="f-${f.name}">${esc(f.label)}${help}</label>
-          <input id="f-${f.name}" name="${f.name}" type="number" min="${f.min ?? ""}" max="${f.max ?? ""}" step="1" placeholder="unknown"></div>`;
-      }
-      return `<div><label for="f-${f.name}">${esc(f.label)}${help}</label><select id="f-${f.name}" name="${f.name}">
-        <option value="">Unknown / not stated</option>${f.options.map((o) => `<option value="${o.value}">${esc(o.label)}</option>`).join("")}
-        </select></div>`;
-    }).join("");
-  } catch (e) { showError($("#crash-fields"), e); }
+    const [list, schema] = await Promise.all([api("/api/crash/examples"), api("/api/crash/schema")]);
+    $("#crash-nfields").textContent = schema.n_fields;
+    $("#crash-pick").innerHTML = `<option value="">Choose a 2024 crash</option>` +
+      list.map((e) => `<option value="${esc(e.id)}">Crash ${esc(e.casenum)}: ${esc(e.label)}</option>`).join("");
+  } catch (e) { showError($("#crash-record"), e); }
 })();
+$("#crash-pick").addEventListener("change", (e) => loadCrash(e.target.value));
 $("#crash-form").addEventListener("submit", async (e) => {
   e.preventDefault();
-  const out = $("#crash-result"), btn = e.submitter; btn.disabled = true; out.innerHTML = '<p class="muted">Assessing…</p>';
-  const body = {};
-  crashForm.fields.forEach((f) => { const v = $(`#f-${f.name}`).value; body[f.name] = v === "" ? null : Number(v); });
+  const out = $("#crash-result"), btn = e.submitter;
+  let record;
+  try { record = JSON.parse($("#crash-json").value); } catch (_) { showError(out, "The record is not valid JSON."); return; }
+  btn.disabled = true; out.innerHTML = '<p class="muted">Scoring…</p>';
   try {
-    const r = await api("/api/crash/assess", { method: "POST", body: JSON.stringify(body) });
+    const r = await api("/api/crash/assess", { method: "POST", body: JSON.stringify({ record }) });
     const card = (title, x) => `<div class="box"><h3 style="margin-top:0">${title}
         <span class="flag ${x.flagged ? "on" : "off"}">${x.flagged ? "Above review threshold" : "Below review threshold"}</span></h3>
         <div class="kv"><div><b>${pct(x.probability)}</b><span>model probability</span></div>
-        <div><b>${pct(x.threshold)}</b><span>validated threshold</span></div></div>
-        ${x.factors ? `<h3>Main factors in this estimate</h3><div class="bars">${x.factors.map((f) => `
+        <div><b>${pct(x.threshold)}</b><span>threshold set on validation data</span></div></div>
+        ${x.factors.length ? `<h3>Fields that moved this score most</h3><p class="muted">Change in probability if the field were unknown (treated as typical).</p>
+          <div class="bars">${x.factors.map((f) => `
           <div class="bar ${f.effect > 0 ? "rec" : ""}"><span>${esc(f.label)}</span>
-          <span class="track"><span class="fill" style="width:${Math.min(100, Math.abs(f.effect) * 100)}%;display:block"></span></span>
-          <span class="muted">${f.effect > 0 ? "raises" : "lowers"}</span></div>`).join("")}</div>` : ""}
-        <p class="muted" style="margin-top:8px">${esc(x.model)} · ${esc(x.note)}</p></div>`;
-    out.innerHTML = (r.warning ? `<div class="banner">${esc(r.warning)}</div>` : "") +
-      card("Injury crash", r.injury_crash) + card("Serious or fatal injury", r.serious_or_fatal_crash) +
+          <span class="track"><span class="fill" style="width:${Math.min(100, Math.abs(f.effect) * 200)}%;display:block"></span></span>
+          <span class="muted">${f.effect > 0 ? "+" : "−"}${Math.abs(f.effect * 100).toFixed(1)} pts</span></div>`).join("")}</div>` : ""}
+        <p class="muted" style="margin-top:8px">${esc(x.model)} · ${x.n_features} features from ${x.n_fields} CRSS fields · ${esc(x.note)}</p></div>`;
+    const edited = crashExample && JSON.stringify(record) !== JSON.stringify(crashExample.record);
+    const outcome = crashExample ? `<div class="box"><h3 style="margin-top:0">Outcome the police recorded</h3>
+        <p><b>${esc(crashExample.recorded_outcome)}</b>${edited ? ' <span class="muted">(for the original record; you edited it)</span>' : ""}</p>
+        <p class="muted">Shown after scoring for comparison. The models never receive outcome fields.</p></div>` : "";
+    out.innerHTML = (r.warning ? `<div class="banner">${esc(r.warning)} Missing: ${r.missing_fields.map((m) => esc(m.label)).join(", ")}</div>` : "") +
+      (r.ignored_outcome_fields.length ? `<div class="banner">Outcome fields ignored: ${r.ignored_outcome_fields.map(esc).join(", ")}</div>` : "") +
+      card("Injury crash (S1)", r.injury_crash) + card("Serious or fatal injury (S2)", r.serious_or_fatal_crash) + outcome +
       `<p class="disclaimer">${esc(r.disclaimer)}</p>`;
   } catch (err) { showError(out, err); } finally { btn.disabled = false; }
 });

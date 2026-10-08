@@ -2,14 +2,18 @@
 
 Serves the trained models as three human-review workflows:
   /api/complaint/analyze   U1 component routing + U2 serious-incident flag for a narrative
-  /api/crash/assess        S1 injury + S2 serious/fatal likelihood for a crash description
+  /api/crash/assess        S1 injury + S2 serious/fatal likelihood for a crash record in CRSS format
+  /api/crash/schema        the 50 CRSS fields (12 tables) a crash record must contain
+  /api/crash/examples      real 2024 crashes (the test year) in that format, for demonstration
   /api/vehicles/...        integrated make/model/year profile (complaints + CRSS exposure/severity)
 Artifacts are produced by src/export_artifacts.py into app/api/artifacts.
 """
 import json
+import math
 import os
 from functools import lru_cache
 from pathlib import Path
+from typing import Any
 
 import joblib
 import numpy as np
@@ -17,6 +21,8 @@ import pandas as pd
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
+
+import crash_features  # builds the final crash models' features from a CRSS record, as in training
 
 ART = Path(os.environ.get("ARTIFACT_DIR", Path(__file__).parent / "artifacts"))
 DISCLAIMER = ("Decision support for human review only. Outputs do not establish causation, liability "
@@ -38,8 +44,13 @@ def crash_model(target: str) -> dict:
 
 
 @lru_cache
-def crash_form() -> dict:
-    return json.loads((ART / "crash_form.json").read_text(encoding="utf-8"))
+def crash_spec() -> dict:
+    return json.loads((ART / "crash_spec.json").read_text(encoding="utf-8"))
+
+
+@lru_cache
+def crash_examples() -> dict:
+    return {e["id"]: e for e in json.loads((ART / "crash_examples.json").read_text(encoding="utf-8"))["examples"]}
 
 
 @lru_cache
@@ -109,48 +120,89 @@ def analyze_complaint(body: Narrative):
     }
 
 
-@app.get("/api/crash/form")
-def get_crash_form():
-    return crash_form()
+class CrashRecord(BaseModel):
+    record: dict[str, list[dict[str, Any]]] = Field(
+        ..., description="One crash: rows per CRSS table, in CRSS codes, e.g. {'accident': [{...}], 'person': [...]}")
+
+
+CRASH_NOTE = "Probability is relative to the CRSS sample, which over-represents injury crashes."
+
+
+@app.get("/api/crash/schema")
+def crash_schema():
+    spec = crash_spec()
+    tables = {}
+    for key in spec["fields"]:
+        table, field = key.split(".")
+        tables.setdefault(table, []).append({"field": field, "title": spec["field_titles"][key]})
+    return {"format": "One crash per request: {'record': {table: [rows]}}, CRSS codes, field names as in the CRSS files. "
+                      "A table given as an empty list means the crash has no such rows; an absent table is treated as missing.",
+            "tables": tables, "keys": spec["keys"], "n_fields": len(spec["fields"]),
+            "outcome_fields_ignored": spec["outcome_fields_ignored"]}
+
+
+@app.get("/api/crash/examples")
+def list_crash_examples():
+    return [{"id": e["id"], "label": e["label"], "casenum": e["casenum"], "year": e["year"]}
+            for e in crash_examples().values()]
+
+
+@app.get("/api/crash/examples/{example_id}")
+def get_crash_example(example_id: str):
+    e = crash_examples().get(example_id)
+    if e is None:
+        raise HTTPException(404, "Unknown example")
+    return {k: e[k] for k in ("id", "label", "casenum", "year", "record", "display", "recorded_outcome")}
 
 
 @app.post("/api/crash/assess")
-def assess_crash(inputs: dict[str, float | int | None]):
-    form = crash_form()
-    known = {f["name"] for f in form["fields"]}
-    unknown = sorted(set(inputs) - known)
-    if unknown:
-        raise HTTPException(422, f"Unknown fields: {unknown}")
-    row, missing = {}, []
-    for f in form["fields"]:
-        v = inputs.get(f["name"])
-        if v is None:
-            missing.append(f["label"])
-        row[f["name"]] = np.nan if v is None else float(v)
-    X = pd.DataFrame([row])
-    provided = [f["name"] for f in form["fields"] if inputs.get(f["name"]) is not None]
-    labels = {f["name"]: f["label"] for f in form["fields"]}
+def assess_crash(body: CrashRecord):
+    spec = crash_spec()
+    record = crash_features.normalise(body.record)
+    if len(record.get("accident", [])) > 1:
+        raise HTTPException(422, "Send one crash at a time: the accident table must have one row.")
+    cases = {r.get("CASENUM") for rows in record.values() for r in rows if r.get("CASENUM") is not None}
+    if len(cases) > 1:
+        raise HTTPException(422, f"Rows from more than one crash (CASENUM {sorted(map(str, cases))}); send one crash at a time.")
+    needed = set(spec["tables"])
+    if not needed & set(record):
+        raise HTTPException(422, f"No required CRSS tables found; expected some of {sorted(needed)}.")
+
+    outcome = set(spec["outcome_fields_ignored"])
+    ignored = sorted({f for rows in record.values() for r in rows for f in r if f in outcome})
+    missing = crash_features.missing_fields(record, spec)
+    titles = spec["field_titles"]
     out = {}
     for target, label in [("y_injury", "injury_crash"), ("y_serious", "serious_or_fatal_crash")]:
         b = crash_model(target)
-        predict = lambda frame: b["pipeline"].predict_proba(frame[b["features"]])[:, 1]
+        feats = crash_features.build_features(record, b["features"], spec)
+        X = pd.DataFrame([feats])[b["features"]].astype(float)
+        predict = lambda frame: b["pipeline"].predict_proba(frame)[:, 1]
         p = float(predict(X)[0])
-        # Local explanation: change in probability when each provided input is set back to unknown.
-        if provided:
-            variants = pd.concat([X] * len(provided), ignore_index=True)
-            for i, name in enumerate(provided):
-                variants.loc[i, name] = np.nan
+        # Main factors: change in probability when one field is treated as unknown
+        # (the model then uses the training median, or no category, for that field's features).
+        by_field = {}
+        for f in b["features"]:
+            t, fld, _, _ = crash_features.parse_feature(f)
+            by_field.setdefault(f"{t}.{fld or 'n_rows'}", []).append(f)
+        present = [k for k in by_field if k not in missing]
+        if present:
+            variants = pd.concat([X] * len(present), ignore_index=True)
+            for i, k in enumerate(present):
+                variants.loc[i, by_field[k]] = math.nan
             effects = p - predict(variants)
-            factors = sorted(({"label": labels[n], "effect": round(float(e), 4)} for n, e in zip(provided, effects)),
-                             key=lambda f: -abs(f["effect"]))[:6]
+            factors = sorted(({"field": k, "label": titles[k], "effect": round(float(e), 4)}
+                              for k, e in zip(present, effects)), key=lambda f: -abs(f["effect"]))[:6]
         else:
             factors = []
-        out[label] = {"probability": round(p, 4), "threshold": round(b["threshold"], 4),
-                      "flagged": p >= b["threshold"], "model": b["model"], "factors": factors,
-                      "note": "Probability is relative to the CRSS sample, which over-represents injury crashes."}
-    out["missing_inputs"] = missing
-    out["warning"] = (f"{len(missing)} inputs were not provided and were treated as unknown; confidence is reduced."
-                      if missing else None)
+        out[label] = {"probability": round(p, 4), "threshold": round(float(b["threshold"]), 4),
+                      "flagged": p >= b["threshold"], "model": b["model"],
+                      "n_features": len(b["features"]), "n_fields": len(b["fields"]),
+                      "factors": factors, "note": CRASH_NOTE}
+    out["missing_fields"] = [{"field": k, "label": titles[k]} for k in missing]
+    out["warning"] = (f"{len(missing)} of {len(spec['fields'])} required fields were not supplied and were treated as "
+                      "unknown; confidence is reduced." if missing else None)
+    out["ignored_outcome_fields"] = ignored
     out["disclaimer"] = DISCLAIMER
     return out
 

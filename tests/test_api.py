@@ -2,14 +2,18 @@
 
     .venv/Scripts/python.exe -m pytest tests -q
 """
+import copy
+import json
 import sys
 from pathlib import Path
 
+import joblib
+import pandas as pd
 import pytest
 from fastapi.testclient import TestClient
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "app" / "api"))
-from main import app  # noqa: E402
+from main import ART, app  # noqa: E402
 
 client = TestClient(app)
 
@@ -45,37 +49,55 @@ def test_complaint_rejects_short_text():
     assert client.post("/api/complaint/analyze", json={"text": "too short"}).status_code == 422
 
 
-def test_crash_form_has_labelled_options():
-    form = client.get("/api/crash/form").json()
-    selects = [f for f in form["fields"] if f["type"] == "select"]
-    assert len(form["fields"]) == 30 and selects
-    labels = [o["label"] for f in selects for o in f["options"]]
-    assert "nan" not in [l.lower() for l in labels]
+def crash_example(i=0):
+    first = client.get("/api/crash/examples").json()[i]["id"]
+    return client.get(f"/api/crash/examples/{first}").json()
 
 
-def test_crash_assessment_orders_risk_sensibly():
-    form = {f["name"]: f for f in client.get("/api/crash/form").json()["fields"]}
-    code = lambda field, text: next(o["value"] for o in form[field]["options"] if o["label"] == text)
-    severe = {"first_harmful_event": code("first_harmful_event", "Rollover/Overturn"), "max_travel_speed": 75,
-              "speed_limit": 65, "rollovers": 1, "unrestrained_occupants": 1, "vehicles": 1, "ejected": 1}
-    minor = {"first_harmful_event": code("first_harmful_event", "Motor Vehicle In-Transport"),
-             "manner_of_collision": code("manner_of_collision", "Front-to-Rear"), "max_travel_speed": 5,
-             "speed_limit": 25, "vehicles": 2, "unrestrained_occupants": 0, "rollovers": 0}
-    hi = client.post("/api/crash/assess", json=severe).json()
-    lo = client.post("/api/crash/assess", json=minor).json()
-    for key in ("injury_crash", "serious_or_fatal_crash"):
-        assert hi[key]["probability"] > lo[key]["probability"]
-    assert hi["serious_or_fatal_crash"]["flagged"] and not lo["serious_or_fatal_crash"]["flagged"]
-    assert hi["warning"] and hi["injury_crash"]["factors"]
+def test_crash_schema_lists_the_50_fields_from_12_tables():
+    schema = client.get("/api/crash/schema").json()
+    assert schema["n_fields"] == 50 and len(schema["tables"]) == 12
+    assert "MAX_SEV" in schema["outcome_fields_ignored"]
 
 
-def test_crash_assessment_with_no_inputs_warns():
-    r = client.post("/api/crash/assess", json={}).json()
-    assert len(r["missing_inputs"]) == 30 and r["warning"]
+def test_crash_examples_score_exactly_as_in_training():
+    """Trained = evaluated = deployed: features built from the raw record give the model's training-data score."""
+    stored = {e["id"]: e for e in json.loads((ART / "crash_examples.json").read_text())["examples"]}
+    assert len(stored) >= 4
+    for ex_id, e in stored.items():
+        r = client.post("/api/crash/assess", json={"record": e["record"]}).json()
+        assert r["missing_fields"] == [] and r["warning"] is None
+        for target, key in [("y_injury", "injury_crash"), ("y_serious", "serious_or_fatal_crash")]:
+            b = joblib.load(ART / f"crash_{target}.joblib")
+            row = pd.DataFrame([e["training_features"]])[b["features"]].astype(float)
+            expected = float(b["pipeline"].predict_proba(row)[:, 1][0])
+            assert abs(r[key]["probability"] - expected) < 1e-4, (ex_id, key)
+            assert r[key]["flagged"] == (r[key]["probability"] >= r[key]["threshold"])
+            assert r[key]["factors"]
 
 
-def test_crash_rejects_unknown_field():
-    assert client.post("/api/crash/assess", json={"not_a_field": 1}).status_code == 422
+def test_crash_outcome_and_extra_fields_are_ignored():
+    e = crash_example()
+    base = client.post("/api/crash/assess", json={"record": e["record"]}).json()
+    rec = copy.deepcopy(e["record"])
+    rec["accident"][0].update({"MAX_SEV": 4, "NOT_A_MODEL_FIELD": 1})
+    r = client.post("/api/crash/assess", json={"record": rec}).json()
+    assert r["ignored_outcome_fields"] == ["MAX_SEV"]
+    assert r["injury_crash"]["probability"] == base["injury_crash"]["probability"]
+
+
+def test_crash_missing_table_is_flagged_not_filled():
+    rec = {k: v for k, v in crash_example()["record"].items() if k != "person"}
+    r = client.post("/api/crash/assess", json={"record": rec}).json()
+    assert r["warning"] and len(r["missing_fields"]) == 14
+    assert all(m["field"].startswith("person.") for m in r["missing_fields"])
+
+
+def test_crash_rejects_rows_from_two_crashes():
+    rec = copy.deepcopy(crash_example()["record"])
+    rec["vehicle"][0]["CASENUM"] = 1
+    assert client.post("/api/crash/assess", json={"record": rec}).status_code == 422
+    assert client.post("/api/crash/assess", json={"record": {"weather": []}}).status_code == 422
 
 
 def test_vehicle_lookup_chain():
