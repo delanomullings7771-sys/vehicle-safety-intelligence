@@ -276,8 +276,8 @@ def main() -> None:
     ] + [(f"c__{g}", f"U1 target: 1 if the complaint names component group {g}") for g in groups],
         columns=["column", "meaning"])
     targets = pd.DataFrame([
-        ("S1", "y_injury", "CRSS crash", "1 if MAX_SEV is C, B, A, K or injured-severity-unknown; 0 if O (no apparent injury); excluded if unknown"),
-        ("S2", "y_serious", "CRSS crash", "1 if MAX_SEV is A (suspected serious) or K (fatal); 0 if O, C or B; excluded if unknown"),
+        ("S1", "y_injury", "CRSS crash", "1 if MAX_SEV is C, B, A, K or injured-severity-unknown; 0 if O (no apparent injury); excluded if the worst injury is unknown or not reported, died prior to crash, or no person involved (4,794 crashes, 2020-2024)"),
+        ("S2", "y_serious", "CRSS crash", "1 if MAX_SEV is A (suspected serious) or K (fatal); 0 if O, C or B; excluded if injured with severity unknown (634 crashes, which cannot be called serious or not) or for the same reasons as S1 (5,428 crashes in total)"),
         ("U1", "c__<GROUP> (19 columns)", "Complaint", "Multi-label: the harmonised component groups in COMPDESC"),
         ("U2", "y_serious", "Complaint", "1 if CRASH = Y, FIRE = Y, INJURED > 0 or DEATHS > 0"),
     ], columns=["model", "column", "unit", "definition"])
