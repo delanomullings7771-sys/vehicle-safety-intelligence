@@ -1,5 +1,4 @@
 [NbConvertApp] Converting notebook notebooks/01_Business_Understanding.ipynb to notebook
 C:\Users\delan\Downloads\NHTSA_Road_Vehicle_Safety_Capstone_Last_Lap\.venv\Lib\site-packages\zmq\_future.py:718: RuntimeWarning: Proactor event loop does not implement add_reader family of methods required for zmq. Registering an additional selector thread for add_reader support via tornado. Use `asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())` to avoid this warning.
   self._get_loop()
-Assertion failed: Socket operation on non-socket [10038] (C:\Users\runneradmin\AppData\Local\Temp\tmp4su6nwjv\build\_deps\bundled_libzmq-src\src\signaler.cpp:345)
-[NbConvertApp] Writing 11111 bytes to notebooks\01_Business_Understanding.ipynb
+[NbConvertApp] Writing 13186 bytes to notebooks\01_Business_Understanding.ipynb
