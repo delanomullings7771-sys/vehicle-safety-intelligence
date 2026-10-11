@@ -178,11 +178,14 @@ def crss_feature_list(raw: pd.DataFrame) -> pd.DataFrame:
         if "=" in rest:
             code = rest.split("=")[1].removesuffix(".0")
             lab = labels.get((r.table, r.field, code))
-            return f"Number of {r.grain}s in the crash with {r.field} = {code}" + (f" ({lab})" if lab else "")
+            unit = {"person": "people in the crash", "vehicle": "vehicles in the crash",
+                    "crash": "crash events" if r.table == "cevent" else f"{r.table} rows for the crash"}[r.grain]
+            return f"Number of {unit} with {r.field} = {code}" + (f" ({lab})" if lab else "")
         if rest.endswith("__min") or rest.endswith("__max"):
-            return f"{'Lowest' if rest.endswith('__min') else 'Highest'} {r.field} among the crash's {r.grain}s"
+            unit = {"person": "people", "vehicle": "vehicles", "crash": "crash events" if r.table == "cevent" else f"{r.table} rows"}[r.grain]
+            return f"{'Lowest' if rest.endswith('__min') else 'Highest'} {r.field} among the {unit} in the crash"
         if rest == "n_rows":
-            return f"Number of {r.table} records in the crash"
+            return f"Number of rows in the {r.table} table for the crash"
         return f"Crash-level value of {r.field}"
     reg["field_title"] = reg.field.map(title)
     reg["meaning"] = reg.apply(explain, axis=1)
