@@ -60,7 +60,9 @@ def missing_fields(record: dict, spec: dict) -> list[str]:
     """Required 'table.field' entries the record does not supply.
 
     A table that is absent is missing. A table given as an empty list means the crash has no such rows
-    (for example no pedestrians), which is a real value, as in training.
+    (for example no pedestrians), which is a real value, as in training. A field counts as missing when any
+    row of its table lacks it: a count or a minimum/maximum built from only some of the rows would be wrong
+    without saying so. (A field that is present with an empty value is an unknown value, as in the CRSS files.)
     """
     out = []
     for key in spec["fields"]:
@@ -68,7 +70,7 @@ def missing_fields(record: dict, spec: dict) -> list[str]:
         rows = record.get(table)
         if rows is None:
             out.append(key)
-        elif field != "n_rows" and rows and not any(field in r for r in rows):
+        elif field != "n_rows" and rows and not all(field in r for r in rows):
             out.append(key)
     return out
 

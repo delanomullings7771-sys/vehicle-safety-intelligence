@@ -93,6 +93,15 @@ def test_crash_missing_table_is_flagged_not_filled():
     assert all(m["field"].startswith("person.") for m in r["missing_fields"])
 
 
+def test_crash_field_missing_from_one_row_is_flagged():
+    """A field left out of a single person row must be reported, not silently scored on the remaining rows."""
+    rec = copy.deepcopy(crash_example(1)["record"])
+    assert len(rec["person"]) > 1
+    del rec["person"][0]["AIR_BAG"]
+    r = client.post("/api/crash/assess", json={"record": rec}).json()
+    assert [m["field"] for m in r["missing_fields"]] == ["person.AIR_BAG"] and r["warning"]
+
+
 def test_crash_rejects_rows_from_two_crashes():
     rec = copy.deepcopy(crash_example()["record"])
     rec["vehicle"][0]["CASENUM"] = 1
