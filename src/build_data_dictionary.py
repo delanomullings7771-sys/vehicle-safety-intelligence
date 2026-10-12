@@ -312,7 +312,7 @@ def main() -> None:
         "Vehicle Safety Intelligence: Linking Structured Crash Data and Unstructured Owner Complaints to Support Vehicle Safety Screening. MSc Applied Data Science capstone (COMP6830)",
         "NHTSA CRSS 2020-2024 (28 tables per year) and NHTSA Vehicle Owner Complaints (51 fields). Definitions are quoted from the CRSS Analytical User's Manual 2016-2024 and the official complaint file layout.",
         "One sheet per part of the data, described below.",
-        f"Every raw field in all 28 CRSS tables ({len(raw):,} table/field pairs): official title and definition, years present, its role in data preparation and its status after field selection.",
+        f"Every raw field in all 28 CRSS tables ({len(raw):,} table/field pairs): official title and definition where the CRSS manual has an entry (every field used for modelling has one; the text-label ...NAME columns, which repeat the label of a coded field, do not), years present, its role in data preparation and its status after field selection.",
         f"All {len(features):,} crash-level features built in data preparation, with the field and code each one counts or summarises, its source tag, and whether the final S1/S2 models use it.",
         "How the 1,114 raw CRSS fields become the 178 fields available to importance-based selection (notebook 04, Part B).",
         f"The {len(final_fields)} CRSS fields the final crash models use (S1 13, S2 47): what a crash record must contain for the deployed crash tool.",

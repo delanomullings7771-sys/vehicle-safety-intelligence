@@ -37,9 +37,9 @@
       <div class="grid3">
         <article class="card"><h3>Complaint triage</h3><p>Reads a narrative, recommends the affected component groups and flags reports describing a crash, fire, injury or death.</p></article>
         <article class="card"><h3>Crash analysis</h3><p>Scores a police crash record (CRSS format) for injury and for serious or fatal injury, shows the fields behind each score, and compares it with the outcome the police recorded.</p></article>
-        <article class="card"><h3>Vehicle lookup</h3><p>Sets complaint volume against CRSS-estimated crash involvement (a proxy for exposure), so vehicles are compared fairly rather than by raw counts.</p></article>
+        <article class="card"><h3>Vehicle lookup</h3><p>Sets complaint volume against CRSS-estimated crash involvement (a proxy for exposure), so vehicles are screened by complaints per crash-involved vehicle rather than by raw counts.</p></article>
       </div>
-      <h2>Model performance on untouched test data</h2>
+      <h2>Model performance on held-out test data</h2>
       <div id="metrics" class="metrics"><p class="muted">Loading…</p></div>
       <p class="disclaimer" id="disclaimer"></p>
     </section>
@@ -85,7 +85,7 @@
         <label>Model year <select id="year" disabled></select></label>
       </div>
       <div id="vehicle-result" class="result" aria-live="polite"></div>
-      <h3>Highest exposure-adjusted complaint rates</h3>
+      <h3>Highest complaint rates per crash-involved vehicle</h3>
       <div class="table-scroll"><table id="top-table"><thead><tr><th>Vehicle</th><th class="num">Complaints</th>
         <th class="num">Per 10k crash-involved</th><th class="num">Serious share</th></tr></thead><tbody></tbody></table></div>
     </section>

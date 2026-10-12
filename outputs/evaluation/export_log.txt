@@ -1,6 +1,8 @@
-crash_form.json                       0.0 MB
-crash_y_injury.joblib                 0.5 MB
-crash_y_serious.joblib                0.4 MB
+Feature builder reproduces the training features for 3,000 2024 crashes
+crash_examples.json                   0.1 MB
+crash_spec.json                       0.0 MB
+crash_y_injury.joblib                 0.3 MB
+crash_y_serious.joblib                0.6 MB
 model_card.json                       0.0 MB
 text_U1.joblib                       47.8 MB
 text_U2.joblib                        6.2 MB
@@ -10,16 +12,16 @@ vehicle_profiles.parquet              0.4 MB
   {
    "task": "S1 Injury crash (CRSS)",
    "model": "Gradient Boosting",
-   "headline_metric": "ROC-AUC, 2024 test",
-   "headline_value": "0.906",
-   "detail": "PR-AUC 0.918 vs baseline 0.513; app form model 0.849"
+   "headline_metric": "PR-AUC, 2024 test",
+   "headline_value": "0.894",
+   "detail": "baseline 0.513; ROC-AUC 0.872; 15 features from 13 CRSS fields"
   },
   {
    "task": "S2 Serious or fatal crash (CRSS)",
    "model": "Gradient Boosting",
-   "headline_metric": "ROC-AUC, 2024 test",
-   "headline_value": "0.902",
-   "detail": "PR-AUC 0.642 vs baseline 0.130; app form model 0.853"
+   "headline_metric": "PR-AUC, 2024 test",
+   "headline_value": "0.610",
+   "detail": "baseline 0.130; ROC-AUC 0.889; 75 features from 47 CRSS fields"
   },
   {
    "task": "U1 Component routing (complaints)",

@@ -46,7 +46,7 @@ Download from NHTSA and unzip into `data/raw/` with this layout (the scripts loo
 | CRSS 2020-2024 (one zip per year) | `https://static.nhtsa.gov/nhtsa/downloads/CRSS/<year>/CRSS<year>CSV.zip` | `data/raw/crss/<year>/CRSS<year>CSV/` (28 CSV files, e.g. `accident.csv`) |
 | Vehicle Owner Complaints (flat file) | `https://static.nhtsa.gov/odi/ffdd/cmpl/FLAT_CMPL.zip` | `data/raw/complaints/FLAT_CMPL/FLAT_CMPL.txt` |
 
-* **CRSS is fixed:** the five zips used here are byte-for-byte the files NHTSA serves today (checked by size on 8 Oct 2026), so the crash results reproduce exactly.
+* **CRSS is fixed:** the five zips used here have the same size in bytes as the files NHTSA served on 8 Oct 2026, and every extracted table is fingerprinted (SHA-256 in `outputs/tables/crss_raw_file_inventory.csv`), so a fresh download can be checked against the data used here. With the same files the crash results reproduce exactly.
 * **The complaint file grows:** NHTSA adds complaints continuously. This project used the copy downloaded on 29 Sep 2026 (last complaint received 24 Sep 2026; 2,250,304 rows; SHA-256 `ca2d3fe0c53a7b2ecc5a5354162914ae21e046d7766452a1ee8825ea0ceb4ad1`). A newer download adds complaints to the 2024-2026 test period, so the text-model test results will differ slightly; training and validation (to 2023) are unchanged. `src/audit_raw_data.py` prints the hash of the file you have.
 
 ### 3. Run the pipeline in this order

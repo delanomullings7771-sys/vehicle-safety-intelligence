@@ -248,6 +248,14 @@ Text label of the code in PEDLEG (code used instead)              1
 Text label of the code in PEDSNR (code used instead)              1
 Text label of the code in PEDCGP (code used instead)              1
 Text label of the code in BIKECGP (code used instead)             1
+selection_status
+(not used)                       811
+Not selected                     131
+Removed in field selection       125
+FINAL MODEL INPUT (S2)            35
+FINAL MODEL INPUT (S1 and S2)     10
+FINAL MODEL INPUT (S1)             2
+final model fields: 50
 fields without a manual definition (excluding NAME labels): 1
   table       field
 weather WEATHERCODE
